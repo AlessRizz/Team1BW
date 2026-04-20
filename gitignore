@@ -1,0 +1,157 @@
+# =====================
+# Dipendenze
+# =====================
+node_modules/
+bower_components/
+jspm_packages/
+
+# =====================
+# Build & Output
+# =====================
+dist/
+build/
+out/
+.output/
+public/build/
+
+# =====================
+# SASS / CSS compilato
+# =====================
+*.css.map
+*.sass.cache/
+.sass-cache/
+
+# =====================
+# Environment & Secrets
+# =====================
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+.env.staging
+*.pem
+*.key
+secrets.json
+
+# =====================
+# Log
+# =====================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# =====================
+# Package manager
+# =====================
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+.pnp/
+.pnp.js
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# =====================
+# Cache & Temp
+# =====================
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+.prettiercache
+.npm/
+.pnpm-store/
+*.tmp
+*.temp
+.tmp/
+.temp/
+
+# =====================
+# Test & Coverage
+# =====================
+coverage/
+.nyc_output/
+*.lcov
+test-results/
+playwright-report/
+cypress/screenshots/
+cypress/videos/
+
+# =====================
+# IDE & Editor
+# =====================
+
+# VSCode
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# IntelliJ / WebStorm
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Vim / Neovim
+*.swp
+*.swo
+*~
+
+# Emacs
+\#*\#
+.\#*
+
+# =====================
+# Sistema Operativo
+# =====================
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+.directory
+.Trash-*
+
+# =====================
+# Bundler / Tools
+# =====================
+.webpack/
+.rollup.cache/
+.vite/
+.turbo/
+.next/
+.nuxt/
+.svelte-kit/
+
+# Storybook
+storybook-static/
+
+# =====================
+# Misc
+# =====================
+*.zip
+*.tar.gz
+*.rar
+.vercel
+.netlify
