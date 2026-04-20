@@ -1,0 +1,24 @@
+{
+  "name": "team-1-build-week",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/AlessRizz/Team1BW#readme",
+  "bugs": {
+    "url": "https://github.com/AlessRizz/Team1BW/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlessRizz/Team1BW.git"
+  },
+  "license": "ISC",
+  "author": "Team 1",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "sass": "^1.99.0"
+  }
+}
