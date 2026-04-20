@@ -1,11 +1,83 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Team1BW/src/dist/css/style.css">
     <title>Streaming Video</title>
 </head>
+
 <body>
-    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-viola sticky-top px-lg-5">
+        <div class="container-fluid">
+            <!-- Logo  -->
+            <a class="navbar-brand me-4" href="#">
+                <img src="/Team1BW/src/asset/img/logo-min-remaster.png" alt="logo" width="110">
+            </a>
+
+            <!-- Hamburger Menu per Mobile -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#primeNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="primeNavbar">
+                <!-- Menu Principale (Sinistra) -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-bold">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link border-start-custom" href="#">Film</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Serie TV</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sport <i class="bi bi-search fs-5"></i></a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown">Categorie</a>
+                        <ul class="dropdown-menu dropdown-menu-dark border-0">
+                            <li><a class="dropdown-item" href="#">Azione e avventura</a></li>
+                            <li><a class="dropdown-item" href="#">Commedia</a></li>
+                            <li><a class="dropdown-item" href="#">Documentari</a></li>
+                            <li>
+                                <hr class="dropdown-divider bg-secondary">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Bambini</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Area Utente e Ricerca (Destra) -->
+                <div class="d-flex align-items-center gap-4">
+                    <!-- Icona Cerca -->
+                    <a href="#" class="text-white"><i class="bi bi-search fs-5"></i></a>
+                    
+
+                    <!-- Menu Profilo -->
+                    <div class="dropdown">
+                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                            data-bs-toggle="dropdown">
+                            <div class="profile-avatar me-2">
+                                <img src="" alt="User" width="32" class="rounded">
+                            </div>
+                            <span class="d-none d-xl-inline small fw-bold">Il mio account</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark border-0">
+                            <li><a class="dropdown-item" href="#">Account e impostazioni</a></li>
+                            <li><a class="dropdown-item" href="#">Iscrizione Prime</a></li>
+                            <li>
+                                <hr class="dropdown-divider bg-secondary">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Esci</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
+
 </html>
