@@ -1,1 +1,13 @@
-@use '../../node_modules/bootstrap/scss/bootstrap.scss';
+@use './variables' as *;
+
+@use "../../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
+
+@use "../../node_modules/bootstrap/scss/bootstrap.scss" with (
+
+$theme-colors: (
+
+"viola": $viola,
+
+)
+
+);
