@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
- <link rel="icon" type="image/png" href="../assets/favicon2.png" />
+    <link rel="icon" type="image/png" href="../assets/favicon2.png" />
 
     <title>Streaming Video</title>
 
-<meta
-name="description"
-content="Piattaforma di streaming di film con contenuti in evidenza, trailer e categorie. Scopri nuovi film, guarda trailer e trova i tuoi preferiti."
-/> <meta name="robots" content="index, follow" /> <meta name="author" content="team1BW" />
+    <meta name="description"
+        content="Piattaforma di streaming di film con contenuti in evidenza, trailer e categorie. Scopri nuovi film, guarda trailer e trova i tuoi preferiti." />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="team1BW" />
 
-<meta
-property="og:title"
-content="Streaming Film | Scopri, Guarda e Esplora"
-/> <meta
-property="og:description"
-content="Esplora una vasta selezione di film, guarda trailer e scopri contenuti in evidenza. Progetto sviluppato dal team di sviluppatori team1BW."
-/> <meta property="og:type" content="website" />
+    <meta property="og:title" content="Streaming Film | Scopri, Guarda e Esplora" />
+    <meta property="og:description"
+        content="Esplora una vasta selezione di film, guarda trailer e scopri contenuti in evidenza. Progetto sviluppato dal team di sviluppatori team1BW." />
+    <meta property="og:type" content="website" />
 
 
     <link rel="stylesheet" href="./css/style.css">
@@ -27,85 +25,141 @@ content="Esplora una vasta selezione di film, guarda trailer e scopri contenuti 
 
 <body>
     <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-viola sticky-top px-lg-5">
+            <div class="container-fluid">
+                <!-- Logo  -->
+                <a class="navbar-brand me-4" href="#">
+                    <img src="/Team1BW/src/asset/img/logo-min-remaster.png" alt="logo" width="110">
+                </a>
+
+                <!-- Hamburger Menu per Mobile -->
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#Navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="Navbar">
+                    <!-- Menu Principale (Sinistra) -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-bold">
+                        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link border-start-custom" href="#">Film</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Serie TV</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Sport</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown">Categorie</a>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0">
+                                <li><a class="dropdown-item" href="#">Azione e avventura</a></li>
+                                <li><a class="dropdown-item" href="#">Commedia</a></li>
+                                <li><a class="dropdown-item" href="#">Documentari</a></li>
+                                <li>
+                                    <hr class="dropdown-divider bg-secondary">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Bambini</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <!-- Area Utente e Ricerca (Destra) -->
+                    <div class="d-flex align-items-center gap-4">
+                        <!-- Icona Cerca -->
+                        <a href="#" class="text-white"><i class="bi bi-search fs-5"></i></a>
+                        <!-- Menu Profilo -->
+                        <div class="dropdown">
+                            <a href="#"
+                                class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                                data-bs-toggle="dropdown">
+                                <div class="profile-avatar me-2">
+                                    <img src="" alt="User" width="32" class="rounded">
+                                </div>
+                                <span class="d-none d-xl-inline small fw-bold">Il mio account</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark border-0">
+                                <li><a class="dropdown-item" href="#">Account e impostazioni</a></li>
+                                <li><a class="dropdown-item" href="#">Iscrizione Prime</a></li>
+                                <li>
+                                    <hr class="dropdown-divider bg-secondary">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Esci</a></li>
+                            </ul>
+        </nav>
         <section class="hero-section">
 
             <h1>Guarda ciò che ami, quando vuoi</h1>
-           <!-- ---------Carousel-------- -->
+            <!-- ---------Carousel-------- -->
 
-<div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
-  <div class="carousel-inner">
-    
-    
-<div class="carousel-item active">
-    <div class="hero-img-wrap">
-      <img src="../assets/img-hero/avatar.webp" class="d-block w-100" alt="...">
-    <div class="hero-img-text">
-      <h2>Avatar</h2>
-      <p>Un'avventura epica nel mondo di Pandora.</p>
-    </div>
-    </div>
-
-</div>
+            <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-inner">
 
 
-<div class="carousel-item">
-    <div class="hero-img-wrap">
-      <img src="../assets/img/hero/interstellar.webp" class="d-block w-100" alt="...">
-    </div>
-    <div class="hero-img-text">
-      <h2>Interstellar</h2>
-      <p>Un viaggio attraverso lo spazio e il tempo.</p>
-    </div>
-</div>
+                    <div class="carousel-item active">
+                        <div class="hero-img-wrap">
+                            <img src="../assets/img-hero/avatar.webp" class="d-block w-100" alt="...">
+                            <div class="hero-img-text">
+                                <h2>Avatar</h2>
+                                <p>Un'avventura epica nel mondo di Pandora.</p>
+                            </div>
+                        </div>
+
+                    </div>
 
 
-
-<div class="carousel-item">
-    <div class="hero-img-wrap">
-      <img src="../assets/img/hero/maleficent.webp" class="d-block w-100" alt="...">
-    </div>
-    <div class="hero-img-text">
-      <h2>Maleficent</h2>
-      <p>Una storia di magia e vendetta.</p>
-    </div>
-</div>
-         
-
-<div class="carousel-item">
-    <div class="hero-img-wrap">
-      <img src="../assets/img/hero/titanik.webp" class="d-block w-100" alt="...">
-    </div>
-    <div class="hero-img-text">
-      <h2>Titanic</h2>
-      <p>Un romance epico sul naufragio del Titanic.</p>
-    </div>
-</div>
-
-   
-<div class="carousel-item">
-    <div class="hero-img-wrap">
-      <img src="../assets/img/hero/wonka.webp" class="d-block w-100" alt="...">
-    </div>
-    <div class="hero-img-text">
-      <h2>Wonka</h2>
-      <p>La storia di Willy Wonka e il suo mondo magico.</p>
-    </div>
-</div> 
-
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+                    <div class="carousel-item">
+                        <div class="hero-img-wrap">
+                            <img src="../assets/img/hero/interstellar.webp" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="hero-img-text">
+                            <h2>Interstellar</h2>
+                            <p>Un viaggio attraverso lo spazio e il tempo.</p>
+                        </div>
+                    </div>
 
 
 
+                    <div class="carousel-item">
+                        <div class="hero-img-wrap">
+                            <img src="../assets/img/hero/maleficent.webp" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="hero-img-text">
+                            <h2>Maleficent</h2>
+                            <p>Una storia di magia e vendetta.</p>
+                        </div>
+                    </div>
 
+
+                    <div class="carousel-item">
+                        <div class="hero-img-wrap">
+                            <img src="../assets/img/hero/titanik.webp" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="hero-img-text">
+                            <h2>Titanic</h2>
+                            <p>Un romance epico sul naufragio del Titanic.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="carousel-item">
+                        <div class="hero-img-wrap">
+                            <img src="../assets/img/hero/wonka.webp" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="hero-img-text">
+                            <h2>Wonka</h2>
+                            <p>La storia di Willy Wonka e il suo mondo magico.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </section>
     </header>
     <main>
