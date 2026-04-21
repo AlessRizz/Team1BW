@@ -19761,6 +19761,19 @@ textarea.form-control-lg {
   opacity: 1;
 }
 
+.profile-avatar {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.profile-avatar img {
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+.profile-avatar:hover img {
+  border-color: #ffffff;
+  transform: scale(1.05);
+}
+
 .footer-stream {
   background-color: #00050d;
   border-top: 1px solid rgba(129, 151, 164, 0.2);
