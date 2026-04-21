@@ -1,8 +1,5 @@
 @use "./variables" as *;
 
-
-
-
 @use "../../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
 
 @use "./fonts";
@@ -50,4 +47,13 @@
       color: $viola;
     }
   }
+}
+
+.min-w-15 {
+  min-width: 15rem;
+}
+
+.card-img-top {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
 }
