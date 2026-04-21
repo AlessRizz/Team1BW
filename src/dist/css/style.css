@@ -15508,6 +15508,37 @@ textarea.form-control-lg {
   background-color: RGBA(var(--bs-grigio-chiaro-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
+.link-viola {
+  color: RGBA(var(--bs-viola-rgb), var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(var(--bs-viola-rgb), var(--bs-link-underline-opacity, 1)) !important;
+}
+
+.text-bg-grigio-chiaro {
+  color: #000 !important;
+  background-color: RGBA(var(--bs-grigio-chiaro-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.link-scuro {
+  color: RGBA(var(--bs-scuro-rgb), var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(var(--bs-scuro-rgb), var(--bs-link-underline-opacity, 1)) !important;
+}
+.link-scuro:hover, .link-scuro:focus {
+  color: RGBA(0, 4, 10, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(0, 4, 10, var(--bs-link-underline-opacity, 1)) !important;
+}
+
+.link-grigio-chiaro {
+  color: RGBA(var(--bs-grigio-chiaro-rgb), var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(var(--bs-grigio-chiaro-rgb), var(--bs-link-underline-opacity, 1)) !important;
+}
+.link-grigio-chiaro:hover, .link-grigio-chiaro:focus {
+  color: RGBA(154, 172, 182, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(154, 172, 182, var(--bs-link-underline-opacity, 1)) !important;
+}
+
+.link-body-emphasis {
+  color: RGBA(var(--bs-emphasis-color-rgb), var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(var(--bs-emphasis-color-rgb), var(--bs-link-underline-opacity, 1)) !important;
 .text-bg-viola-chiaro {
   color: #fff !important;
   background-color: RGBA(var(--bs-viola-chiaro-rgb), var(--bs-bg-opacity, 1)) !important;
@@ -20934,6 +20965,52 @@ body {
 }
 .footer-stream .footer-social i:hover {
   color: #39264D;
+}
+
+.min-w-15 {
+  min-width: 15rem;
+}
+
+.card-img-top {
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.categories {
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  padding-bottom: 200px !important;
+  margin-bottom: -200px;
+}
+
+.card {
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: visible !important;
+}
+.card .card-body {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: inherit;
+  border-radius: 0 0 0.375rem 0.375rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: all 0.3s ease-in-out;
+}
+.card:hover {
+  transform: scale(1.02);
+  z-index: 100;
+}
+.card:hover .card-body {
+  opacity: 1;
+  max-height: 500px;
+  padding: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
