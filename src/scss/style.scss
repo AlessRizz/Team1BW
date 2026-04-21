@@ -1,5 +1,8 @@
 @use './variables' as *;
 
+
+
+
 @use "../../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
 
 
@@ -12,7 +15,45 @@ $theme-colors: (
 
 "viola": $viola,
 
+"scuro": $scuro,
+"grigio-chiaro": $grigio-lt,
+
 )
 
 );
 
+// REGOLE FOOTER
+.footer-stream {
+    background-color: $scuro; 
+    border-top: 1px solid rgba($grigio-lt, 0.2); 
+    color: $grigio-lt;
+
+    .footer-links {
+        a {
+            color: $grigio-lt;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s ease;
+
+            &:hover {
+                color: #fff; 
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .footer-copy {
+        font-size: 0.8rem;
+        color: rgba($grigio-lt, 0.7); 
+    }
+
+    .footer-social i {
+        color: $grigio-lt;
+        font-size: 1.2rem;
+        transition: color 0.2s;
+
+        &:hover {
+            color: $viola; 
+        }
+    }
+}
