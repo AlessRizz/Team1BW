@@ -19538,5 +19538,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.card-img-top {
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  width: 100%;
+}
 
 /*# sourceMappingURL=style.css.map */
