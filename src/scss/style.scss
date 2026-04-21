@@ -21,10 +21,40 @@ $bootstrap-icons-font-src: url("../assets/fonts/bootstrap-icons.woff2") format("
 
     "scuro": $scuro,
     "grigio-chiaro": $grigio-lt,
+
+
+
+"viola-chiaro": $viola-chiaro,
+"viola-scuro": $viola-scuro,
+"bludark": $bludark,
+
+
+
+"rosa-logo": $rosa-logo,
+"rosa-logo-chiaro": $rosa-logo-chiaro,
+
+"bianco": $bianco, 
+
+"grigio-molto-chiaro": $grigio-molto-chiaro, 
+
+"rosso-scuro": $rosso-scuro,  
+
+"giallo": $giallo,
+"giallo-chiaro": $giallo-chiaro,
+
+
+"verde": $verde,
+"verde-chiaro": $verde-chiaro,
+
+
   )
 );
 
-
+body {
+  font-family: "LinkSans", sans-serif;
+  background-color: $viola-scuro;
+  color: $grigio-lt;
+}
 
 // REGOLE NAVBAR
 .navbar-nav .nav-link {
