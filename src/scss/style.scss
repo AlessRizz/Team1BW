@@ -1,15 +1,59 @@
 @use "./variables" as *;
 
+
+
+
 @use "../../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
 
+
+@use "./fonts";
+
+
 @use "../../node_modules/bootstrap/scss/bootstrap.scss" with (
-  $theme-colors: (
-    "viola": $viola,
-  )
+
+$theme-colors: (
+
+"viola": $viola,
+
+"scuro": $scuro,
+"grigio-chiaro": $grigio-lt,
+
+)
+
 );
 
-.card-img-top {
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  width: 100%;
+// REGOLE FOOTER
+.footer-stream {
+    background-color: $scuro; 
+    border-top: 1px solid rgba($grigio-lt, 0.2); 
+    color: $grigio-lt;
+
+    .footer-links {
+        a {
+            color: $grigio-lt;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s ease;
+
+            &:hover {
+                color: #fff; 
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .footer-copy {
+        font-size: 0.8rem;
+        color: rgba($grigio-lt, 0.7); 
+    }
+
+    .footer-social i {
+        color: $grigio-lt;
+        font-size: 1.2rem;
+        transition: color 0.2s;
+
+        &:hover {
+            color: $viola; 
+        }
+    }
 }
