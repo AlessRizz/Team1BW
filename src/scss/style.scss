@@ -5,6 +5,10 @@
 
 @use "../../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
 
+
+@use "./fonts";
+
+
 @use "../../node_modules/bootstrap/scss/bootstrap.scss" with (
 
 $theme-colors: (
