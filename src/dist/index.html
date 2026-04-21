@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="../assets/favicon2.png" />
+
+    <title>Streaming Video</title>
+
+    <meta name="description"
+        content="Piattaforma di streaming di film con contenuti in evidenza, trailer e categorie. Scopri nuovi film, guarda trailer e trova i tuoi preferiti." />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="team1BW" />
+
+    <meta property="og:title" content="Streaming Film | Scopri, Guarda e Esplora" />
+    <meta property="og:description"
+        content="Esplora una vasta selezione di film, guarda trailer e scopri contenuti in evidenza. Progetto sviluppato dal team di sviluppatori team1BW." />
+    <meta property="og:type" content="website" />
+
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-viola sticky-top px-lg-5">
+            <div class="container-fluid">
+                <!-- Logo  -->
+                <a class="navbar-brand me-4" href="#">
+                    <img src="../assets/img/logo-min-remaster.png" alt="logo" width="110">
+                </a>
+
+                <!-- Hamburger Menu per Mobile -->
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#Navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="Navbar">
+                    <!-- Menu Principale (Sinistra) -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-bold">
+                        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link border-start-custom" href="#">Film</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Serie TV</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Sport</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown">Categorie</a>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0">
+                                <li><a class="dropdown-item" href="#">Azione e avventura</a></li>
+                                <li><a class="dropdown-item" href="#">Commedia</a></li>
+                                <li><a class="dropdown-item" href="#">Documentari</a></li>
+                                <li>
+                                    <hr class="dropdown-divider bg-secondary">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Bambini</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <!-- Area Utente e Ricerca (Destra) -->
+                    <div class="d-flex align-items-center gap-4">
+                        <!-- Icona Cerca -->
+                        <a href="#" class="text-white"><i class="bi bi-search fs-5"></i></a>
+                        <!-- Menu Profilo -->
+                        <div class="dropdown">
+                            <a href="#"
+                                class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                                data-bs-toggle="dropdown">
+                                <div class="profile-avatar me-2">
+                                    <img src="" alt="User" width="32" class="rounded">
+                                </div>
+                                <span class="d-none d-xl-inline small fw-bold">Il mio account</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark border-0">
+                                <li><a class="dropdown-item" href="#">Account e impostazioni</a></li>
+                                <li><a class="dropdown-item" href="#">Iscrizione Prime</a></li>
+                                <li>
+                                    <hr class="dropdown-divider bg-secondary">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Esci</a></li>
+                            </ul>
+        </nav>
+        <section class="hero-section">
+
+            <h1>Guarda ciò che ami, quando vuoi</h1>
+            <!-- ---------Carousel-------- -->
+
+            <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-inner">
+
+
+                    <div class="carousel-item active">
+                        <div class="hero-img-wrap">
+                            <img src="../assets/img/hero/avatar.webp" class="d-block w-100" alt="...">
+                            <div class="hero-img-text">
+                                <h2>Avatar</h2>
+                                <p>Un'avventura epica nel mondo di Pandora.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="carousel-item">
+                        <div class="hero-img-wrap">
+                            <img src="../assets/img/hero/interstellar.webp" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="hero-img-text">
+                            <h2>Interstellar</h2>
+                            <p>Un viaggio attraverso lo spazio e il tempo.</p>
+                        </div>
+                    </div>
+
+
+
+                    <div class="carousel-item">
+                        <div class="hero-img-wrap">
+                            <img src="../assets/img/hero/maleficent.webp" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="hero-img-text">
+                            <h2>Maleficent</h2>
+                            <p>Una storia di magia e vendetta.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="carousel-item">
+                        <div class="hero-img-wrap">
+                            <img src="../assets/img/hero/titanik.webp" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="hero-img-text">
+                            <h2>Titanic</h2>
+                            <p>Un romance epico sul naufragio del Titanic.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="carousel-item">
+                        <div class="hero-img-wrap">
+                            <img src="../assets/img/hero/wonka.webp" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="hero-img-text">
+                            <h2>Wonka</h2>
+                            <p>La storia di Willy Wonka e il suo mondo magico.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+    </header>
+    <main>
+        <div class="container-fluid">
+            <h2 class="mb-4">Serie TV</h2>
+            <div class="categories d-flex flex-nowrap overflow-auto gap-3 pb-4">
+                <div class="card" style="min-width: 15rem;">
+                    <img src="./carousel1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card" style="min-width: 15rem;">
+                    <img src="./carousel1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card" style="min-width: 15rem;">
+                    <img src="./carousel1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card" style="min-width: 15rem;">
+                    <img src="./carousel1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card" style="min-width: 15rem;">
+                    <img src="./carousel1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card" style="min-width: 15rem;">
+                    <img src="./carousel1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card" style="min-width: 15rem;">
+                    <img src="./carousel1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card" style="min-width: 15rem;">
+                    <img src="./carousel1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card" style="min-width: 15rem;">
+                    <img src="./carousel1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card" style="min-width: 15rem;">
+                    <img src="./carousel1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <h2 class="mb-4">Film d'azione</h2>
+            <div class="categories d-flex flex-nowrap overflow-auto gap-3 pb-4">
+                <div class="card" style="min-width: 15rem;">
+                    <img src="./carousel1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the
+                            card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card" style="min-width: 15rem;">
+                    <img src="./carousel1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the
+                            card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card" style="min-width: 15rem;">
+                    <img src="./carousel1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the
+                            card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card" style="min-width: 15rem;">
+                    <img src="./carousel1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the
+                            card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card" style="min-width: 15rem;">
+                    <img src="./carousel1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the
+                            card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card" style="min-width: 15rem;">
+                    <img src="./carousel1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the
+                            card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card" style="min-width: 15rem;">
+                    <img src="./carousel1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the
+                            card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card" style="min-width: 15rem;">
+                    <img src="./carousel1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the
+                            card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card" style="min-width: 15rem;">
+                    <img src="./carousel1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the
+                            card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card" style="min-width: 15rem;">
+                    <img src="./carousel1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the
+                            card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <h2 class="mb-4">Sport</h2>
+            <div class="categories d-flex flex-nowrap overflow-auto gap-3 pb-4">
+                <div class="card" style="min-width: 15rem;">
+                    <img src="./carousel1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the
+                            card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card" style="min-width: 15rem;">
+                    <img src="./carousel1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the
+                            card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card" style="min-width: 15rem;">
+                    <img src="./carousel1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the
+                            card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card" style="min-width: 15rem;">
+                    <img src="./carousel1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the
+                            card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card" style="min-width: 15rem;">
+                    <img src="./carousel1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the
+                            card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card" style="min-width: 15rem;">
+                    <img src="./carousel1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the
+                            card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card" style="min-width: 15rem;">
+                    <img src="./carousel1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the
+                            card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card" style="min-width: 15rem;">
+                    <img src="./carousel1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the
+                            card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card" style="min-width: 15rem;">
+                    <img src="./carousel1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the
+                            card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card" style="min-width: 15rem;">
+                    <img src="./carousel1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the
+                            card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ----------ACCORDION---------- -->
+         <section class="accordion-section">
+
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#collapseOne" 
+      aria-expanded="false" 
+      aria-controls="collapseOne">
+        Cos’è questo sito?
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+       Questo sito ti permette di scoprire, cercare e esplorare film di ogni genere, dai grandi classici alle ultime uscite.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#collapseTwo" 
+      aria-expanded="false" 
+      aria-controls="collapseTwo">
+       Come funziona il sito?
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        Il sito permette di navigare tra i film, vedere i dettagli e le informazioni come poster, descrizione e valutazione, simulando un servizio di streaming moderno.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#collapseThree"
+      aria-expanded="false" aria-controls="collapseThree">
+        Devo registrarmi per usare il sito?
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        No, puoi utilizzare tutte le funzionalità principali senza registrazione.
+      </div>
+    </div>
+  </div>
+
+ <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#collapseThree"
+      aria-expanded="false" aria-controls="collapseThree">
+         I contenuti sono aggiornati frequentemente?
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+         Sì, i contenuti vengono aggiornati regolarmente per garantire che tu abbia accesso alle ultime uscite e alle informazioni più recenti.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#collapseThree"
+      aria-expanded="false" aria-controls="collapseThree">
+        Come posso trovare un film specifico?
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        Puoi navigare tra le categorie e le raccomandazioni.
+      </div>
+    </div>
+  </div>
+
+  
+  
+  </div>
+
+  
+
+</div>
+
+         </section>
+
+    </main>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<footer class="footer-stream py-5 bg-viola">
+    <div class="container text-center">
+        <!-- Logo Footer -->
+        <div class="footer-logo mb-4 ">
+            <img src="../assets/img/logo-min-remaster.png" alt="logo" width="100" class="opacity-75 >
+        </div>
+
+        <!-- Link di Servizio -->
+        <ul class="list-inline footer-links mb-3">
+            <li class="list-inline-item"><a href="#">Termini e Informativa sulla privacy</a></li>
+            <li class="list-inline-item"><a href="#">Inviaci un feedback</a></li>
+            <li class="list-inline-item"><a href="#">Aiuto</a></li>
+            <li class="list-inline-item"><a href="#">Informativa sui cookie</a></li>
+        </ul>
+
+        <!-- Copyright -->
+        <p class="footer-copy small">
+            © 1996-2024, StreamingVideo, Inc. o società affiliate
+        </p>
+
+        <!-- Social Icons (Opzionali) -->
+        <div class="footer-social mt-4">
+            <a href="#" class="mx-2"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="mx-2"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="mx-2"><i class="bi bi-instagram"></i></a>
+        </div>
+    </div>
+</footer>
+
+
+</html>

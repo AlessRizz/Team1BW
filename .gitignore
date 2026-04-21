@@ -8,7 +8,11 @@ jspm_packages/
 # =====================
 # Build & Output
 # =====================
+<<<<<<< HEAD
 dist/
+=======
+
+>>>>>>> feat/homepage
 build/
 out/
 .output/
