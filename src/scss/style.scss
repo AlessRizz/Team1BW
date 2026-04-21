@@ -1,11 +1,19 @@
+
+
+
+// percorso dove stanno i file .woff2
+$bootstrap-icons-font-src: url("../assets/fonts/bootstrap-icons.woff2") format("woff2"), 
+                           url("../assets/fonts/bootstrap-icons.woff") format("woff");
+
+// Importa il file SCSS delle icone (che userà la variabile sopra)
+@use "../../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
+
+
 @use "./variables" as *;
 
 
-
-
-@use "../../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
-
 @use "./fonts";
+
 
 @use "../../node_modules/bootstrap/scss/bootstrap.scss" with (
   $theme-colors: (
@@ -77,6 +85,27 @@ body {
   opacity: 1;
 }
 
+// avatar
+.profile-avatar {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  img {
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+  }
+
+  &:hover img {
+    border-color: #ffffff; // Bordo bianco all'hover
+    transform: scale(1.05); // Leggero zoom
+  }
+}
+
+// Rimuovi la freccina standard di Bootstrap se vuoi lo stile pulito
+// .dropdown-toggle::after {
+//    display: none !important;
+// }
+
 // REGOLE FOOTER
 .footer-stream {
   background-color: $scuro;
@@ -112,3 +141,4 @@ body {
     }
   }
 }
+
