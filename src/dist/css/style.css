@@ -15508,37 +15508,6 @@ textarea.form-control-lg {
   background-color: RGBA(var(--bs-grigio-chiaro-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
-.link-viola {
-  color: RGBA(var(--bs-viola-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(var(--bs-viola-rgb), var(--bs-link-underline-opacity, 1)) !important;
-}
-
-.text-bg-grigio-chiaro {
-  color: #000 !important;
-  background-color: RGBA(var(--bs-grigio-chiaro-rgb), var(--bs-bg-opacity, 1)) !important;
-}
-
-.link-scuro {
-  color: RGBA(var(--bs-scuro-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(var(--bs-scuro-rgb), var(--bs-link-underline-opacity, 1)) !important;
-}
-.link-scuro:hover, .link-scuro:focus {
-  color: RGBA(0, 4, 10, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(0, 4, 10, var(--bs-link-underline-opacity, 1)) !important;
-}
-
-.link-grigio-chiaro {
-  color: RGBA(var(--bs-grigio-chiaro-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(var(--bs-grigio-chiaro-rgb), var(--bs-link-underline-opacity, 1)) !important;
-}
-.link-grigio-chiaro:hover, .link-grigio-chiaro:focus {
-  color: RGBA(154, 172, 182, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(154, 172, 182, var(--bs-link-underline-opacity, 1)) !important;
-}
-
-.link-body-emphasis {
-  color: RGBA(var(--bs-emphasis-color-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(var(--bs-emphasis-color-rgb), var(--bs-link-underline-opacity, 1)) !important;
 .text-bg-viola-chiaro {
   color: #fff !important;
   background-color: RGBA(var(--bs-viola-chiaro-rgb), var(--bs-bg-opacity, 1)) !important;
