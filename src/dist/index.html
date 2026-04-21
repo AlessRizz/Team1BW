@@ -21,6 +21,10 @@
 
 
     <link rel="stylesheet" href="./css/style.css">
+    <!-- Percorso relativo da index.html verso node_modules -->
+
+<link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
 </head>
 
 <body>
@@ -29,7 +33,7 @@
             <div class="container-fluid">
                 <!-- Logo  -->
                 <a class="navbar-brand me-4" href="#">
-                    <img src="../assets/img/streaming_logo.png" alt="logo" width="110">
+                    <img src="../assets/img/streaming_logo.png" alt="logo FLUXR" width="110">
                 </a>
                 <!-- Hamburger Menu per Mobile -->
                 <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
@@ -40,9 +44,9 @@
                     <!-- Menu Principale (Sinistra) -->
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-bold">
                         <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link border-start-custom" href="#film">Film</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#serie">Serie TV</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#sport">Sport</a></li>
+                        <li class="nav-item"><a class="nav-link border-start-custom" href="#Film">Film</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Serie">Serie TV</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Sport">Sport</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button"
                                 data-bs-toggle="dropdown">Categorie</a>
@@ -66,14 +70,18 @@
                             <a href="#"
                                 class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
                                 data-bs-toggle="dropdown">
-                                <div class="profile-avatar me-2">
+                                <!-- <div class="profile-avatar me-2">
                                     <img src="" alt="User" width="32" class="rounded">
+                                </div> -->
+                                <div class="profile-avatar me-2 d-flex align-items-center justify-content-center bg-secondary rounded"
+                                    style="width: 32px; height: 32px;">
+                                    <i class="bi bi-person-fill text-white"></i>
                                 </div>
                                 <span class="d-none d-xl-inline small fw-bold">Il mio account</span>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark border-0">
                                 <li><a class="dropdown-item" href="#">Account e impostazioni</a></li>
-                                <li><a class="dropdown-item" href="#">Iscrizione Prime</a></li>
+                                <li><a class="dropdown-item" href="#">Iscrizione Fluxr</a></li>
                                 <li>
                                     <hr class="dropdown-divider bg-secondary">
                                 </li>
@@ -263,7 +271,7 @@
                 </div>
             </div>
         </div>
-        <div id="film" class="container-fluid">
+        <div id="Film" class="container-fluid">
             <h2 class="mb-4">Film d'azione</h2>
             <div class="categories d-flex flex-nowrap overflow-auto gap-3 pb-4">
                 <div class="card min-w-15">
@@ -378,7 +386,7 @@
                 </div>
             </div>
         </div>
-        <div id="sport" class="container-fluid">
+        <div id="Sport" class="container-fluid">
             <h2 class="mb-4">Sport</h2>
             <div class="categories d-flex flex-nowrap overflow-auto gap-3 pb-4">
                 <div class="card min-w-15">
@@ -565,11 +573,11 @@
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
 
-    <footer class="footer-stream py-5 bg-viola">
+    <footer class="footer-stream py-5 mt-5 bg-viola">
         <div class="container text-center">
             <!-- Logo Footer -->
             <div class="footer-logo mb-4 ">
-                <img src="../assets/img/streaming_logo.png" alt="logo" width="100" class="opacity-75">
+                <img src="../assets/img/streaming_logo.png" alt="Logo Fluxr" width="100" class="opacity-75">
             </div>
 
             <!-- Link di Servizio -->
@@ -582,10 +590,10 @@
 
             <!-- Copyright -->
             <p class="footer-copy small">
-                © 1996-2024, StreamingVideo, Inc. o società affiliate
+                © 2026, FLUXR Streaming Video, Inc. o società affiliate
             </p>
 
-            <!-- Social Icons (Opzionali) -->
+            <!-- Social Icons  -->
             <div class="footer-social mt-4">
                 <a href="#" class="mx-2"><i class="bi bi-facebook"></i></a>
                 <a href="#" class="mx-2"><i class="bi bi-twitter-x"></i></a>
