@@ -8367,6 +8367,10 @@ h3,
 }
 
 .navbar-nav .nav-link {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.95rem;
   color: #8197a4;
   padding-left: 15px;
   padding-right: 15px;
@@ -21029,7 +21033,6 @@ textarea.form-control-lg {
   }
 }
 body {
-  font-family: "LinkSans", sans-serif;
   background-color: #2B2233;
   color: #8197a4;
 }
