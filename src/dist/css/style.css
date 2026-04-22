@@ -8426,16 +8426,21 @@ h3,
   margin-top: 1rem;
 }
 .accordion-section .accordion {
-  --bs-accordion-border-color: rgba(#8197a4, 0.1);
-  --bs-accordion-bg: transparent;
-  --bs-accordion-btn-bg: transparent;
-  --bs-accordion-active-bg: transparent;
-  --bs-accordion-btn-color: #fff;
-  --bs-accordion-active-color: #fff;
-  --bs-accordion-btn-focus-box-shadow: none;
+  --bs-accordion-border-color: rgba(#8197a4, 0.5);
+  --bs-accordion-bg: $viola-chiaro;
+  --bs-accordion-color: $grigio-lt;
+  --bs-accordion-btn-bg: $viola-chiaro;
+  --bs-accordion-btn-color: $grigio-lt;
+  --bs-accordion-active-bg: rgba(57, 38, 77, 0.1);
+  --bs-accordion-active-color: #ffffff;
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(57, 38, 77, 0.25);
+  border-radius: 10px;
+  overflow: hidden;
 }
 .accordion-section .accordion .accordion-item {
-  background-color: transparent;
+  padding: 1rem 1rem;
+  background-color: #39264D;
+  border-radius: 10px;
   border-left: none;
   border-right: none;
 }
@@ -8453,7 +8458,7 @@ h3,
 .accordion-section .accordion .accordion-body {
   color: #8197a4;
   padding-bottom: 2rem;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .hero-section h1 {
