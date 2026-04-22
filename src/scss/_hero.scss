@@ -1,20 +1,44 @@
 @use "./variables" as *;
 
+.carousel,
+.carousel-inner,
+.carousel-item {
+  height: 100%;
+}
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  height: 60vh;
+}
+
 .hero-section {
   h1 {
     text-align: center;
     position: absolute;
     z-index: 3;
-    font-size: 32px;
+    font-size: 40px;
     top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%);
     color: rgba($bianco, 0.8);
+    transition: all .3s ease;
+   
+    text-shadow:
+      0 0 12px rgba($viola-chiaro, 0.45),
+      0 0 32px rgba($viola-scuro, 0.35),
+      0 4px 12px rgba($scuro, 0.9);
+    letter-spacing: 1.5px;
 
-   text-shadow:
-  0 2px 5px rgba($scuro, 0.8),
-  0 10px 30px rgba($viola-scuro, 0.6),
-  0 0 20px rgba($viola-chiaro, 0.25);
+    opacity: 0;
+    transform: translate(-50%, -60%) scale(0.95);
+    transition:
+      all 0.8s ease,
+      transform 0.8s ease;
+    animation: heroFade 1.2s ease-out forwards;
+    text-shadow:
+      0 2px 5px rgba($scuro, 0.8),
+      0 10px 30px rgba($viola-scuro, 0.6),
+      0 0 20px rgba($viola-chiaro, 0.25);
 
     @media (min-width: 768px) {
       white-space: nowrap;
@@ -22,36 +46,96 @@
       top: 26%;
     }
 
-     @media (min-width: 1200px) {
+    @media (min-width: 1200px) {
       font-size: 62px;
       top: 26%;
-       white-space: nowrap;
+      white-space: nowrap;
     }
   }
 }
 
-  .hero-img-text {
+@keyframes heroFade {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.hero-section:hover h1{
+  transform: translate(-50%, -50%) scale(1.03);
+  text-shadow:
+    0 0 18px rgba($bianco, 0.9),
+    0 0 32px rgba($viola-chiaro, 0.6),
+    0 4px 14px rgba($scuro, 1);
+}
+
+
+.hero-underline {
+  display: block;
+  width: 0;
+  height: 3px;
+  margin: 12px auto 0;
+  background: linear-gradient(90deg, $viola-chiaro, $viola-scuro);
+  animation: underlineGrow 1.4s ease-out forwards;
+}
+
+@keyframes underlineGrow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+.hero-img-text {
   position: absolute;
   z-index: 2;
-  top: 80%;
+  top: 70%;
   left: 5%;
+  color: rgba($bianco, 0.9);
   transform: translateY(-50%);
- color: rgba($bianco, 0.9);
+  color: rgba($bianco, 0.9);
   text-shadow:
-  0 2px 5px rgba($scuro, 0.8),
-  0 10px 30px rgba($viola-scuro, 0.6),
-  0 0 20px rgba($viola-chiaro, 0.25);
+    0 2px 5px rgba($scuro, 0.8),
+    0 10px 30px rgba($viola-scuro, 0.6),
+    0 0 20px rgba($viola-chiaro, 0.25);
+
+
+  transform: translate(-50%, -50%) translateY(20px);
+
+  text-shadow:
+    0 2px 5px rgba($scuro, 0.8),
+    0 10px 30px rgba($viola-scuro, 0.6),
+    0 0 20px rgba($viola-chiaro, 0.25);
+
+  opacity: 0;
+  transition: all 0.8s ease;
+ 
+}
+.carousel-item.active .hero-img-text {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.25s;
 }
 
-
-
-.hero-img-wrap {
-  position: relative;
+.hero-img-text p {
+  margin-bottom: 0;
+  font-size: 12px;
+}
+.hero-img-text h2 {
+  margin-bottom: 0;
+  font-weight: 600;
+   transition: all .3s ease;
 }
 
-.hero-img-wrap img {
-  height: 100vh;
-  object-fit: cover;
+.hero-img-text:hover h2 {
+  transform: translateY(-3px);
+  text-shadow: 0 0 10px rgba($bianco, 0.8);
 }
 
 
@@ -59,15 +143,46 @@
   content: "";
   position: absolute;
   inset: 0;
- background: linear-gradient(
-  to right,
-  rgba($scuro, 0.99) 0%,
-  rgba($scuro, 0.9) 20%,
-  rgba($bludark, 0.05) 50%,
-  rgba($bludark, 0.4) 80%,
-  rgba($bludark, 0.6) 100%
-);
+  background: linear-gradient(
+    to right,
+    rgba($scuro, 0.99) 0%,
+    rgba($scuro, 0.9) 20%,
+    rgba($bludark, 0.05) 50%,
+    rgba($bludark, 0.4) 80%,
+    rgba($bludark, 0.6) 100%
+  );
   z-index: 1;
 }
 
+.hero-img-wrap {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
 
+.hero-img-wrap img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.movie-meta {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+
+  background: rgba($rosa-logo, 0.25);
+  color: rgba($giallo, 0.95);
+  backdrop-filter: blur(4px);
+
+  border: 1px solid rgba($viola-chiaro, 0.4);
+
+  transition: transform .25s ease, background .25s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    background: rgba($viola-chiaro, 0.45);
+  }
+}
