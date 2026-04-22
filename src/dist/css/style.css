@@ -8551,6 +8551,12 @@ h3,
   opacity: 0;
   transition: all 0.8s ease;
 }
+@media (min-width: 768px) {
+  .hero-img-text {
+    top: 55%;
+    left: 10%;
+  }
+}
 
 .carousel-item.active .hero-img-text {
   opacity: 1;
@@ -8559,8 +8565,13 @@ h3,
 }
 
 .hero-img-text p {
-  margin-bottom: 0;
+  margin-bottom: 4px;
   font-size: 12px;
+}
+@media (min-width: 768px) {
+  .hero-img-text p {
+    font-size: 14px;
+  }
 }
 
 .hero-img-text h2 {
@@ -8601,11 +8612,18 @@ h3,
   font-weight: 600;
   letter-spacing: 0.5px;
   border-radius: 4px;
+  max-width: 90%;
+  white-space: normal;
   background: rgba(186, 20, 91, 0.25);
   color: rgba(195, 172, 82, 0.95);
   backdrop-filter: blur(4px);
   border: 1px solid rgba(94, 58, 126, 0.4);
   transition: transform 0.25s ease, background 0.25s ease;
+}
+@media (min-width: 768px) {
+  .movie-meta {
+    font-size: 14px;
+  }
 }
 .movie-meta:hover {
   transform: translateY(-2px);

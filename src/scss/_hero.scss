@@ -105,9 +105,8 @@
     0 10px 30px rgba($viola-scuro, 0.6),
     0 0 20px rgba($viola-chiaro, 0.25);
 
-
   transform: translate(-50%, -50%) translateY(20px);
-
+    
   text-shadow:
     0 2px 5px rgba($scuro, 0.8),
     0 10px 30px rgba($viola-scuro, 0.6),
@@ -116,6 +115,12 @@
   opacity: 0;
   transition: all 0.8s ease;
  
+ @media (min-width: 768px) {
+    top: 55%;
+    left: 10%;
+  }
+
+
 }
 .carousel-item.active .hero-img-text {
   opacity: 1;
@@ -124,9 +129,14 @@
 }
 
 .hero-img-text p {
-  margin-bottom: 0;
+  margin-bottom: 4px;
   font-size: 12px;
+  @media (min-width: 768px) {
+    font-size: 14px;
+  }
 }
+
+
 .hero-img-text h2 {
   margin-bottom: 0;
   font-weight: 600;
@@ -172,6 +182,8 @@
   font-weight: 600;
   letter-spacing: 0.5px;
   border-radius: 4px;
+  max-width: 90%;
+  white-space: normal; 
 
   background: rgba($rosa-logo, 0.25);
   color: rgba($giallo, 0.95);
@@ -181,6 +193,11 @@
 
   transition: transform .25s ease, background .25s ease;
 
+ @media (min-width: 768px) {
+    font-size: 14px;
+  }
+
+  
   &:hover {
     transform: translateY(-2px);
     background: rgba($viola-chiaro, 0.45);
