@@ -8343,6 +8343,28 @@
   font-style: normal;
   font-display: swap;
 }
+.accordion-section {
+  background-color: #00050d;
+}
+.accordion-section .accordion {
+  --bs-accordion-bg: #00050d;
+  --bs-accordion-color: #8197a4;
+  --bs-accordion-border-color: rgba(#8197a4, 0.1);
+  --bs-accordion-btn-bg: #00050d;
+  --bs-accordion-btn-color: #8197a4;
+  --bs-accordion-active-bg: rgba(57, 38, 77, 0.1);
+  --bs-accordion-active-color: #ffffff;
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(57, 38, 77, 0.25);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.accordion-section .accordion-button::after {
+  filter: invert(1) brightness(0.8);
+}
+.accordion-section .accordion-button:not(.collapsed)::after {
+  filter: invert(1) brightness(1);
+}
+
 /*!
  * Bootstrap  v5.3.8 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
