@@ -14,12 +14,10 @@
 }
 
 .categories {
-  overflow-x: auto !important;
-  overflow-y: visible !important;
-  padding-bottom: 250px !important;
-  margin-bottom: -250px;
-  padding-top: 80px !important;
-  margin-top: -80px;
+  padding-bottom: 400px !important;
+  margin-bottom: -400px;
+  padding-top: 120px !important;
+  margin-top: -120px;
 
   &::-webkit-scrollbar {
     display: none;
@@ -50,14 +48,16 @@
   position: relative;
   overflow: visible !important;
   transform-origin: center center;
-  animation: cardShrink 0.3s ease forwards;
+  @media (min-width: 768px) {
+    animation: cardShrink 0.3s ease forwards;
+  }
 
   .card-body {
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: $scuro;
+    background-color: $viola;
     color: $bianco;
     border-radius: 0 0 0.375rem 0.375rem;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
@@ -69,6 +69,11 @@
     padding-top: 0;
     padding-bottom: 0;
     transition: all 0.3s ease-in-out;
+
+    .mio-bottone {
+      background-color: $rosso-scuro;
+
+    }
   }
 
   &:first-child {
@@ -79,13 +84,15 @@
   }
 
   &:hover {
-    animation: cardExpand 0.3s ease forwards;
-    z-index: 100;
+    @media (min-width: 768px) {
+      animation: cardExpand 0.3s ease forwards;
+      z-index: 100;
 
-    .card-body {
-      opacity: 1;
-      max-height: 500px;
-      padding: 1rem;
+      .card-body {
+        opacity: 1;
+        max-height: 500px;
+        padding: 1rem;
+      }
     }
   }
 }

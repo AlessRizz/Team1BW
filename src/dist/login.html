@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-viola sticky-top px-lg-5">
+        <div class="container-fluid">
+            <!-- Logo  -->
+            <a class="navbar-brand me-4" href="./index.html">
+                <img src="../assets/img/streaming_logo.png" alt="logo FLUXR" width="110">
+            </a>
+            <!-- Hamburger Menu per Mobile -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <!-- Menu Principale (Sinistra) -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-bold">
+                    <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link border-start-custom" href="#Film">Film</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Serie">Serie TV</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Sport">Sport</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown">Categorie</a>
+                        <ul class="dropdown-menu dropdown-menu-dark border-0">
+                            <li><a class="dropdown-item" href="#">Azione e avventura</a></li>
+                            <li><a class="dropdown-item" href="#">Commedia</a></li>
+                            <li><a class="dropdown-item" href="#">Documentari</a></li>
+                            <li>
+                                <hr class="dropdown-divider bg-secondary">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Bambini</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- Area Utente e Ricerca (Destra) -->
+                <div class="d-flex align-items-center gap-4">
+                    <!-- Icona Cerca -->
+                    <a href="#" class="text-white"><i class="bi bi-search fs-5"></i></a>
+                    <!-- Menu Profilo -->
+                    <div class="dropdown">
+                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                            data-bs-toggle="dropdown">
+                            <!-- <div class="profile-avatar me-2">
+                                    <img src="" alt="User" width="32" class="rounded">
+                                </div> -->
+                            <div class="profile-avatar me-2 d-flex align-items-center justify-content-center bg-secondary rounded"
+                                style="width: 32px; height: 32px;">
+                                <i class="bi bi-person-fill text-white"></i>
+                            </div>
+                            <span class="d-none d-xl-inline small fw-bold">Il mio account</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark border-0">
+                            <li><a class="dropdown-item" href="login.html">Accedi</a></li>
+                            <li><a class="dropdown-item" href="#">Iscrizione Fluxr</a></li>
+                            <li>
+                                <hr class="dropdown-divider bg-secondary">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Esci</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="login-page d-flex align-items-center justify-content-center">
+
+        <div class="login-card p-4 p-md-5">
+
+            <div class="text-center mb-4">
+                <img src="../assets/img/streaming_logo.png" alt="Logo Fluxr" width="120">
+            </div>
+
+            <h1 class="h3 text-center mb-4">Accedi</h1>
+
+            <form id="loginForm" novalidate>
+                <div class="mb-3">
+                    <label class="form-label" for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" />
+                    <small class="text-danger" id="emailError"></small>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" />
+                    <small class="text-danger" id="passwordError"></small>
+                </div>
+
+                <!-- Honeypot -->
+                <div class="d-none">
+                    <label for="website">Lascia vuoto questo campo</label>
+                    <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn login-btn">Accedi</button>
+                </div>
+
+                <p class="mt-3 text-danger" id="formError"></p>
+                <p class="mt-3 text-success" id="formSuccess"></p>
+            </form>
+
+        </div>
+
+    </main>
+
+    <footer class="footer-stream py-5 mt-5 bg-viola">
+        <div class="container text-center">
+            <!-- Logo Footer -->
+            <div class="footer-logo mb-4 ">
+                <img src="../assets/img/streaming_logo.png" alt="Logo Fluxr" width="100" class="opacity-75">
+            </div>
+
+            <!-- Link di Servizio -->
+            <ul class="list-inline footer-links mb-3">
+                <li class="list-inline-item"><a href="#">Termini e Informativa sulla privacy</a></li>
+                <li class="list-inline-item"><a href="#">Inviaci un feedback</a></li>
+                <li class="list-inline-item"><a href="#">Aiuto</a></li>
+                <li class="list-inline-item"><a href="#">Informativa sui cookie</a></li>
+            </ul>
+
+            <!-- Copyright -->
+            <p class="footer-copy small">
+                © 2026, FLUXR Streaming Video, Inc. o società affiliate
+            </p>
+
+            <!-- Social Icons  -->
+            <div class="footer-social mt-4">
+                <a href="#" class="mx-2"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="mx-2"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" class="mx-2"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
