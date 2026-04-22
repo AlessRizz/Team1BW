@@ -104,7 +104,7 @@
     0 2px 5px rgba($scuro, 0.8),
     0 10px 30px rgba($viola-scuro, 0.6),
     0 0 20px rgba($viola-chiaro, 0.25);
-}
+
 
   transform: translate(-50%, -50%) translateY(20px);
 
@@ -165,8 +165,6 @@
   width: 100%;
   object-fit: cover;
 }
-
-
 .movie-meta {
   display: inline-block;
   padding: 4px 10px;
