@@ -1,0 +1,69 @@
+
+@use "./variables" as *;
+
+.login-page {
+  min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    $viola-scuro 0%,
+    $bludark 100%
+  );
+  color: $bianco;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background-color: $scuro;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba($grigio-lt, 0.2);
+}
+
+.login-card h1 {
+  color: $bianco;
+}
+
+.login-card .form-label {
+  color: $grigio-molto-chiaro;
+}
+
+.login-card .form-control {
+  background-color: $viola-scuro;
+  border: 1px solid $viola-chiaro;
+  color: $bianco;
+}
+
+.login-card .form-control::placeholder {
+  color: $grigio-lt;
+}
+
+.login-card .form-control:focus {
+  background-color: $viola-scuro;
+  border-color: $rosa-logo;
+  color: $bianco;
+  box-shadow: 0 0 0 0.2rem rgba($rosa-logo, 0.25);
+}
+
+.login-btn {
+  background-color: $rosa-logo;
+  border: none;
+  color: $bianco;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background-color: $rosa-logo-chiaro;
+}
+
+.login-link {
+  color: $grigio-lt;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.login-link:hover {
+  color: $bianco;
+  text-decoration: underline;
+}

@@ -1,11 +1,29 @@
-@use "./variables" as *;
 
 
 
+// percorso dove stanno i file .woff2
+$bootstrap-icons-font-src: url("../assets/fonts/bootstrap-icons.woff2") format("woff2"), 
+                           url("../assets/fonts/bootstrap-icons.woff") format("woff");
 
+// Importa il file SCSS delle icone (che userà la variabile sopra)
 @use "../../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
 
+
+@use "./variables" as *;
 @use "./fonts";
+
+
+@use "./navbar";
+@use "./accordion";
+
+@use "./hero";
+@use "./footer";
+
+
+
+
+
+@use "./login";
 
 @use "../../node_modules/bootstrap/scss/bootstrap.scss" with (
   $theme-colors: (
@@ -13,41 +31,49 @@
 
     "scuro": $scuro,
     "grigio-chiaro": $grigio-lt,
+
+
+
+"viola-chiaro": $viola-chiaro,
+"viola-scuro": $viola-scuro,
+"bludark": $bludark,
+
+
+
+"rosa-logo": $rosa-logo,
+"rosa-logo-chiaro": $rosa-logo-chiaro,
+
+"bianco": $bianco, 
+
+"grigio-molto-chiaro": $grigio-molto-chiaro, 
+
+"rosso-scuro": $rosso-scuro,  
+
+"giallo": $giallo,
+"giallo-chiaro": $giallo-chiaro,
+
+
+"verde": $verde,
+"verde-chiaro": $verde-chiaro,
+
+
   )
+
+
+
 );
 
-// REGOLE FOOTER
-.footer-stream {
-  background-color: $scuro;
-  border-top: 1px solid rgba($grigio-lt, 0.2);
-  color: $grigio-lt;
 
-  .footer-links {
-    a {
-      color: $grigio-lt;
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: color 0.2s ease;
+@use "./cards";
 
-      &:hover {
-        color: #fff;
-        text-decoration: underline;
-      }
-    }
-  }
-
-  .footer-copy {
-    font-size: 0.8rem;
-    color: rgba($grigio-lt, 0.7);
-  }
-
-  .footer-social i {
-    color: $grigio-lt;
-    font-size: 1.2rem;
-    transition: color 0.2s;
-
-    &:hover {
-      color: $viola;
-    }
-  }
+body {
+  
+  background-color: $viola-scuro;
+  color: $grigio-molto-chiaro;
 }
+
+
+
+
+
+
