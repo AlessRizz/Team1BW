@@ -20890,10 +20890,27 @@ textarea.form-control-lg {
   scrollbar-width: none;
 }
 
+@keyframes cardExpand {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+@keyframes cardShrink {
+  0% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .card {
-  transition: transform 0.3s ease;
   position: relative;
   overflow: visible !important;
+  transform-origin: center center;
+  animation: cardShrink 0.3s ease forwards;
 }
 .card .card-body {
   position: absolute;
@@ -20912,8 +20929,14 @@ textarea.form-control-lg {
   padding-bottom: 0;
   transition: all 0.3s ease-in-out;
 }
+.card:first-child {
+  transform-origin: left center;
+}
+.card:last-child {
+  transform-origin: right center;
+}
 .card:hover {
-  transform: scale(1.5);
+  animation: cardExpand 0.3s ease forwards;
   z-index: 100;
 }
 .card:hover .card-body {
