@@ -35,6 +35,10 @@
       all 0.8s ease,
       transform 0.8s ease;
     animation: heroFade 1.2s ease-out forwards;
+    text-shadow:
+      0 2px 5px rgba($scuro, 0.8),
+      0 10px 30px rgba($viola-scuro, 0.6),
+      0 0 20px rgba($viola-chiaro, 0.25);
 
     @media (min-width: 768px) {
       white-space: nowrap;
@@ -94,6 +98,13 @@
   top: 70%;
   left: 5%;
   color: rgba($bianco, 0.9);
+  transform: translateY(-50%);
+  color: rgba($bianco, 0.9);
+  text-shadow:
+    0 2px 5px rgba($scuro, 0.8),
+    0 10px 30px rgba($viola-scuro, 0.6),
+    0 0 20px rgba($viola-chiaro, 0.25);
+}
 
   transform: translate(-50%, -50%) translateY(20px);
 

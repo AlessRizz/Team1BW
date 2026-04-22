@@ -1,4 +1,9 @@
+
+@use "./variables" as *;
+
+/*
 @font-face {
+
   font-family: "LinkSans";
   src:
     url("../assets/fonts/aFTR7PB1QTsUX8KYvrGyEYOtbYf-Vlg.woff2") format("woff2"),
@@ -10,4 +15,23 @@
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
+}
+*/
+
+@import url('https://googleapis.com');
+
+$font-main: 'Kanit', sans-serif;
+
+// Applicazione globale
+body {
+  font-family: $font-main;
+  -webkit-font-smoothing: antialiased; // Rende i caratteri più nitidi
+}
+
+h1,
+h2,
+h3,
+.navbar-brand {
+  font-weight: 800; // Titoli belli spessi stile cinema
+  letter-spacing: -0.02em; // Riduce leggermente lo spazio tra le lettere
 }
