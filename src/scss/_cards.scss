@@ -50,7 +50,9 @@
   position: relative;
   overflow: visible !important;
   transform-origin: center center;
-  animation: cardShrink 0.3s ease forwards;
+  @media (min-width: 768px) {
+    animation: cardShrink 0.3s ease forwards;
+  }
 
   .card-body {
     position: absolute;
@@ -79,13 +81,15 @@
   }
 
   &:hover {
-    animation: cardExpand 0.3s ease forwards;
-    z-index: 100;
+    @media (min-width: 768px) {
+      animation: cardExpand 0.3s ease forwards;
+      z-index: 100;
 
-    .card-body {
-      opacity: 1;
-      max-height: 500px;
-      padding: 1rem;
+      .card-body {
+        opacity: 1;
+        max-height: 500px;
+        padding: 1rem;
+      }
     }
   }
 }
