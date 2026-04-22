@@ -11,10 +11,10 @@
     transform: translate(-50%, -50%);
     color: rgba($bianco, 0.8);
 
-   text-shadow:
-  0 2px 5px rgba($scuro, 0.8),
-  0 10px 30px rgba($viola-scuro, 0.6),
-  0 0 20px rgba($viola-chiaro, 0.25);
+    text-shadow:
+      0 2px 5px rgba($scuro, 0.8),
+      0 10px 30px rgba($viola-scuro, 0.6),
+      0 0 20px rgba($viola-chiaro, 0.25);
 
     @media (min-width: 768px) {
       white-space: nowrap;
@@ -22,25 +22,25 @@
       top: 26%;
     }
 
-     @media (min-width: 1200px) {
+    @media (min-width: 1200px) {
       font-size: 62px;
       top: 26%;
-       white-space: nowrap;
+      white-space: nowrap;
     }
   }
 }
 
-  .hero-img-text {
+.hero-img-text {
   position: absolute;
   z-index: 2;
   top: 80%;
   left: 5%;
   transform: translateY(-50%);
- color: rgba($bianco, 0.9);
+  color: rgba($bianco, 0.9);
   text-shadow:
-  0 2px 5px rgba($scuro, 0.8),
-  0 10px 30px rgba($viola-scuro, 0.6),
-  0 0 20px rgba($viola-chiaro, 0.25);
+    0 2px 5px rgba($scuro, 0.8),
+    0 10px 30px rgba($viola-scuro, 0.6),
+    0 0 20px rgba($viola-chiaro, 0.25);
 }
 
 
@@ -59,15 +59,11 @@
   content: "";
   position: absolute;
   inset: 0;
- background: linear-gradient(
-  to right,
-  rgba($scuro, 0.99) 0%,
-  rgba($scuro, 0.9) 20%,
-  rgba($bludark, 0.05) 50%,
-  rgba($bludark, 0.4) 80%,
-  rgba($bludark, 0.6) 100%
-);
+  background: linear-gradient(to right,
+      rgba($scuro, 0.99) 0%,
+      rgba($scuro, 0.9) 20%,
+      rgba($bludark, 0.05) 50%,
+      rgba($bludark, 0.4) 80%,
+      rgba($bludark, 0.6) 100%);
   z-index: 1;
 }
-
-
