@@ -20951,6 +20951,13 @@ body {
   padding-bottom: 200px !important;
   margin-bottom: -200px;
 }
+.categories::-webkit-scrollbar {
+  display: none;
+}
+.categories {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 
 .card {
   transition: transform 0.3s ease;

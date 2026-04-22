@@ -156,6 +156,12 @@ body {
   overflow-y: hidden !important;
   padding-bottom: 200px !important;
   margin-bottom: -200px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .card {
