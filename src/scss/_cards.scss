@@ -9,7 +9,6 @@
   object-fit: cover;
 }
 
-// Il container-fluid che avvolge le categories deve permettere l'overflow
 .container-fluid {
   overflow: visible !important;
 }
@@ -29,14 +28,33 @@
   scrollbar-width: none;
 }
 
+@keyframes cardExpand {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes cardShrink {
+  0% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .card {
-  transition: transform 0.3s ease;
   position: relative;
   overflow: visible !important;
-  
+  transform-origin: center center;
+  animation: cardShrink 0.3s ease forwards;
+
   .card-body {
     position: absolute;
-    top: 100%; // Esce sotto l'immagine
+    top: 100%;
     left: 0;
     width: 100%;
     background-color: $scuro;
@@ -45,7 +63,6 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     z-index: 101;
 
-    // Stato nascosto di default
     opacity: 0;
     max-height: 0;
     overflow: hidden;
@@ -54,8 +71,15 @@
     transition: all 0.3s ease-in-out;
   }
 
+  &:first-child {
+    transform-origin: left center;
+  }
+  &:last-child {
+    transform-origin: right center;
+  }
+
   &:hover {
-    transform: scale(1.5);
+    animation: cardExpand 0.3s ease forwards;
     z-index: 100;
 
     .card-body {
