@@ -8413,24 +8413,47 @@ h3,
 
 .accordion-section {
   background-color: #2B2233;
+  border: 1px solid rgba(129, 151, 164, 0.2);
+  border-radius: 20px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.accordion-section .accordion-title {
+  color: #fff;
+  font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  margin-top: 1rem;
 }
 .accordion-section .accordion {
-  --bs-accordion-bg: $viola-chiaro;
-  --bs-accordion-color: $grigio-lt;
   --bs-accordion-border-color: rgba(#8197a4, 0.1);
-  --bs-accordion-btn-bg: $viola-chiaro;
-  --bs-accordion-btn-color: $grigio-lt;
-  --bs-accordion-active-bg: rgba(57, 38, 77, 0.1);
-  --bs-accordion-active-color: #ffffff;
-  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(57, 38, 77, 0.25);
-  border-radius: 10px;
-  overflow: hidden;
+  --bs-accordion-bg: transparent;
+  --bs-accordion-btn-bg: transparent;
+  --bs-accordion-active-bg: transparent;
+  --bs-accordion-btn-color: #fff;
+  --bs-accordion-active-color: #fff;
+  --bs-accordion-btn-focus-box-shadow: none;
 }
-.accordion-section .accordion-button::after {
-  filter: invert(1) brightness(0.8);
+.accordion-section .accordion .accordion-item {
+  background-color: transparent;
+  border-left: none;
+  border-right: none;
 }
-.accordion-section .accordion-button:not(.collapsed)::after {
-  filter: invert(1) brightness(1);
+.accordion-section .accordion .accordion-item:last-child {
+  border-bottom: none;
+}
+.accordion-section .accordion .accordion-button {
+  padding: 1.5rem 1rem;
+  font-size: 1.1rem;
+}
+.accordion-section .accordion .accordion-button::after {
+  filter: invert(1);
+  transition: transform 0.3s ease;
+}
+.accordion-section .accordion .accordion-body {
+  color: #8197a4;
+  padding-bottom: 2rem;
+  line-height: 1.6;
 }
 
 .hero-section h1 {
