@@ -20989,17 +20989,4 @@ body {
   padding: 1rem;
 }
 
-@media (min-width: 992px) {
-  main {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-}
-@media (min-width: 1400px) {
-  main {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
-}
-
 /*# sourceMappingURL=style.css.map */
