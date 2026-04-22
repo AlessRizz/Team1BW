@@ -82,30 +82,32 @@
 
     <h1 class="h3 text-center mb-4">Accedi</h1>
 
-    <form>
-      <div class="mb-3">
-        <label class="form-label">Email</label>
-        <input type="email" class="form-control" placeholder="Inserisci email">
-      </div>
+    <form id="loginForm" novalidate>
+  <div class="mb-3">
+    <label class="form-label" for="email">Email</label>
+    <input type="email" class="form-control" id="email" name="email" />
+    <small class="text-danger" id="emailError"></small>
+  </div>
 
-      <div class="mb-3">
-        <label class="form-label">Password</label>
-        <input type="password" class="form-control" placeholder="Inserisci password">
-      </div>
+  <div class="mb-3">
+    <label class="form-label" for="password">Password</label>
+    <input type="password" class="form-control" id="password" name="password" />
+    <small class="text-danger" id="passwordError"></small>
+  </div>
 
-      <div class="d-grid mb-3">
-        <button class="btn login-btn">Accedi</button>
-      </div>
+  <!-- Honeypot -->
+  <div class="d-none">
+    <label for="website">Lascia vuoto questo campo</label>
+    <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+  </div>
 
-      <div class="text-center small">
-        <a href="#" class="login-link">Password dimenticata?</a>
-      </div>
+  <div class="d-grid">
+    <button type="submit" class="btn login-btn">Accedi</button>
+  </div>
 
-      <p class="text-center mt-4 small">
-        Non hai un account?
-        <a href="#" class="login-link">Registrati</a>
-      </p>
-    </form>
+  <p class="mt-3 text-danger" id="formError"></p>
+  <p class="mt-3 text-success" id="formSuccess"></p>
+</form>
 
   </div>
 
@@ -139,6 +141,6 @@
             </div>
         </div>
     </footer>
-
+<script src="script.js"></script>
 </body>
 </html>
