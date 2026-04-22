@@ -22,10 +22,13 @@ $font-main: 'Kanit', sans-serif;
 // Applicazione globale
 body {
   font-family: $font-main;
-  -webkit-font-smoothing: antialiased; // Rende i caratteri più nitidi su Mac/Chrome
+  -webkit-font-smoothing: antialiased; // Rende i caratteri più nitidi
 }
 
-h1, h2, h3, .navbar-brand {
+h1,
+h2,
+h3,
+.navbar-brand {
   font-weight: 800; // Titoli belli spessi stile cinema
-  letter-spacing: -0.02em; // Riduce leggermente lo spazio tra le lettere per un look più "pro"
+  letter-spacing: -0.02em; // Riduce leggermente lo spazio tra le lettere
 }

@@ -11,13 +11,12 @@ $bootstrap-icons-font-src: url("../assets/fonts/bootstrap-icons.woff2") format("
 
 @use "./variables" as *;
 
-
 @use "./fonts";
-
+@use "./navbar";
 @use "./accordion";
 
-
 @use "./hero";
+@use "./footer";
 
 @use "../../node_modules/bootstrap/scss/bootstrap.scss" with (
   $theme-colors: (
@@ -60,87 +59,10 @@ body {
   color: $grigio-lt;
 }
 
-// REGOLE NAVBAR
-.navbar-nav .nav-link {
-  color: $grigio-lt;
-  padding-left: 15px;
-  padding-right: 15px;
-  transition: all 0.2s ease-in-out;
-}
-
-.navbar-nav .nav-link:hover, 
-.navbar-nav .nav-link.active {
-  color: #ffffff;
-}
-
-/* Sfondo dropdown e separatori */
-.dropdown-menu-dark {
-  background-color: $bludark;
-}
-
-/* Effetto hover sull'avatar */
-.profile-avatar:hover {
-  outline: 2px solid #ffffff;
-  border-radius: 4px;
-}
-
-/* Icona ricerca trasparente */
-.hover-opacity-100:hover {
-  opacity: 1;
-}
-
-// avatar
-.profile-avatar {
-  cursor: pointer;
-  transition: transform 0.2s ease;
-
-  img {
-    border: 2px solid transparent;
-    transition: all 0.2s ease;
-  }
-
-  &:hover img {
-    border-color: #ffffff; // Bordo bianco all'hover
-    transform: scale(1.05); // Leggero zoom
-  }
-}
 
 
-// REGOLE FOOTER
-.footer-stream {
-  background-color: $scuro;
-  border-top: 1px solid rgba($grigio-lt, 0.2);
-  color: $grigio-lt;
 
-  .footer-links {
-    a {
-      color: $grigio-lt;
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: color 0.2s ease;
 
-      &:hover {
-        color: #fff;
-        text-decoration: underline;
-      }
-    }
-  }
-
-  .footer-copy {
-    font-size: 0.8rem;
-    color: #fff;
-  }
-
-  .footer-social i {
-    color: $grigio-lt;
-    font-size: 1.2rem;
-    transition: color 0.2s;
-
-    &:hover {
-      color: $viola;
-    }
-  }
-}
 
 .min-w-15 {
   min-width: 15rem;
