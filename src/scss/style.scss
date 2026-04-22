@@ -17,6 +17,8 @@ $bootstrap-icons-font-src: url("../assets/fonts/bootstrap-icons.woff2") format("
 @use "./accordion";
 
 
+@use "./hero";
+
 @use "../../node_modules/bootstrap/scss/bootstrap.scss" with (
   $theme-colors: (
     "viola": $viola,
@@ -154,6 +156,12 @@ body {
   overflow-y: hidden !important;
   padding-bottom: 200px !important;
   margin-bottom: -200px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .card {
