@@ -21048,10 +21048,10 @@ textarea.form-control-lg {
 .categories {
   overflow-x: auto !important;
   overflow-y: visible !important;
-  padding-bottom: 250px !important;
-  margin-bottom: -250px;
-  padding-top: 80px !important;
-  margin-top: -80px;
+  padding-bottom: 400px !important;
+  margin-bottom: -400px;
+  padding-top: 120px !important;
+  margin-top: -120px;
 }
 .categories::-webkit-scrollbar {
   display: none;
