@@ -8383,6 +8383,8 @@ h1, h2, h3, .navbar-brand {
 }
 .accordion-section .accordion-button:not(.collapsed)::after {
   filter: invert(1) brightness(1);
+}
+
 .hero-section h1 {
   text-align: center;
   position: absolute;
