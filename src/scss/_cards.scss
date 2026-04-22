@@ -1,0 +1,91 @@
+@use "./variables" as *;
+
+.min-w-15 {
+  min-width: 15rem;
+}
+
+.card-img-top {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.container-fluid {
+  overflow: visible !important;
+}
+
+.categories {
+  overflow-x: auto !important;
+  overflow-y: visible !important;
+  padding-bottom: 250px !important;
+  margin-bottom: -250px;
+  padding-top: 80px !important;
+  margin-top: -80px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes cardExpand {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes cardShrink {
+  0% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.card {
+  position: relative;
+  overflow: visible !important;
+  transform-origin: center center;
+  animation: cardShrink 0.3s ease forwards;
+
+  .card-body {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: $scuro;
+    color: $bianco;
+    border-radius: 0 0 0.375rem 0.375rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    z-index: 101;
+
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:first-child {
+    transform-origin: left center;
+  }
+  &:last-child {
+    transform-origin: right center;
+  }
+
+  &:hover {
+    animation: cardExpand 0.3s ease forwards;
+    z-index: 100;
+
+    .card-body {
+      opacity: 1;
+      max-height: 500px;
+      padding: 1rem;
+    }
+  }
+}
