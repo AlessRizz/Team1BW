@@ -1,0 +1,29 @@
+@use "./variables" as *;
+
+.accordion-section {
+    background-color: $viola-scuro;
+
+    .accordion {
+        // Manteniamo solo la logica dei colori e bordi
+        --bs-accordion-bg: $viola-chiaro;
+        --bs-accordion-color: $grigio-lt;
+        --bs-accordion-border-color: rgba(#{$grigio-lt}, 0.1);
+        --bs-accordion-btn-bg: $viola-chiaro;
+        --bs-accordion-btn-color: $grigio-lt;
+        --bs-accordion-active-bg: #{rgba($viola, 0.1)};
+        --bs-accordion-active-color: #ffffff;
+        --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem #{rgba($viola, 0.25)};
+        
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .accordion-button {
+        &::after {
+            filter: invert(1) brightness(0.8);
+        }
+        &:not(.collapsed)::after {
+            filter: invert(1) brightness(1);
+        }
+    }
+}
