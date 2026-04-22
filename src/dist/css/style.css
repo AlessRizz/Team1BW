@@ -8344,18 +8344,18 @@
   font-display: swap;
 }
 .accordion-section {
-  background-color: #00050d;
+  background-color: #2B2233;
 }
 .accordion-section .accordion {
-  --bs-accordion-bg: #00050d;
-  --bs-accordion-color: #8197a4;
+  --bs-accordion-bg: $viola-chiaro;
+  --bs-accordion-color: $grigio-lt;
   --bs-accordion-border-color: rgba(#8197a4, 0.1);
-  --bs-accordion-btn-bg: #00050d;
-  --bs-accordion-btn-color: #8197a4;
+  --bs-accordion-btn-bg: $viola-chiaro;
+  --bs-accordion-btn-color: $grigio-lt;
   --bs-accordion-active-bg: rgba(57, 38, 77, 0.1);
   --bs-accordion-active-color: #ffffff;
   --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(57, 38, 77, 0.25);
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
 }
 .accordion-section .accordion-button::after {
