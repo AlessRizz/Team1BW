@@ -10,13 +10,15 @@ $bootstrap-icons-font-src: url("../assets/fonts/bootstrap-icons.woff2") format("
 
 
 @use "./variables" as *;
-
 @use "./fonts";
+
+
 @use "./navbar";
 @use "./accordion";
 
 @use "./hero";
 @use "./footer";
+
 
 @use "../../node_modules/bootstrap/scss/bootstrap.scss" with (
   $theme-colors: (
@@ -119,4 +121,8 @@ body {
       padding: 1rem;
     }
   }
+}
+
+:root {
+  --bs-body-font-family: 'Kanit', sans-serif;
 }

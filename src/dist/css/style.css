@@ -21090,4 +21090,8 @@ body {
   padding: 1rem;
 }
 
+:root {
+  --bs-body-font-family: 'Kanit', sans-serif;
+}
+
 /*# sourceMappingURL=style.css.map */
