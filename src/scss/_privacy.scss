@@ -1,15 +1,15 @@
 @use "./variables" as *;
 
 
-.body-privacy {
+.main-privacy {
     padding: 60px;
 }
-.body-privacy h2 {
+.main-privacy h2 {
     color: $giallo;
     margin-bottom: 40px;
 }
 
-.header-privacy a, .body-privacy a, .privacy-btn {
+.header-privacy a, .main-privacy a, .privacy-btn {
     display: inline-block;
     color: $rosa-logo;
     text-decoration: none;
@@ -30,4 +30,8 @@
     padding: 40px;
  background-color: $viola;
 
+}
+
+.form-control.bg-grigio-lt {
+  background-color: $grigio-lt;
 }
