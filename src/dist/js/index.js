@@ -1,5 +1,5 @@
 
-import { catalog } from "./player/catalog.js";
+import { catalog } from "../player/catalog.js";
 
 const SECTIONS = [
   { containerId: "cards-serie", catalogKey: "serie" },
