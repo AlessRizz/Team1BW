@@ -21314,6 +21314,10 @@ h3,
 }
 .card .card-body .mio-bottone {
   background-color: #6E1C28;
+  color: #a6b6c6;
+}
+.card .card-body .mio-bottone:hover {
+  color: #fff;
 }
 .card:first-child {
   transform-origin: left center;
