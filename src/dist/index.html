@@ -1,70 +1,61 @@
 <!doctype html>
 <html lang="it">
+
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="icon" type="image/png" href="../assets/favicon.ico" />
+
     <title>Streaming Video</title>
-    <meta name="description" content="Piattaforma di streaming di film con contenuti in evidenza, trailer e categorie. Scopri nuovi film, guarda trailer e trova i tuoi preferiti."/>
+
+    <meta name="description"
+        content="Piattaforma di streaming di film con contenuti in evidenza, trailer e categorie. Scopri nuovi film, guarda trailer e trova i tuoi preferiti." />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="team1BW" />
-    <meta property="og:title" content="Streaming Film | Scopri, Guarda e Esplora"/>
-    <meta property="og:description"content="Esplora una vasta selezione di film, guarda trailer e scopri contenuti in evidenza. Progetto sviluppato dal team di sviluppatori team1BW."/>
+
+    <meta property="og:title" content="Streaming Film | Scopri, Guarda e Esplora" />
+    <meta property="og:description"
+        content="Esplora una vasta selezione di film, guarda trailer e scopri contenuti in evidenza. Progetto sviluppato dal team di sviluppatori team1BW." />
     <meta property="og:type" content="website" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css"/>
+
+
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Percorso relativo da index.html verso node_modules -->
+
+<link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
   </head>
 
   <body>
     <header>
-      <nav
-        class="navbar navbar-expand-lg navbar-dark bg-viola sticky-top px-lg-5"
-      >
+        <nav class="navbar navbar-expand-lg navbar-dark bg-viola sticky-top px-lg-5">
         <div class="container-fluid">
           <!-- Logo  -->
           <a class="navbar-brand me-4" href="#">
-            <img src="../assets/img/streaming_logo.png" alt="logo FLUXR" width="110"/>
+                    <img src="../assets/img/streaming_logo.png" alt="logo FLUXR" width="110">
           </a>
           <!-- Hamburger Menu per Mobile -->
-          <button
-            class="navbar-toggler border-0"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#Navbar"
-          >
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#Navbar">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="Navbar">
             <!-- Menu Principale (Sinistra) -->
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-bold">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link border-start-custom" href="#Film">Film</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#Serie">Serie TV</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#Sport">Sport</a>
-              </li>
+                        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link border-start-custom" href="#Film">Film</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Serie">Serie TV</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Sport">Sport</a></li>
               <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  >Categorie</a
-                >
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown">Categorie</a>
                 <ul class="dropdown-menu dropdown-menu-dark border-0">
-                  <li>
-                    <a class="dropdown-item" href="#">Azione e avventura</a>
-                  </li>
+                                <li><a class="dropdown-item" href="#">Azione e avventura</a></li>
                   <li><a class="dropdown-item" href="#">Commedia</a></li>
                   <li><a class="dropdown-item" href="#">Documentari</a></li>
                   <li>
-                    <hr class="dropdown-divider bg-secondary" />
+                                    <hr class="dropdown-divider bg-secondary">
                   </li>
                   <li><a class="dropdown-item" href="#">Bambini</a></li>
                 </ul>
@@ -73,40 +64,26 @@
             <!-- Area Utente e Ricerca (Destra) -->
             <div class="d-flex align-items-center gap-4">
               <!-- Icona Cerca -->
-              <a href="#" class="text-white"
-                ><i class="bi bi-search fs-5"></i
-              ></a>
+                        <a href="#" class="text-white"><i class="bi bi-search fs-5"></i></a>
               <!-- Menu Profilo -->
               <div class="dropdown">
-                <a
-                  href="#"
+                            <a href="#"
                   class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                >
+                                data-bs-toggle="dropdown">
                   <!-- <div class="profile-avatar me-2">
                                     <img src="" alt="User" width="32" class="rounded">
                                 </div> -->
-                  <div
-                    class="profile-avatar me-2 d-flex align-items-center justify-content-center bg-secondary rounded"
-                    style="width: 32px; height: 32px"
-                  >
+                                <div class="profile-avatar me-2 d-flex align-items-center justify-content-center bg-secondary rounded"
+                                    style="width: 32px; height: 32px;">
                     <i class="bi bi-person-fill text-white"></i>
                   </div>
-                  <span class="d-none d-xl-inline small fw-bold"
-                    >Il mio account</span
-                  >
+                                <span class="d-none d-xl-inline small fw-bold">Il mio account</span>
                 </a>
-                <ul
-                  class="dropdown-menu dropdown-menu-end dropdown-menu-dark border-0"
-                >
+                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark border-0">
+                                <li><a class="dropdown-item" href="#">Account e impostazioni</a></li>
+                                <li><a class="dropdown-item" href="#">Iscrizione Fluxr</a></li>
                   <li>
-                    <a class="dropdown-item" href="#">Account e impostazioni</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">Iscrizione Fluxr</a>
-                  </li>
-                  <li>
-                    <hr class="dropdown-divider bg-secondary" />
+                                    <hr class="dropdown-divider bg-secondary">
                   </li>
                   <li><a class="dropdown-item" href="#">Esci</a></li>
                 </ul>
@@ -118,21 +95,13 @@
       <section class="hero-section">
         <h1>Guarda ciò che ami, quando vuoi</h1>
         <!-- ---------Carousel-------- -->
-        <div
-          id="carouselExampleRide"
-          class="carousel slide"
-          data-bs-ride="carousel"
-          data-bs-interval="3000"
-          data-bs-pause="false"
-        >
+            <div id="carouselExampleRide" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000"
+                data-bs-pause="false">
+
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div class="hero-img-wrap">
-                <img
-                  src="../assets/img/hero/avatar.webp"
-                  class="d-block w-100"
-                  alt="..."
-                />
+                            <img src="../assets/img/hero/avatar.webp" class="d-block w-100" alt="...">
                 <div class="hero-img-text">
                   <h2>Avatar</h2>
                   <p>Un'avventura epica nel mondo di Pandora.</p>
@@ -142,11 +111,7 @@
 
             <div class="carousel-item">
               <div class="hero-img-wrap">
-                <img
-                  src="../assets/img/hero/interstellar.webp"
-                  class="d-block w-100"
-                  alt="..."
-                />
+                            <img src="../assets/img/hero/interstellar.webp" class="d-block w-100" alt="...">
 
                 <div class="hero-img-text">
                   <h2>Interstellar</h2>
@@ -157,11 +122,7 @@
 
             <div class="carousel-item">
               <div class="hero-img-wrap">
-                <img
-                  src="../assets/img/hero/maleficent.webp"
-                  class="d-block w-100"
-                  alt="..."
-                />
+                            <img src="../assets/img/hero/maleficent.webp" class="d-block w-100" alt="...">
 
                 <div class="hero-img-text">
                   <h2>Maleficent</h2>
@@ -172,11 +133,7 @@
 
             <div class="carousel-item">
               <div class="hero-img-wrap">
-                <img
-                  src="../assets/img/hero/titanic.webp"
-                  class="d-block w-100"
-                  alt="..."
-                />
+                            <img src="../assets/img/hero/titanik.webp" class="d-block w-100" alt="...">
 
                 <div class="hero-img-text">
                   <h2>Titanic</h2>
@@ -186,11 +143,7 @@
             </div>
             <div class="carousel-item">
               <div class="hero-img-wrap">
-                <img
-                  src="../assets/img/hero/williwonka.webp"
-                  class="d-block w-100"
-                  alt="..."
-                />
+                            <img src="../assets/img/hero/wonka.webp" class="d-block w-100" alt="...">
 
                 <div class="hero-img-text">
                   <h2>Wonka</h2>
@@ -199,6 +152,7 @@
               </div>
             </div>
           </div>
+
         </div>
       </section>
     </header>
@@ -234,126 +188,74 @@
 
       <!-- ----------ACCORDION---------- -->
       <section class="accordion-section">
+
         <div class="accordion" id="accordionExample">
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseOne"
-                aria-expanded="false"
-                aria-controls="collapseOne"
-              >
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                 Cos’è questo sito?
               </button>
             </h2>
-            <div
-              id="collapseOne"
-              class="accordion-collapse collapse"
-              data-bs-parent="#accordionExample"
-            >
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                Questo sito ti permette di scoprire, cercare e esplorare film di
-                ogni genere, dai grandi classici alle ultime uscite.
+                            Questo sito ti permette di scoprire, cercare e esplorare film di ogni genere, dai grandi
+                            classici alle ultime uscite.
               </div>
             </div>
           </div>
 
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo"
-                aria-expanded="false"
-                aria-controls="collapseTwo"
-              >
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                 Come funziona il sito?
               </button>
             </h2>
-            <div
-              id="collapseTwo"
-              class="accordion-collapse collapse"
-              data-bs-parent="#accordionExample"
-            >
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                Il sito permette di navigare tra i film, vedere i dettagli e le
-                informazioni come poster, descrizione e valutazione, simulando
-                un servizio di streaming moderno.
+                            Il sito permette di navigare tra i film, vedere i dettagli e le informazioni come poster,
+                            descrizione e valutazione, simulando un servizio di streaming moderno.
               </div>
             </div>
           </div>
 
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseThree"
-                aria-expanded="false"
-                aria-controls="collapseThree"
-              >
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                 Devo registrarmi per usare il sito?
               </button>
             </h2>
-            <div
-              id="collapseThree"
-              class="accordion-collapse collapse"
-              data-bs-parent="#accordionExample"
-            >
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                No, puoi utilizzare tutte le funzionalità principali senza
-                registrazione.
+                            No, puoi utilizzare tutte le funzionalità principali senza registrazione.
               </div>
             </div>
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseFour"
-                aria-expanded="false"
-                aria-controls="collapseFour"
-              >
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                 I contenuti sono aggiornati frequentemente?
               </button>
             </h2>
-            <div
-              id="collapseFour"
-              class="accordion-collapse collapse"
-              data-bs-parent="#accordionExample"
-            >
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                Sì, i contenuti vengono aggiornati regolarmente per garantire
-                che tu abbia accesso alle ultime uscite e alle informazioni più
-                recenti.
+                            Sì, i contenuti vengono aggiornati regolarmente per garantire che tu abbia accesso alle
+                            ultime uscite e alle informazioni più recenti.
               </div>
             </div>
           </div>
 
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseFive"
-                aria-expanded="false"
-                aria-controls="collapseFive"
-              >
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                 Come posso trovare un film specifico?
               </button>
             </h2>
-            <div
-              id="collapseFive"
-              class="accordion-collapse collapse"
-              data-bs-parent="#accordionExample"
-            >
+                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
               <div class="accordion-body">
                 Puoi navigare tra le categorie e le raccomandazioni.
               </div>
@@ -363,28 +265,20 @@
       </section>
     </main>
 
+
     <footer class="footer-stream py-5 mt-5 bg-viola">
       <div class="container text-center">
         <!-- Logo Footer -->
-        <div class="footer-logo mb-4">
-          <img
-            src="../assets/img/streaming_logo.png"
-            alt="Logo Fluxr"
-            width="100"
-            class="opacity-75"
-          />
+            <div class="footer-logo mb-4 ">
+                <img src="../assets/img/streaming_logo.png" alt="Logo Fluxr" width="100" class="opacity-75">
         </div>
 
         <!-- Link di Servizio -->
         <ul class="list-inline footer-links mb-3">
-          <li class="list-inline-item">
-            <a href="#">Termini e Informativa sulla privacy</a>
-          </li>
+                <li class="list-inline-item"><a href="#">Termini e Informativa sulla privacy</a></li>
           <li class="list-inline-item"><a href="#">Inviaci un feedback</a></li>
           <li class="list-inline-item"><a href="#">Aiuto</a></li>
-          <li class="list-inline-item">
-            <a href="#">Informativa sui cookie</a>
-          </li>
+                <li class="list-inline-item"><a href="#">Informativa sui cookie</a></li>
         </ul>
 
         <!-- Copyright -->
