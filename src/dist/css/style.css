@@ -1,21 +1,5 @@
 @charset "UTF-8";
-/*
-@font-face {
-
-  font-family: "LinkSans";
-  src:
-    url("../assets/fonts/aFTR7PB1QTsUX8KYvrGyEYOtbYf-Vlg.woff2") format("woff2"),
-    url("../assets/fonts/aFTR7PB1QTsUX8KYvumzEYOtbYf-Vlg.woff2") format("woff2"),
-    url("../assets/fonts/aFTU7PB1QTsUX8KYthqQBK6PYK0.woff2") format("woff2"),
-    url("../assets/fonts/L0x5DF4xlVMF-BfR8bXMljhLq3-cXbKD.woff2") format("woff2"),
-    url("../assets/fonts/NGSwv5HMAFg6luGlBNMjxLsH8ahuQ2e8.woff2") format("woff2"),
-    url("../assets/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50Sjla1ZL7W0Q5nw.woff2") format("woff2");
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-*/
-@import url("https://googleapis.com");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /*!
  * Bootstrap Icons v1.13.1 (https://icons.getbootstrap.com/)
  * Copyright 2019-2024 The Bootstrap Authors
@@ -8353,8 +8337,11 @@
   content: "爛";
 }
 
-body {
+*, *::before, *::after {
   font-family: "Kanit", sans-serif;
+}
+
+body {
   -webkit-font-smoothing: antialiased;
 }
 
@@ -8757,6 +8744,37 @@ h3,
     margin: 0 15px;
   }
 }
+.body-privacy {
+  padding: 60px;
+}
+
+.body-privacy h2 {
+  color: #c3ac52;
+  margin-bottom: 40px;
+}
+
+.header-privacy a, .body-privacy a, .privacy-btn {
+  display: inline-block;
+  color: #ba145b;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+  margin-block: 20px;
+  border: 1px solid rgba(186, 20, 91, 0.25);
+  border-radius: 16px;
+  background-color: rgba(232, 92, 155, 0.25);
+  padding: 10px 15px;
+}
+.header-privacy a:hover, .body-privacy a:hover, .privacy-btn:hover {
+  color: #c3ac52;
+  text-decoration: underline;
+}
+
+.header-privacy, .footer-privacy {
+  padding: 40px;
+  background-color: #39264D;
+}
+
 .login-page {
   min-height: 100vh;
   background: linear-gradient(180deg, #2B2233 0%, #19222d 100%);

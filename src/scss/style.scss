@@ -1,16 +1,13 @@
-
-
-
 // percorso dove stanno i file .woff2
-$bootstrap-icons-font-src: url("../assets/fonts/bootstrap-icons.woff2") format("woff2"), 
-                           url("../assets/fonts/bootstrap-icons.woff") format("woff");
+$bootstrap-icons-font-src: url("../assets/fonts/bootstrap-icons.woff2") format("woff2"),
+  url("../assets/fonts/bootstrap-icons.woff") format("woff");
 
 // Importa il file SCSS delle icone (che userà la variabile sopra)
 @use "../../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
 
 
 @use "./variables" as *;
-@use "./fonts";
+@use "./fonts" as *;
 
 
 @use "./navbar";
@@ -21,45 +18,32 @@ $bootstrap-icons-font-src: url("../assets/fonts/bootstrap-icons.woff2") format("
 
 @use "./register";
 
+@use "./privacy";
 
 
 @use "./login";
 
 @use "../../node_modules/bootstrap/scss/bootstrap.scss" with (
-  $theme-colors: (
+  
+$theme-colors: (
+  
     "viola": $viola,
-
     "scuro": $scuro,
     "grigio-chiaro": $grigio-lt,
-
-
-
-"viola-chiaro": $viola-chiaro,
-"viola-scuro": $viola-scuro,
-"bludark": $bludark,
-
-
-
-"rosa-logo": $rosa-logo,
-"rosa-logo-chiaro": $rosa-logo-chiaro,
-
-"bianco": $bianco, 
-
-"grigio-molto-chiaro": $grigio-molto-chiaro, 
-
-"rosso-scuro": $rosso-scuro,  
-
-"giallo": $giallo,
-"giallo-chiaro": $giallo-chiaro,
-
-
-"verde": $verde,
-"verde-chiaro": $verde-chiaro,
-
+    "viola-chiaro": $viola-chiaro,
+    "viola-scuro": $viola-scuro,
+    "bludark": $bludark,
+    "rosa-logo": $rosa-logo,
+    "rosa-logo-chiaro": $rosa-logo-chiaro,
+    "bianco": $bianco,
+    "grigio-molto-chiaro": $grigio-molto-chiaro,
+    "rosso-scuro": $rosso-scuro,
+    "giallo": $giallo,
+    "giallo-chiaro": $giallo-chiaro,
+    "verde": $verde,
+    "verde-chiaro": $verde-chiaro,
 
   )
-
-
 
 );
 
@@ -67,13 +51,7 @@ $bootstrap-icons-font-src: url("../assets/fonts/bootstrap-icons.woff2") format("
 @use "./cards";
 
 body {
-  
+
   background-color: $viola-scuro;
   color: $grigio-molto-chiaro;
 }
-
-
-
-
-
-
