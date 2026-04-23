@@ -7,8 +7,12 @@
 
 
 // Applicazione globale
-body {
+*, *::before, *::after {
   font-family: $font-main;
+}
+
+body {
+  
   -webkit-font-smoothing: antialiased; // caratteri più nitidi
 }
 
