@@ -8590,7 +8590,14 @@ h3,
 .hero-img-wrap img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+}
+
+.img-top {
+  object-position: top;
+}
+
+.img-up {
+  object-position: center 25%;
 }
 
 .movie-meta {
@@ -8646,6 +8653,7 @@ h3,
   color: #39264D;
 }
 
+.main-privacy {
 .register-card {
   width: 100%;
   max-width: 420px;
@@ -8748,12 +8756,12 @@ h3,
   padding: 60px;
 }
 
-.body-privacy h2 {
+.main-privacy h2 {
   color: #c3ac52;
   margin-bottom: 40px;
 }
 
-.header-privacy a, .body-privacy a, .privacy-btn {
+.header-privacy a, .main-privacy a, .privacy-btn {
   display: inline-block;
   color: #ba145b;
   text-decoration: none;
@@ -8765,7 +8773,7 @@ h3,
   background-color: rgba(232, 92, 155, 0.25);
   padding: 10px 15px;
 }
-.header-privacy a:hover, .body-privacy a:hover, .privacy-btn:hover {
+.header-privacy a:hover, .main-privacy a:hover, .privacy-btn:hover {
   color: #c3ac52;
   text-decoration: underline;
 }
@@ -8773,6 +8781,10 @@ h3,
 .header-privacy, .footer-privacy {
   padding: 40px;
   background-color: #39264D;
+}
+
+.form-control.bg-grigio-lt {
+  background-color: #a6b6c6;
 }
 
 .login-page {
