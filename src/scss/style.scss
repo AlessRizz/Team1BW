@@ -49,6 +49,9 @@ $bootstrap-icons-font-src: url("../assets/fonts/bootstrap-icons.woff2") format("
 @use "./footer";
 @use "./login";
 @use "./cards";
+@use "./register";
+@use "./privacy";
+
 
 // Stili globali finali
 body {
