@@ -8643,6 +8643,37 @@ h3,
   color: #39264D;
 }
 
+.body-privacy {
+  padding: 60px;
+}
+
+.body-privacy h2 {
+  color: #c3ac52;
+  margin-bottom: 40px;
+}
+
+.header-privacy a, .body-privacy a, .privacy-btn {
+  display: inline-block;
+  color: #ba145b;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+  margin-block: 20px;
+  border: 1px solid rgba(186, 20, 91, 0.25);
+  border-radius: 16px;
+  background-color: rgba(232, 92, 155, 0.25);
+  padding: 10px 15px;
+}
+.header-privacy a:hover, .body-privacy a:hover, .privacy-btn:hover {
+  color: #c3ac52;
+  text-decoration: underline;
+}
+
+.header-privacy, .footer-privacy {
+  padding: 40px;
+  background-color: #39264D;
+}
+
 .login-page {
   min-height: 100vh;
   background: linear-gradient(180deg, #2B2233 0%, #19222d 100%);
