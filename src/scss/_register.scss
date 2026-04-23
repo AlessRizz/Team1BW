@@ -1,0 +1,111 @@
+@use "./variables" as *;
+
+.hero-section {
+  padding-top: 2rem;
+  padding-bottom: 1rem; // meno spazio sotto
+}
+
+main {
+  padding-top: 1rem; // riduce distanza dal hero
+}
+
+
+
+.register-card {
+  width: 100%;
+  max-width: 420px;
+  background-color: $scuro;
+  border-radius: 16px;
+  border: 1px solid rgba($grigio-lt, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  color: $bianco;
+}
+
+/* Titolo */
+.register-card h2 {
+  color: $bianco;
+  font-weight: bold;
+}
+
+/* Label */
+.register-card .form-label {
+  color: $grigio-molto-chiaro;
+}
+
+/* Input */
+.register-card .form-control {
+  background-color: $viola-scuro;
+  border: 1px solid $viola-chiaro;
+  color: $bianco;
+  transition: all 0.2s ease;
+}
+
+.register-card .form-control::placeholder {
+  color: $grigio-lt;
+}
+
+/* Focus input */
+.register-card .form-control:focus {
+  background-color: $viola-scuro;
+  border-color: $rosa-logo;
+  box-shadow: 0 0 0 0.2rem rgba($rosa-logo, 0.25);
+  color: $bianco;
+}
+
+/* Checkbox */
+.register-card .form-check-label {
+  color: $grigio-molto-chiaro;
+}
+
+.register-card .form-check-input:checked {
+  background-color: $rosa-logo;
+  border-color: $rosa-logo;
+}
+
+/* Bottone */
+.register-btn {
+  background-color: $rosa-logo;
+  border: none;
+  color: $bianco;
+  font-weight: bold;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.register-btn:hover {
+  background-color: $rosa-logo-chiaro;
+  transform: translateY(-1px);
+}
+
+/* Link */
+.register-card a {
+  color: $grigio-lt;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.register-card a:hover {
+  color: $bianco;
+  text-decoration: underline;
+}
+
+/* Errori */
+.register-card small {
+  font-size: 0.8rem;
+}
+
+/* Messaggi */
+#formError {
+  font-weight: bold;
+}
+
+#formSuccess {
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .register-card {
+    margin: 0 15px;
+  }
+}
