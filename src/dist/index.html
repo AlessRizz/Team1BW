@@ -23,27 +23,27 @@
     <link rel="stylesheet" href="./css/style.css">
     <!-- Percorso relativo da index.html verso node_modules -->
 
-<link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
 
   </head>
 
   <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-viola sticky-top px-lg-5">
-        <div class="container-fluid">
-          <!-- Logo  -->
-          <a class="navbar-brand me-4" href="#">
+            <div class="container-fluid">
+                <!-- Logo  -->
+                <a class="navbar-brand me-4" href="./index.html">
                     <img src="../assets/img/streaming_logo.png" alt="logo FLUXR" width="110">
           </a>
           <!-- Hamburger Menu per Mobile -->
                 <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
                     data-bs-target="#Navbar">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="Navbar">
-            <!-- Menu Principale (Sinistra) -->
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-bold">
-                        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="Navbar">
+                    <!-- Menu Principale (Sinistra) -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-bold">
+                        <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link border-start-custom" href="#Film">Film</a></li>
                         <li class="nav-item"><a class="nav-link" href="#Serie">Serie TV</a></li>
                         <li class="nav-item"><a class="nav-link" href="#Sport">Sport</a></li>
@@ -80,7 +80,7 @@
                                 <span class="d-none d-xl-inline small fw-bold">Il mio account</span>
                 </a>
                             <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark border-0">
-                                <li><a class="dropdown-item" href="#">Account e impostazioni</a></li>
+                                <li><a class="dropdown-item" href="login.html">Accedi</a></li>
                                 <li><a class="dropdown-item" href="#">Iscrizione Fluxr</a></li>
                   <li>
                                     <hr class="dropdown-divider bg-secondary">
@@ -89,65 +89,81 @@
                 </ul>
               </div>
             </div>
-          </div>
-        </div>
-      </nav>
-      <section class="hero-section">
-        <h1>Guarda ciò che ami, quando vuoi</h1>
-        <!-- ---------Carousel-------- -->
-            <div id="carouselExampleRide" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000"
+        </nav>
+        <section class="hero-section">
+            <h1>Guarda ciò che ami, quando vuoi
+                <span class="hero-underline"></span>
+            </h1>
+
+            <!-- ---------Carousel-------- -->
+            <div id="carouselExampleRide" class="carousel slide h-100" data-bs-ride="carousel" data-bs-interval="3000"
                 data-bs-pause="false">
 
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="hero-img-wrap">
-                            <img src="../assets/img/hero/avatar.webp" class="d-block w-100" alt="...">
-                <div class="hero-img-text">
-                  <h2>Avatar</h2>
-                  <p>Un'avventura epica nel mondo di Pandora.</p>
-                </div>
-              </div>
-            </div>
 
-            <div class="carousel-item">
-              <div class="hero-img-wrap">
-                            <img src="../assets/img/hero/interstellar.webp" class="d-block w-100" alt="...">
 
-                <div class="hero-img-text">
-                  <h2>Interstellar</h2>
-                  <p>Un viaggio attraverso lo spazio e il tempo.</p>
-                </div>
-              </div>
-            </div>
+                <div class="carousel-inner h-100">
+                    <div class="carousel-item active h-100">
+                        <div class="hero-img-wrap">
+                            <img src="../assets/img/hero/avatar.webp" class="d-block w-100 h-100 object-fit-cover"
+                                alt="Avatar film poster">
+                            <div class="hero-img-text">
+                                <h2>Avatar</h2>
+                                <p>Un'avventura epica nel mondo di Pandora.</p>
+                                <span class="movie-meta">2009 • James Cameron</span>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="carousel-item">
-              <div class="hero-img-wrap">
-                            <img src="../assets/img/hero/maleficent.webp" class="d-block w-100" alt="...">
+                    <div class="carousel-item h-100">
+                        <div class="hero-img-wrap">
+                            <img src="../assets/img/hero/interstellar.webp" class="d-block w-100 h-100 object-fit-cover"
+                                alt="Interstellar film poster">
 
-                <div class="hero-img-text">
-                  <h2>Maleficent</h2>
-                  <p>Una storia di magia e vendetta.</p>
-                </div>
-              </div>
-            </div>
+                            <div class="hero-img-text">
+                                <h2>Interstellar</h2>
+                                <p>Un viaggio attraverso lo spazio e il tempo.</p>
+                                <span class="movie-meta">2014 • Christopher Nolan • Matthew McConaughey,Anne Hathaway</span>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="carousel-item">
-              <div class="hero-img-wrap">
-                            <img src="../assets/img/hero/titanik.webp" class="d-block w-100" alt="...">
+                    <div class="carousel-item h-100">
+                        <div class="hero-img-wrap">
+                            <img src="../assets/img/hero/maleficent.webp" class="d-block w-100 h-100 object-fit-cover"
+                                alt="Maleficent film poster">
 
-                <div class="hero-img-text">
-                  <h2>Titanic</h2>
-                  <p>Un romance epico sul naufragio del Titanic.</p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="hero-img-wrap">
-                            <img src="../assets/img/hero/wonka.webp" class="d-block w-100" alt="...">
+                            <div class="hero-img-text">
+                                <h2>Maleficent</h2>
+                                <p>Una storia di magia e vendetta.</p>
+                                <span class="movie-meta">2014 • Robert Stromberg • Angelina Jolie, Elle Fanning</span>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="hero-img-text">
-                  <h2>Wonka</h2>
-                  <p>La storia di Willy Wonka e il suo mondo magico.</p>
+                    <div class="carousel-item h-100">
+                        <div class="hero-img-wrap">
+                            <img src="../assets/img/hero/titanik.webp" class="d-block w-100 h-100 object-fit-cover"
+                                alt="Titanic film poster">
+
+                            <div class="hero-img-text">
+                                <h2>Titanic</h2>
+                                <p>Un romance epico sul naufragio del Titanic.</p>
+                                <span class="movie-meta">1997 • James Cameron • Leonardo DiCaprio, Kate Winslet</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item h-100">
+                        <div class="hero-img-wrap">
+                            <img src="../assets/img/hero/wonka.webp" class="d-block w-100 h-100 object-fit-cover"
+                                alt="Wonka film poster">
+
+                            <div class="hero-img-text">
+                                <h2>Wonka</h2>
+                                <p>La storia di Willy Wonka e il suo mondo magico.</p>
+                                <span class="movie-meta">2023 • Paul King • Timothée Chalamet, Olivia Colman</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
               </div>
             </div>
@@ -264,7 +280,6 @@
         </div>
       </section>
     </main>
-
 
     <footer class="footer-stream py-5 mt-5 bg-viola">
       <div class="container text-center">
