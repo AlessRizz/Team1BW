@@ -59,8 +59,8 @@ document.addEventListener("DOMContentLoaded", function () {
       passwordError.textContent = "Inserisci la password.";
       passwordInput.classList.add("is-invalid");
       valid = false;
-    } else if (password.length < 8) {
-      passwordError.textContent = "La password deve avere almeno 8 caratteri.";
+    } else if (password.length < 12) {
+      passwordError.textContent = "La password deve avere almeno 12 caratteri.";
       passwordInput.classList.add("is-invalid");
       valid = false;
     }
