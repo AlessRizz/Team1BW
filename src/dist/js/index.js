@@ -1,10 +1,10 @@
 
-import { catalog } from "./player/catalog.js";
+import { catalog } from "../player/catalog.js";
 
 const SECTIONS = [
-  { containerId: "cards-serie",  catalogKey: "serie"  },
-  { containerId: "cards-film",   catalogKey: "film"   },
-  { containerId: "cards-sport",  catalogKey: "sport"  },
+  { containerId: "cards-serie", catalogKey: "serie" },
+  { containerId: "cards-film", catalogKey: "film" },
+  { containerId: "cards-sport", catalogKey: "sport" },
 ];
 
 
@@ -45,9 +45,9 @@ function buildCard(video) {
 
 function escapeHtml(str = "") {
   return String(str)
-    .replace(/&/g,  "&amp;")
-    .replace(/</g,  "&lt;")
-    .replace(/>/g,  "&gt;")
-    .replace(/"/g,  "&quot;")
-    .replace(/'/g,  "&#39;");
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
 }
