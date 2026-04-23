@@ -8654,6 +8654,105 @@ h3,
 }
 
 .main-privacy {
+.register-card {
+  width: 100%;
+  max-width: 420px;
+  background-color: #00050d;
+  border-radius: 16px;
+  border: 1px solid rgba(166, 182, 198, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+
+/* Titolo */
+.register-card h2 {
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Label */
+.register-card .form-label {
+  color: #c4c4c4;
+}
+
+/* Input */
+.register-card .form-control {
+  background-color: #2B2233;
+  border: 1px solid #5e3a7e;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+.register-card .form-control::placeholder {
+  color: #a6b6c6;
+}
+
+/* Focus input */
+.register-card .form-control:focus {
+  background-color: #2B2233;
+  border-color: #ba145b;
+  box-shadow: 0 0 0 0.2rem rgba(186, 20, 91, 0.25);
+  color: #fff;
+}
+
+/* Checkbox */
+.register-card .form-check-label {
+  color: #c4c4c4;
+}
+
+.register-card .form-check-input:checked {
+  background-color: #ba145b;
+  border-color: #ba145b;
+}
+
+/* Bottone */
+.register-btn {
+  background-color: #ba145b;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.register-btn:hover {
+  background-color: #e85c9b;
+  transform: translateY(-1px);
+}
+
+/* Link */
+.register-card a {
+  color: #a6b6c6;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.register-card a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Errori */
+.register-card small {
+  font-size: 0.8rem;
+}
+
+/* Messaggi */
+#formError {
+  font-weight: bold;
+}
+
+#formSuccess {
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .register-card {
+    margin: 0 15px;
+  }
+}
+.body-privacy {
   padding: 60px;
 }
 

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registrazione | FLUXR</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-viola sticky-top px-lg-5">
+            <div class="container-fluid">
+                <!-- Logo  -->
+                <a class="navbar-brand me-4" href="./index.html">
+                    <img src="../assets/img/streaming_logo.webp" alt="logo FLUXR" width="110">
+                </a>
+                <!-- Hamburger Menu per Mobile -->
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#Navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="Navbar">
+                    <!-- Menu Principale (Sinistra) -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-bold">
+                        <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link border-start-custom" href="#Film">Film</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Serie">Serie TV</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Sport">Sport</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown">Categorie</a>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0">
+                                <li><a class="dropdown-item" href="#">Azione e avventura</a></li>
+                                <li><a class="dropdown-item" href="#">Commedia</a></li>
+                                <li><a class="dropdown-item" href="#">Documentari</a></li>
+                                <li>
+                                    <hr class="dropdown-divider bg-secondary">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Bambini</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- Area Utente e Ricerca (Destra) -->
+                    <div class="d-flex align-items-center gap-4">
+                        <!-- Icona Cerca -->
+                        <a href="#" class="text-white"><i class="bi bi-search fs-5"></i></a>
+                        <!-- Menu Profilo -->
+                        <div class="dropdown">
+                            <a href="#"
+                                class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                                data-bs-toggle="dropdown">
+                                <!-- <div class="profile-avatar me-2">
+                                    <img src="" alt="User" width="32" class="rounded">
+                                </div> -->
+                                <div class="profile-avatar me-2 d-flex align-items-center justify-content-center bg-secondary rounded"
+                                    style="width: 32px; height: 32px;">
+                                    <i class="bi bi-person-fill text-white"></i>
+                                </div>
+                                <span class="d-none d-xl-inline small fw-bold">Il mio account</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark border-0">
+                                <li><a class="dropdown-item" href="login.html">Accedi</a></li>
+                                <li><a class="dropdown-item" href="./register.html">Iscrizione Fluxr</a></li>
+                                <li>
+                                    <hr class="dropdown-divider bg-secondary">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Esci</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- REGISTER -->
+        <main class="d-flex justify-content-center text-center py-2">
+            <div class="register-card p-4">
+
+                <h1>Unisciti a FLUXR</h1>
+
+                <p>Crea il tuo account per guardare contenuti esclusivi</p>
+
+                <h2 class="text-center mb-4">Registrati</h2>
+
+                <form id="registerForm" novalidate>
+
+                    <div class="mb-3">
+                        <label class="form-label">Nome utente</label>
+                        <input type="text" class="form-control" id="name">
+                        <small class="text-danger" id="nameError"></small>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email">
+                        <small class="text-danger" id="emailError"></small>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password">
+                        <small class="text-danger" id="passwordError"></small>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Conferma Password</label>
+                        <input type="password" class="form-control" id="confirmPassword">
+                        <small class="text-danger" id="confirmPasswordError"></small>
+                    </div>
+
+                    <div class="form-check mb-3">
+                        <input type="checkbox" class="form-check-input" id="terms">
+                        <label class="form-check-label">Accetto i termini</label>
+                        <small class="text-danger d-block" id="termsError"></small>
+                    </div>
+
+                    <!-- Honeypot -->
+                    <div class="d-none">
+                        <input type="text" id="website">
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn register-btn">Registrati</button>
+                    </div>
+
+                    <p class="text-danger mt-3" id="formError"></p>
+                    <p class="text-success mt-3" id="formSuccess"></p>
+
+                    <p class="text-center mt-4">
+                        Hai già un account?
+                        <a href="./login.html">Accedi</a>
+                    </p>
+
+                </form>
+
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer-stream py-5 mt-5 bg-viola">
+            <div class="container text-center">
+                <!-- Logo Footer -->
+                <div class="footer-logo mb-4 ">
+                    <img src="../assets/img/streaming_logo.webp" alt="Logo Fluxr" width="100" class="opacity-75">
+                </div>
+
+                <!-- Link di Servizio -->
+                <ul class="list-inline footer-links mb-3">
+                    <li class="list-inline-item"><a href="#">Termini e Informativa sulla privacy</a></li>
+                    <li class="list-inline-item"><a href="#">Inviaci un feedback</a></li>
+                    <li class="list-inline-item"><a href="#">Aiuto</a></li>
+                    <li class="list-inline-item"><a href="#">Informativa sui cookie</a></li>
+                </ul>
+
+                <!-- Copyright -->
+                <p class="footer-copy small">
+                    © 2026, FLUXR Streaming Video, Inc. o società affiliate
+                </p>
+
+                <!-- Social Icons  -->
+                <div class="footer-social mt-4">
+                    <a href="#" class="mx-2"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="mx-2"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" class="mx-2"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+
+        <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="./js/register.js"></script>
+
+</body>
+
+</html>
