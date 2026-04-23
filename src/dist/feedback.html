@@ -1,51 +1,201 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Feedback</title>
 
- <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css" />
     <!-- Percorso relativo da index.html verso node_modules -->
 
-    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+  </head>
 
-</head>
-
-
-
-<body>
-<header class="header-privacy">
-     <div class="footer-logo mb-4 ">
-                <img src="../assets/img/streaming_logo.webp" alt="Logo Fluxr" width="100">
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-dark bg-viola sticky-top px-lg-5"
+      >
+        <div class="container-fluid">
+          <!-- Logo  -->
+          <a class="navbar-brand me-4" href="./index.html">
+            <img
+              src="../assets/img/streaming_logo.webp"
+              alt="logo FLUXR"
+              width="110"
+            />
+          </a>
+          <!-- Hamburger Menu per Mobile -->
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#Navbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="Navbar">
+            <!-- Menu Principale (Sinistra) -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-bold">
+              <li class="nav-item">
+                <a class="nav-link active" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link border-start-custom" href="./index.html#Film"
+                  >Film</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html#Serie">Serie TV</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html#Sport">Sport</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  >Categorie</a
+                >
+                <ul class="dropdown-menu dropdown-menu-dark border-0">
+                  <li>
+                    <a class="dropdown-item" href="#">Azione e avventura</a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Commedia</a></li>
+                  <li><a class="dropdown-item" href="#">Documentari</a></li>
+                  <li>
+                    <hr class="dropdown-divider bg-secondary" />
+                  </li>
+                  <li><a class="dropdown-item" href="#">Bambini</a></li>
+                </ul>
+              </li>
+            </ul>
+            <!-- Area Utente e Ricerca (Destra) -->
+            <div class="d-flex align-items-center gap-4">
+              <!-- Icona Cerca -->
+              <a href="#" class="text-white"
+                ><i class="bi bi-search fs-5"></i
+              ></a>
+              <!-- Menu Profilo -->
+              <div class="dropdown">
+                <a
+                  href="#"
+                  class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                >
+                  <div
+                    class="profile-avatar me-2 d-flex align-items-center justify-content-center bg-secondary rounded"
+                    style="width: 32px; height: 32px"
+                  >
+                    <i class="bi bi-person-fill text-white"></i>
+                  </div>
+                  <span class="d-none d-xl-inline small fw-bold"
+                    >Il mio account</span
+                  >
+                </a>
+                <ul
+                  class="dropdown-menu dropdown-menu-end dropdown-menu-dark border-0"
+                >
+                  <li><a class="dropdown-item" href="login.html">Accedi</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Iscrizione Fluxr</a>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider bg-secondary" />
+                  </li>
+                  <li><a class="dropdown-item" href="#">Esci</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-    <h1>Feedback</h1>
-    <a href="index.html">← Torna alla Home</a>
-</header>
-<main class="body-privacy">
-    <p>Il tuo feedback è importante per noi! Compila il modulo sottostante per inviarci i tuoi commenti, suggerimenti o segnalazioni di problemi.</p>
-<form action="#" method="post">
-<div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Email address</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-</div>
-<div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-</div>
+      </nav>
+    </header>
 
-<button type="submit" class="privacy-btn">Invia Feedback</button>
-</form>
-   
-</main>
-а
-<footer class="footer-privacy">
-    <div class="footer-logo mb-4 ">
-                <img src="../assets/img/streaming_logo.webp" alt="Logo Fluxr" width="100">
+    <main class="main-privacy">
+      <h1>Feedback</h1>
+      <a href="index.html">← Torna alla Home</a>
+      <p>
+        Il tuo feedback è importante per noi! Compila il modulo sottostante per
+        inviarci i tuoi commenti, suggerimenti o segnalazioni di problemi.
+      </p>
+     <form onsubmit="event.preventDefault(); alert('Messaggio inviato!');"> 
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Email address</label
+          >
+          <input
+            type="email"
+            class="form-control bg-grigio-lt"
+            id="exampleFormControlInput1"
+            placeholder="name@example.com"
+            required
+          />
         </div>
-    <p>&copy; 2026 [team1BW]. Tutti i diritti riservati.</p>
-</footer>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label"
+            >Example textarea</label
+          >
+          <textarea
+            class="form-control bg-grigio-lt"
+            placeholder="Scrivi il tuo messaggio..."
+            maxlength="200"
+            id="exampleFormControlTextarea1"
+            rows="3"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="privacy-btn">Invia Feedback</button>
+      </form>
+    </main>
+    а
+    <footer class="footer-stream py-5 mt-5 bg-viola">
+      <div class="container text-center">
+        <!-- Logo Footer -->
+        <div class="footer-logo mb-4">
+          <img
+            src="../assets/img/streaming_logo.webp"
+            alt="Logo Fluxr"
+            width="100"
+          />
+        </div>
+
+        <!-- Link di Servizio -->
+        <ul class="list-inline footer-links mb-3">
+          <li class="list-inline-item">
+            <a href="termini-privacy.html"
+              >Termini e Informativa sulla privacy</a
+            >
+          </li>
+          <li class="list-inline-item">
+            <a href="feedback.html">Inviaci un feedback</a>
+          </li>
+          <li class="list-inline-item"><a href="aiuto.html">Aiuto</a></li>
+          <li class="list-inline-item">
+            <a href="cookies.html">Informativa sui cookie</a>
+          </li>
+        </ul>
+
+        <!-- Copyright -->
+        <p class="footer-copy small">
+          © 2026, FLUXR Streaming Video, Inc. o società affiliate
+        </p>
+
+        <!-- Social Icons  -->
+        <div class="footer-social mt-4">
+          <a href="#" class="mx-2"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="mx-2"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="mx-2"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
     <script type="module" src="./index.js"></script>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  </body>
 </html>
