@@ -15,6 +15,26 @@ SECTIONS.forEach(({ containerId, catalogKey }) => {
   container.innerHTML = videos.map(video => buildCard(video)).join("");
 });
 
+// Auto-scroll when hovering a card at the edge of the container
+document.querySelectorAll(".categories").forEach(container => {
+  container.addEventListener("mouseover", e => {
+    const card = e.target.closest(".card");
+    if (!card) return;
+
+    const cRect = container.getBoundingClientRect();
+    const kRect = card.getBoundingClientRect();
+
+    // Card is at/past the right edge → scroll right
+    if (kRect.right > cRect.right - 20) {
+      container.scrollBy({ left: 300, behavior: "smooth" });
+    }
+    // Card is at/past the left edge → scroll left
+    else if (kRect.left < cRect.left + 20) {
+      container.scrollBy({ left: -300, behavior: "smooth" });
+    }
+  });
+});
+
 function buildCard(video) {
   const playerURL = `./player/player.html?id=${encodeURIComponent(video.id)}`;
   const badge = video.type === "youtube"
