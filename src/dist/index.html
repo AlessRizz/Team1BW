@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="it">
 
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -25,17 +25,17 @@
 
     <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
 
-  </head>
+</head>
 
-  <body>
+<body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-viola sticky-top px-lg-5">
             <div class="container-fluid">
                 <!-- Logo  -->
                 <a class="navbar-brand me-4" href="./index.html">
                     <img src="../assets/img/streaming_logo.webp" alt="logo FLUXR" width="110">
-          </a>
-          <!-- Hamburger Menu per Mobile -->
+                </a>
+                <!-- Hamburger Menu per Mobile -->
                 <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
                     data-bs-target="#Navbar">
                     <span class="navbar-toggler-icon"></span>
@@ -47,48 +47,48 @@
                         <li class="nav-item"><a class="nav-link border-start-custom" href="#Film">Film</a></li>
                         <li class="nav-item"><a class="nav-link" href="#Serie">Serie TV</a></li>
                         <li class="nav-item"><a class="nav-link" href="#Sport">Sport</a></li>
-              <li class="nav-item dropdown">
+                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button"
                                 data-bs-toggle="dropdown">Categorie</a>
-                <ul class="dropdown-menu dropdown-menu-dark border-0">
+                            <ul class="dropdown-menu dropdown-menu-dark border-0">
                                 <li><a class="dropdown-item" href="#">Azione e avventura</a></li>
-                  <li><a class="dropdown-item" href="#">Commedia</a></li>
-                  <li><a class="dropdown-item" href="#">Documentari</a></li>
-                  <li>
+                                <li><a class="dropdown-item" href="#">Commedia</a></li>
+                                <li><a class="dropdown-item" href="#">Documentari</a></li>
+                                <li>
                                     <hr class="dropdown-divider bg-secondary">
-                  </li>
-                  <li><a class="dropdown-item" href="#">Bambini</a></li>
-                </ul>
-              </li>
-            </ul>
-            <!-- Area Utente e Ricerca (Destra) -->
-            <div class="d-flex align-items-center gap-4">
-              <!-- Icona Cerca -->
+                                </li>
+                                <li><a class="dropdown-item" href="#">Bambini</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- Area Utente e Ricerca (Destra) -->
+                    <div class="d-flex align-items-center gap-4">
+                        <!-- Icona Cerca -->
                         <a href="#" class="text-white"><i class="bi bi-search fs-5"></i></a>
-              <!-- Menu Profilo -->
-              <div class="dropdown">
+                        <!-- Menu Profilo -->
+                        <div class="dropdown">
                             <a href="#"
-                  class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                                class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
                                 data-bs-toggle="dropdown">
-                  <!-- <div class="profile-avatar me-2">
+                                <!-- <div class="profile-avatar me-2">
                                     <img src="" alt="User" width="32" class="rounded">
                                 </div> -->
                                 <div class="profile-avatar me-2 d-flex align-items-center justify-content-center bg-secondary rounded"
                                     style="width: 32px; height: 32px;">
-                    <i class="bi bi-person-fill text-white"></i>
-                  </div>
+                                    <i class="bi bi-person-fill text-white"></i>
+                                </div>
                                 <span class="d-none d-xl-inline small fw-bold">Il mio account</span>
-                </a>
+                            </a>
                             <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark border-0">
                                 <li><a class="dropdown-item" href="login.html">Accedi</a></li>
                                 <li><a class="dropdown-item" href="#">Iscrizione Fluxr</a></li>
-                  <li>
+                                <li>
                                     <hr class="dropdown-divider bg-secondary">
-                  </li>
-                  <li><a class="dropdown-item" href="#">Esci</a></li>
-                </ul>
-              </div>
-            </div>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Esci</a></li>
+                            </ul>
+                        </div>
+                    </div>
         </nav>
         <section class="hero-section">
             <h1>Guarda ciò che ami, quando vuoi
@@ -122,7 +122,8 @@
                             <div class="hero-img-text">
                                 <h2>Interstellar</h2>
                                 <p>Un viaggio attraverso lo spazio e il tempo.</p>
-                                <span class="movie-meta">2014 • Christopher Nolan • Matthew McConaughey,Anne Hathaway</span>
+                                <span class="movie-meta">2014 • Christopher Nolan • Matthew McConaughey,Anne
+                                    Hathaway</span>
                             </div>
                         </div>
                     </div>
@@ -165,45 +166,36 @@
                         </div>
                     </div>
                 </div>
-              </div>
             </div>
-          </div>
+            </div>
+            </div>
 
-        </div>
-      </section>
+            </div>
+        </section>
     </header>
 
     <main>
-      <div id="Serie" class="container-fluid">
-        <h2 class="mb-4">Serie TV</h2>
-        <div
-          id="cards-serie"
-          class="categories d-flex flex-nowrap overflow-auto gap-3 pb-4"
-        >
-          <!-- ci pensa direttamente il js player a popolare i div presi dal catalog.js -->
+        <div id="Serie" class="container-fluid">
+            <h2 class="mb-4">Serie TV</h2>
+            <div id="cards-serie" class="categories d-flex flex-nowrap overflow-auto gap-3 pb-4">
+                <!-- ci pensa direttamente il js player a popolare i div presi dal catalog.js -->
+            </div>
         </div>
-      </div>
-      <div id="Film" class="container-fluid">
-        <h2 class="mb-4">Film d'azione</h2>
-        <div
-          id="cards-film"
-          class="categories d-flex flex-nowrap overflow-auto gap-3 pb-4"
-        >
-          <!-- ci pensa direttamente il js player a popolare i div presi dal catalog.js -->
+        <div id="Film" class="container-fluid">
+            <h2 class="mb-4">Film d'azione</h2>
+            <div id="cards-film" class="categories d-flex flex-nowrap overflow-auto gap-3 pb-4">
+                <!-- ci pensa direttamente il js player a popolare i div presi dal catalog.js -->
+            </div>
         </div>
-      </div>
-      <div id="Sport" class="container-fluid">
-        <h2 class="mb-4">Sport</h2>
-        <div
-          id="cards-sport"
-          class="categories d-flex flex-nowrap overflow-auto gap-3 pb-4"
-        >
-          <!-- ci pensa direttamente il js player a popolare i div presi dal catalog.js -->
+        <div id="Sport" class="container-fluid">
+            <h2 class="mb-4">Sport</h2>
+            <div id="cards-sport" class="categories d-flex flex-nowrap overflow-auto gap-3 pb-4">
+                <!-- ci pensa direttamente il js player a popolare i div presi dal catalog.js -->
+            </div>
         </div>
-      </div>
 
-      <!-- ----------ACCORDION---------- -->
-      <section class="accordion-section py-4 py-lg-5 px-3 px-lg-5 container">
+        <!-- ----------ACCORDION---------- -->
+        <section class="accordion-section py-4 py-lg-5 px-3 px-lg-5 container">
             <h2 class="accordion-title text-center mb-5">Una risposta per ogni domanda</h2>
 
             <div class="accordion" id="accordionExample">
@@ -283,35 +275,36 @@
     </main>
 
     <footer class="footer-stream py-5 mt-5 bg-viola">
-      <div class="container text-center">
-        <!-- Logo Footer -->
+        <div class="container text-center">
+            <!-- Logo Footer -->
             <div class="footer-logo mb-4 ">
                 <img src="../assets/img/streaming_logo.webp" alt="Logo Fluxr" width="100">
-        </div>
+            </div>
 
-        <!-- Link di Servizio -->
-        <ul class="list-inline footer-links mb-3">
+            <!-- Link di Servizio -->
+            <ul class="list-inline footer-links mb-3">
                 <li class="list-inline-item"><a href="#">Termini e Informativa sulla privacy</a></li>
-          <li class="list-inline-item"><a href="#">Inviaci un feedback</a></li>
-          <li class="list-inline-item"><a href="#">Aiuto</a></li>
+                <li class="list-inline-item"><a href="#">Inviaci un feedback</a></li>
+                <li class="list-inline-item"><a href="#">Aiuto</a></li>
                 <li class="list-inline-item"><a href="#">Informativa sui cookie</a></li>
-        </ul>
+            </ul>
 
-        <!-- Copyright -->
-        <p class="footer-copy small">
-          © 2026, FLUXR Streaming Video, Inc. o società affiliate
-        </p>
+            <!-- Copyright -->
+            <p class="footer-copy small">
+                © 2026, FLUXR Streaming Video, Inc. o società affiliate
+            </p>
 
-        <!-- Social Icons  -->
-        <div class="footer-social mt-4">
-          <a href="#" class="mx-2"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="mx-2"><i class="bi bi-twitter-x"></i></a>
-          <a href="#" class="mx-2"><i class="bi bi-instagram"></i></a>
+            <!-- Social Icons  -->
+            <div class="footer-social mt-4">
+                <a href="#" class="mx-2"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="mx-2"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" class="mx-2"><i class="bi bi-instagram"></i></a>
+            </div>
         </div>
-      </div>
     </footer>
 
     <script type="module" src="./index.js"></script>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+</body>
+
 </html>
