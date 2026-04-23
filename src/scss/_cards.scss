@@ -70,10 +70,19 @@
     padding-bottom: 0;
     transition: all 0.3s ease-in-out;
 
+  
+
     .mio-bottone {
       background-color: $rosso-scuro;
+      color: $grigio-lt;
 
+      &:hover {
+
+        color: #fff;
+      }
+    
     }
+
   }
 
   &:first-child {

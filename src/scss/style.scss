@@ -1,3 +1,4 @@
+/*
 // percorso dove stanno i file .woff2
 $bootstrap-icons-font-src: url("../assets/fonts/bootstrap-icons.woff2") format("woff2"),
   url("../assets/fonts/bootstrap-icons.woff") format("woff");
@@ -5,28 +6,21 @@ $bootstrap-icons-font-src: url("../assets/fonts/bootstrap-icons.woff2") format("
 // Importa il file SCSS delle icone (che userà la variabile sopra)
 @use "../../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
 
+*/
 
+
+// Variabili e icone (solo definizioni)
+$bootstrap-icons-font-src: url("../assets/fonts/bootstrap-icons.woff2") format("woff2"),
+  url("../assets/fonts/bootstrap-icons.woff") format("woff");
+
+@use "../../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
 @use "./variables" as *;
-@use "./fonts" as *;
 
-
-@use "./navbar";
-@use "./accordion";
-
-@use "./hero";
-@use "./footer";
-
-@use "./register";
-
-@use "./privacy";
-
-
-@use "./login";
-
+// IMPORTA BOOTSTRAP (Deve stare sopra i moduli che lo usano)
 @use "../../node_modules/bootstrap/scss/bootstrap.scss" with (
+  $font-family-sans-serif: ('Kanit', sans-serif), // riga per i font
   
-$theme-colors: (
-  
+  $theme-colors: ( // colori del tema
     "viola": $viola,
     "scuro": $scuro,
     "grigio-chiaro": $grigio-lt,
@@ -42,16 +36,23 @@ $theme-colors: (
     "giallo-chiaro": $giallo-chiaro,
     "verde": $verde,
     "verde-chiaro": $verde-chiaro,
-
   )
-
 );
 
 
+
+// I MODULI (Ora possono usare le classi di Bootstrap o sovrascriverle)
+@use "./fonts";      // Spostato sotto Bootstrap
+@use "./navbar";
+@use "./accordion";
+@use "./hero";
+@use "./footer";
+@use "./login";
 @use "./cards";
 
+// Stili globali finali
 body {
-
   background-color: $viola-scuro;
   color: $grigio-molto-chiaro;
+  
 }
