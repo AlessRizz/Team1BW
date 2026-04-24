@@ -59,5 +59,11 @@ $bootstrap-icons-font-src: url("../assets/fonts/bootstrap-icons.woff2") format("
 body {
   background-color: $viola-scuro;
   color: $grigio-molto-chiaro;
-  
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
 }
