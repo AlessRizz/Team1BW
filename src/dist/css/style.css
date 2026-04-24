@@ -20896,6 +20896,11 @@ h3,
   color: #ffffff;
 }
 
+.navbar-brand img {
+  width: 200px;
+  height: auto;
+}
+
 /* Sfondo dropdown e separatori */
 .dropdown-item {
   color: #ffffff;
@@ -21187,6 +21192,10 @@ h3,
   color: #fff;
   text-decoration: underline;
 }
+.footer-stream .footer-logo img {
+  width: 200px;
+  height: auto;
+}
 .footer-stream .footer-copy {
   font-size: 0.8rem;
   color: #fff;
@@ -21197,7 +21206,7 @@ h3,
   transition: color 0.2s;
 }
 .footer-stream .footer-social i:hover {
-  color: #39264D;
+  color: #5e3a7e;
 }
 
 .login-page {
