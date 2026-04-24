@@ -21209,7 +21209,7 @@ h3,
   color: #5e3a7e;
 }
 
-.login-page, .register-page {
+.login-page {
   min-height: 70vh;
   padding: 3rem 0;
   background: linear-gradient(180deg, #2B2233 0%, #19222d 100%);
@@ -21384,6 +21384,13 @@ h3,
 
 main {
   padding-top: 1rem;
+}
+
+.register-page {
+  min-height: 70vh;
+  padding: 3rem 0;
+  background: linear-gradient(180deg, #2B2233 0%, #19222d 100%);
+  color: #fff;
 }
 
 .register-card {
