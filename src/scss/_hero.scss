@@ -10,7 +10,6 @@
   position: relative;
   overflow: hidden;
   height: 60vh;
-
 }
 
 .hero-section {
@@ -22,14 +21,12 @@
     top: 40%;
     left: 50%;
     color: rgba($bianco, 0.8);
-    transition: all .3s ease;
-   
+    transition: all 0.3s ease;
     text-shadow:
       0 0 12px rgba($viola-chiaro, 0.45),
       0 0 32px rgba($viola-scuro, 0.35),
       0 4px 12px rgba($scuro, 0.9);
     letter-spacing: 1.5px;
-
     opacity: 0;
     transform: translate(-50%, -60%) scale(0.95);
     transition:
@@ -66,14 +63,13 @@
   }
 }
 
-.hero-section:hover h1{
+.hero-section:hover h1 {
   transform: translate(-50%, -50%) scale(1.03);
   text-shadow:
     0 0 18px rgba($bianco, 0.9),
     0 0 32px rgba($viola-chiaro, 0.6),
     0 4px 14px rgba($scuro, 1);
 }
-
 
 .hero-underline {
   display: block;
@@ -107,7 +103,7 @@
     0 0 20px rgba($viola-chiaro, 0.25);
 
   transform: translate(-50%, -50%) translateY(20px);
-    
+
   text-shadow:
     0 2px 5px rgba($scuro, 0.8),
     0 10px 30px rgba($viola-scuro, 0.6),
@@ -115,13 +111,11 @@
 
   opacity: 0;
   transition: all 0.8s ease;
- 
- @media (min-width: 768px) {
+
+  @media (min-width: 768px) {
     top: 55%;
     left: 10%;
   }
-
-
 }
 .carousel-item.active .hero-img-text {
   opacity: 1;
@@ -137,18 +131,16 @@
   }
 }
 
-
 .hero-img-text h2 {
   margin-bottom: 0;
   font-weight: 600;
-   transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .hero-img-text:hover h2 {
   transform: translateY(-3px);
   text-shadow: 0 0 10px rgba($bianco, 0.8);
 }
-
 
 .hero-img-wrap::before {
   content: "";
@@ -174,9 +166,9 @@
 .hero-img-wrap img {
   height: 100%;
   width: 100%;
- }
+}
 
- .img-top {
+.img-top {
   object-position: top;
 }
 
@@ -184,7 +176,6 @@
   object-fit: cover;
   object-position: center 25%;
 }
-
 
 .movie-meta {
   display: inline-block;
@@ -194,7 +185,7 @@
   letter-spacing: 0.5px;
   border-radius: 4px;
   max-width: 90%;
-  white-space: normal; 
+  white-space: normal;
 
   background: rgba($rosa-logo, 0.25);
   color: rgba($giallo, 0.95);
@@ -202,13 +193,14 @@
 
   border: 1px solid rgba($viola-chiaro, 0.4);
 
-  transition: transform .25s ease, background .25s ease;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
 
- @media (min-width: 768px) {
+  @media (min-width: 768px) {
     font-size: 14px;
   }
 
-  
   &:hover {
     transform: translateY(-2px);
     background: rgba($viola-chiaro, 0.45);

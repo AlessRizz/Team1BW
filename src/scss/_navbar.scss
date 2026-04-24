@@ -1,73 +1,68 @@
 @use "./variables" as *;
 
 // REGOLE NAVBAR
-
-
 .navbar-nav .nav-link {
-    font-weight: 500; // 
-    letter-spacing: 0.5px; 
-    text-transform: uppercase;
-    font-size: 0.95rem;
+  font-weight: 500; //
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.95rem;
 
-    color: $grigio-lt;
-    padding-left: 15px;
-    padding-right: 15px;
-    transition: all 0.2s ease-in-out;
+  color: $grigio-lt;
+  padding-left: 15px;
+  padding-right: 15px;
+  transition: all 0.2s ease-in-out;
 }
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .navbar-brand img {
-    width: 200px;
-    height: auto;          
-   
+  width: 200px;
+  height: auto;
 }
 
 /* Sfondo dropdown e separatori */
 
 .dropdown-item {
-    color:#ffffff;
-
+  color: #ffffff;
 }
 .dropdown-menu-dark {
-    background-color: $bludark;
-    
+  background-color: $bludark;
 }
 
 .dropdown-divider {
-    background-color: $viola-chiaro;
+  background-color: $viola-chiaro;
 }
 
 /* Effetto hover sull'avatar */
 .profile-avatar:hover {
-    outline: 2px solid #ffffff;
-    border-radius: 4px;
+  outline: 2px solid #ffffff;
+  border-radius: 4px;
 }
 
 /* Icona ricerca trasparente */
 .hover-opacity-100:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 // avatar
 .profile-avatar {
-    cursor: pointer;
-    transition: transform 0.2s ease;
-    width: 40px; 
-    height: 35px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  width: 40px;
+  height: 35px;
 
-    img {
-        border: 2px solid transparent;
-        transition: all 0.2s ease;
-    }
+  img {
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+  }
 
-    &:hover img {
-        border-color: #ffffff; // Bordo bianco all'hover
-        transform: scale(1.05); // Leggero zoom
-    }
+  &:hover img {
+    border-color: #ffffff; // Bordo bianco all'hover
+    transform: scale(1.05); // Leggero zoom
+  }
 
-    background-image: linear-gradient(135deg, #7b2ff7, #c471ed);
+  background-image: linear-gradient(135deg, #7b2ff7, #c471ed);
 }

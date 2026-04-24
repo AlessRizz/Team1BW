@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrazione | FLUXR</title>
-
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
 </head>
@@ -19,12 +18,10 @@
                 <a class="navbar-brand me-4" href="./index.html">
                     <img src="../assets/img/streaming_logo.webp" alt="logo FLUXR">
                 </a>
-
                 <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
                     data-bs-target="#Navbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <div class="collapse navbar-collapse" id="Navbar">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-bold">
                         <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
@@ -46,10 +43,8 @@
                             </ul>
                         </li>
                     </ul>
-
                     <div class="d-flex align-items-center gap-4">
                         <a href="#" class="text-white"><i class="bi bi-search fs-5"></i></a>
-
                         <div class="dropdown">
                             <a href="#"
                                 class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
@@ -60,7 +55,6 @@
                                 </div>
                                 <span class="small fw-bold">Il mio account</span>
                             </a>
-
                             <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark border-0">
                                 <li><a class="dropdown-item" href="login.html">Accedi</a></li>
                                 <li><a class="dropdown-item" href="./register.html">Iscrizione Fluxr</a></li>
@@ -74,39 +68,30 @@
 
     <!-- MAIN -->
     <main class="register-page d-flex justify-content-center align-items-start py-4">
-
         <div class="register-card p-4 mt-4 mt-lg-5">
-
             <h1 class="text-center mb-2">Unisciti a FLUXR</h1>
-
             <p class="text-center mb-4">Crea il tuo account per guardare contenuti esclusivi</p>
-
             <form id="registerForm" novalidate>
-
                 <div class="mb-3">
                     <label class="form-label" for="name">Nome utente</label>
                     <input type="text" class="form-control" id="name" name="name">
                     <small class="text-danger" id="nameError"></small>
                 </div>
-
                 <div class="mb-3">
                     <label class="form-label" for="email">Email</label>
                     <input type="email" class="form-control" id="email" name="email">
                     <small class="text-danger" id="emailError"></small>
                 </div>
-
                 <div class="mb-3">
                     <label class="form-label" for="password">Password</label>
                     <input type="password" class="form-control" id="password" name="password">
                     <small class="text-danger" id="passwordError"></small>
                 </div>
-
                 <div class="mb-3">
                     <label class="form-label" for="confirmPassword">Conferma Password</label>
                     <input type="password" class="form-control" id="confirmPassword" name="confirmPassword">
                     <small class="text-danger" id="confirmPasswordError"></small>
                 </div>
-
                 <div class="form-check mb-3">
                     <input type="checkbox" class="form-check-input" id="terms" name="terms">
                     <label class="form-check-label" for="terms">
@@ -119,21 +104,16 @@
                 <div class="d-none">
                     <input type="text" id="website" name="website">
                 </div>
-
                 <div class="d-grid">
                     <button type="submit" class="btn register-btn">Registrati</button>
                 </div>
-
                 <p class="text-danger mt-3" id="formError"></p>
                 <p class="text-success mt-3" id="formSuccess"></p>
-
                 <p class="text-center mt-4">
                     Hai già un account?
                     <a href="./login.html">Accedi</a>
                 </p>
-
             </form>
-
         </div>
     </main>
 
@@ -167,7 +147,6 @@
             </div>
         </div>
     </footer>
-
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/auth.js"></script>
     <script src="./js/register.js"></script>

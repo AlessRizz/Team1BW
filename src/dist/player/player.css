@@ -1,97 +1,124 @@
- 
-    :root {
-      --fluxr-bg:      #0d0d0d;
-      --fluxr-surface: #1a1a1a;
-      --fluxr-accent:  #7c3aed;
-      --fluxr-text:    #f0f0f0;
-      --fluxr-muted:   #888;
-    }
+:root {
+  --fluxr-bg: #0d0d0d;
+  --fluxr-surface: #1a1a1a;
+  --fluxr-accent: #7c3aed;
+  --fluxr-text: #f0f0f0;
+  --fluxr-muted: #888;
+}
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    body {
-      background: var(--fluxr-bg);
-      color: var(--fluxr-text);
-      font-family: system-ui, sans-serif;
-      min-height: 100vh;
-    }
+body {
+  background: var(--fluxr-bg);
+  color: var(--fluxr-text);
+  font-family: system-ui, sans-serif;
+  min-height: 100vh;
+}
 
-    .player-nav {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      padding: .75rem 1.5rem;
-      background: #000;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .player-nav .logo { height: 36px; object-fit: contain; }
+.player-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #000;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.player-nav .logo {
+  height: 36px;
+  object-fit: contain;
+}
 
-    #btn-back {
-      display: flex;
-      align-items: center;
-      gap: .4rem;
-      background: none;
-      border: 1px solid #333;
-      color: var(--fluxr-text);
-      padding: .35rem .85rem;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: .875rem;
-      transition: border-color .2s, background .2s;
-    }
-    #btn-back:hover { background: #222; border-color: #666; }
+#btn-back {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: none;
+  border: 1px solid #333;
+  color: var(--fluxr-text);
+  padding: 0.35rem 0.85rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+#btn-back:hover {
+  background: #222;
+  border-color: #666;
+}
 
-    #player-section {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 1.5rem 1rem 3rem;
-    }
+#player-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
 
-    #yt-wrapper {
-      position: relative;
-      width: 100%;
-      padding-top: 56.25%;
-      background: #000;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-    #yt-player {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
+#yt-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  background: #000;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#yt-player {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
 
-    #vjs-wrapper {
-      width: 100%;
-      border-radius: 10px;
-      overflow: hidden;
-      background: #000;
-    }
-    #vjs-wrapper video-player {
-      display: block;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-    }
+#vjs-wrapper {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #000;
+}
+#vjs-wrapper video-player {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
 
-    .video-meta { margin-top: 1.25rem; padding: 0 .25rem; }
-    #meta-title  { font-size: 1.5rem; font-weight: 700; letter-spacing: -.5px; }
-    #meta-subtitle { margin-top: .35rem; font-size: .875rem; color: var(--fluxr-muted); }
+.video-meta {
+  margin-top: 1.25rem;
+  padding: 0 0.25rem;
+}
+#meta-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+#meta-subtitle {
+  margin-top: 0.35rem;
+  font-size: 0.875rem;
+  color: var(--fluxr-muted);
+}
 
-    #player-error {
-      background: #1e0a0a;
-      border: 1px solid #5a1a1a;
-      color: #f87171;
-      border-radius: 10px;
-      padding: 2rem;
-      text-align: center;
-      font-size: 1rem;
-      margin: 2rem auto;
-      max-width: 600px;
-    }
-    #player-error a { color: var(--fluxr-accent); text-decoration: underline; }
+#player-error {
+  background: #1e0a0a;
+  border: 1px solid #5a1a1a;
+  color: #f87171;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  font-size: 1rem;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+#player-error a {
+  color: var(--fluxr-accent);
+  text-decoration: underline;
+}
 
-    .d-none { display: none !important; }
+.d-none {
+  display: none !important;
+}

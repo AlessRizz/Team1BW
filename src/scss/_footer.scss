@@ -2,41 +2,41 @@
 
 // REGOLE FOOTER
 .footer-stream {
-    background-color: $scuro;
-    border-top: 1px solid rgba($grigio-lt, 0.2);
-    color: $grigio-lt;
+  background-color: $scuro;
+  border-top: 1px solid rgba($grigio-lt, 0.2);
+  color: $grigio-lt;
 
-    .footer-links {
-        a {
-            color: $grigio-lt;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.2s ease;
+  .footer-links {
+    a {
+      color: $grigio-lt;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s ease;
 
-            &:hover {
-                color: #fff;
-                text-decoration: underline;
-            }
-        }
-    }
-
-    .footer-logo img {
-        width: 200px;
-        height: auto;          
-    }
-
-    .footer-copy {
-        font-size: 0.8rem;
+      &:hover {
         color: #fff;
+        text-decoration: underline;
+      }
     }
+  }
 
-    .footer-social i {
-        color: $grigio-lt;
-        font-size: 1.2rem;
-        transition: color 0.2s;
+  .footer-logo img {
+    width: 200px;
+    height: auto;
+  }
 
-        &:hover {
-            color: $viola-chiaro;
-        }
+  .footer-copy {
+    font-size: 0.8rem;
+    color: #fff;
+  }
+
+  .footer-social i {
+    color: $grigio-lt;
+    font-size: 1.2rem;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $viola-chiaro;
     }
+  }
 }
