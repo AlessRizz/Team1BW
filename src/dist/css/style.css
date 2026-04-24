@@ -20897,8 +20897,16 @@ h3,
 }
 
 /* Sfondo dropdown e separatori */
+.dropdown {
+  color: #ffffff;
+}
+
 .dropdown-menu-dark {
   background-color: #19222d;
+}
+
+.dropdown-divider {
+  background-color: #5e3a7e;
 }
 
 /* Effetto hover sull'avatar */

@@ -29,7 +29,7 @@
           <i class="bi bi-person-circle me-1"></i> ${user.name}
         </span>
       </li>
-      <li><span class="dropdown-item-text text-muted small">${user.email}</span></li>
+      <li><span class="dropdown dropdown-item-text small">${user.email}</span></li>
       <li><hr class="dropdown-divider bg-secondary"></li>
       <li><a class="dropdown-item" href="#" id="logoutBtn"><i class="bi bi-box-arrow-right me-1"></i> Esci</a></li>
     `;

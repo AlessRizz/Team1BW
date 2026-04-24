@@ -21,8 +21,17 @@
 }
 
 /* Sfondo dropdown e separatori */
+.dropdown {
+    color:#ffffff;
+
+}
 .dropdown-menu-dark {
     background-color: $bludark;
+    
+}
+
+.dropdown-divider {
+    background-color: $viola-chiaro;
 }
 
 /* Effetto hover sull'avatar */
