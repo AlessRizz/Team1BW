@@ -9,8 +9,8 @@
   width: 520px;
   max-width: 92%;
 
-  background: rgba($giallo, 0.6);
-  color: $scuro;
+  background: $viola-chiaro; 
+  color: $bianco;
 
   padding: 24px 22px;
   border-radius: 18px;
@@ -20,37 +20,38 @@
   gap: 20px;
 
   box-shadow: 0 12px 35px rgba($scuro, 0.25);
-  border: 1px solid rgba($scuro, 0.15);
+  border: 1px solid rgba($bianco, 0.2);
 
   backdrop-filter: blur(2px);
-
   z-index: 9999;
 
+     
   @media (min-width: 768px) {
-    bottom: 450px;
+    left: auto;
+    right: 20px;
+    bottom: 40px;
+    transform: none;
   }
 
+  
   @media (min-width: 1200px) {
-    bottom: 200px;
+    right: 40px;
+    bottom: 40px;
   }
 
   p {
     margin: 0;
     font-size: 14px;
     line-height: 1.4;
-  }
-
-  .cookie-buttons {
-    display: flex;
-    gap: 10px;
+    color: $bianco; 
   }
 
   a {
-    color: $viola-scuro;
+    color: $giallo;
     font-weight: 600;
 
     &:hover {
-      color: $viola;
+      color: $bianco;
     }
   }
 
@@ -67,11 +68,11 @@
     cursor: pointer;
     transition: all 0.2s ease;
     border: none;
+    color: $bianco; 
   }
 
   #accept-cookies {
-    background: rgba($verde, 0.8); // 🔽 прозрачный зелёный
-    color: $scuro;
+    background: rgba($verde, 0.8);
     border: 1px solid rgba($verde, 0.9);
 
     &:hover {
@@ -80,8 +81,7 @@
   }
 
   #decline-cookies {
-    background: rgba($rosa-logo, 0.5); // 🔽 прозрачный розовый
-    color: $scuro;
+    background: rgba($rosa-logo, 0.5);
     border: 1px solid rgba($rosa-logo, 0.9);
 
     &:hover {

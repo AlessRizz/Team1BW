@@ -1,12 +1,21 @@
- const banner = document.getElementById('cookie-banner');
-  const button = document.getElementById('accept-cookies');
+document.addEventListener('DOMContentLoaded', () => {
+  const banner = document.getElementById('cookie-banner');
+  const acceptButton = document.getElementById('accept-cookies');
+  const declineButton = document.getElementById('decline-cookies');
 
-  button.addEventListener('click', () => {
+  if (!banner || !acceptButton || !declineButton) return;
+
+  acceptButton.addEventListener('click', () => {
     localStorage.setItem('cookiesAccepted', 'true');
     banner.style.display = 'none';
   });
 
-  // Проверка при загрузке
-  if (localStorage.getItem('cookiesAccepted')) {
+  declineButton.addEventListener('click', () => {
+    localStorage.setItem('cookiesAccepted', 'false');
+    banner.style.display = 'none';
+  });
+
+  if (localStorage.getItem('cookiesAccepted') !== null) {
     banner.style.display = 'none';
   }
+});
