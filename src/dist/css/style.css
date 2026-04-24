@@ -21481,20 +21481,18 @@ main {
 }
 
 .main-privacy h2 {
-  text-align: center;
   color: #c3ac52;
   margin-bottom: 40px;
 }
 
-.main-privacy h1, .main-privacy h3 {
+.main-privacy h1 {
+  margin-bottom: 30px;
   text-align: center;
 }
 
-.main-privacy h1 {
-  margin-bottom: 30px;
-}
-
-.header-privacy a, .main-privacy a, .privacy-btn {
+.header-privacy a,
+.main-privacy a,
+.privacy-btn {
   display: inline-block;
   color: #ba145b;
   text-decoration: none;
@@ -21506,12 +21504,15 @@ main {
   background-color: rgba(232, 92, 155, 0.25);
   padding: 10px 15px;
 }
-.header-privacy a:hover, .main-privacy a:hover, .privacy-btn:hover {
+.header-privacy a:hover,
+.main-privacy a:hover,
+.privacy-btn:hover {
   color: #c3ac52;
   text-decoration: underline;
 }
 
-.header-privacy, .footer-privacy {
+.header-privacy,
+.footer-privacy {
   padding: 40px;
   background-color: #39264D;
 }
@@ -21527,8 +21528,8 @@ main {
   transform: translateX(-50%);
   width: 520px;
   max-width: 92%;
-  background: rgba(195, 172, 82, 0.6);
-  color: #00050d;
+  background: rgba(94, 58, 126, 0.98);
+  color: #fff;
   padding: 24px 22px;
   border-radius: 18px;
   display: flex;
@@ -21539,14 +21540,25 @@ main {
   backdrop-filter: blur(2px);
   z-index: 9999;
 }
+@media (max-width: 767px) {
+  .cookie-banner {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 300px;
+  }
+}
 @media (min-width: 768px) {
   .cookie-banner {
-    bottom: 450px;
+    left: auto;
+    right: 20px;
+    bottom: 40px;
+    transform: none;
   }
 }
 @media (min-width: 1200px) {
   .cookie-banner {
-    bottom: 200px;
+    right: 40px;
+    bottom: 40px;
   }
 }
 .cookie-banner p {
@@ -21554,16 +21566,12 @@ main {
   font-size: 14px;
   line-height: 1.4;
 }
-.cookie-banner .cookie-buttons {
-  display: flex;
-  gap: 10px;
-}
 .cookie-banner a {
-  color: #2B2233;
+  color: #c3ac52;
   font-weight: 600;
 }
 .cookie-banner a:hover {
-  color: #39264D;
+  color: #fff;
 }
 .cookie-banner .cookie-buttons {
   display: flex;
@@ -21577,10 +21585,10 @@ main {
   cursor: pointer;
   transition: all 0.2s ease;
   border: none;
+  color: #fff;
 }
 .cookie-banner #accept-cookies {
   background: rgba(79, 127, 106, 0.8);
-  color: #00050d;
   border: 1px solid rgba(79, 127, 106, 0.9);
 }
 .cookie-banner #accept-cookies:hover {
@@ -21588,7 +21596,6 @@ main {
 }
 .cookie-banner #decline-cookies {
   background: rgba(186, 20, 91, 0.5);
-  color: #00050d;
   border: 1px solid rgba(186, 20, 91, 0.9);
 }
 .cookie-banner #decline-cookies:hover {
