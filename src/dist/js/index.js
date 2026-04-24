@@ -42,7 +42,7 @@ function buildCard(video) {
     : `<span class="badge bg-primary mb-2"><i class="bi bi-play-circle"></i> HD</span>`;
   return `
     <div class="card min-w-15">
-      <a href="${playerURL}" class="d-block">
+      <a href="${playerURL}" class="d-block d-md-none">
         <img
           src="${escapeHtml(video.poster)}"
           class="card-img-top"
@@ -50,6 +50,12 @@ function buildCard(video) {
           onerror="this.src='../assets/img/placeholder.webp'"
         />
       </a>
+      <img
+        src="${escapeHtml(video.poster)}"
+        class="card-img-top d-none d-md-block"
+        alt="${escapeHtml(video.title)}"
+        onerror="this.src='../assets/img/placeholder.webp'"
+      />
       <div class="card-body d-flex flex-column">
         ${badge}
         <h5 class="card-title">${escapeHtml(video.title)}</h5>
