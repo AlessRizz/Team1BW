@@ -32,6 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
       return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
 
+    function isValidPassword(password) {
+      // Almeno 8 caratteri, una maiuscola, una minuscola, un numero e un carattere speciale
+      return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password);
+    }
+
     registerForm.addEventListener('submit', (e) => {
       e.preventDefault();
       clearErrors();
@@ -71,8 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
         passwordError.textContent = 'Inserisci una password.';
         passwordInput.classList.add('is-invalid');
         valid = false;
-      } else if (password.length < 6) {
-        passwordError.textContent = 'La password deve avere almeno 6 caratteri.';
+      } else if (!isValidPassword(password)) {
+        passwordError.textContent = 'La password deve avere almeno 8 caratteri, includere una maiuscola, una minuscola, un numero e un carattere speciale (@$!%*?&).';
         passwordInput.classList.add('is-invalid');
         valid = false;
       }
