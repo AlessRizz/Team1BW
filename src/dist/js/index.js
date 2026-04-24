@@ -1,4 +1,3 @@
-
 import { catalog } from "../player/catalog.js";
 
 const SECTIONS = [
@@ -7,17 +6,16 @@ const SECTIONS = [
   { containerId: "cards-sport", catalogKey: "sport" },
 ];
 
-
 SECTIONS.forEach(({ containerId, catalogKey }) => {
   const container = document.getElementById(containerId);
   if (!container) return;
   const videos = catalog[catalogKey] ?? [];
-  container.innerHTML = videos.map(video => buildCard(video)).join("");
+  container.innerHTML = videos.map((video) => buildCard(video)).join("");
 });
 
 // Auto-scroll when hovering a card at the edge of the container
-document.querySelectorAll(".categories").forEach(container => {
-  container.addEventListener("mouseover", e => {
+document.querySelectorAll(".categories").forEach((container) => {
+  container.addEventListener("mouseover", (e) => {
     const card = e.target.closest(".card");
     if (!card) return;
 
@@ -37,9 +35,10 @@ document.querySelectorAll(".categories").forEach(container => {
 
 function buildCard(video) {
   const playerURL = `./player/player.html?id=${encodeURIComponent(video.id)}`;
-  const badge = video.type === "youtube"
-    ? `<span class="badge bg-danger mb-2"><i class="bi bi-youtube"></i> Trailer</span>`
-    : `<span class="badge bg-primary mb-2"><i class="bi bi-play-circle"></i> HD</span>`;
+  const badge =
+    video.type === "youtube"
+      ? `<span class="badge bg-danger mb-2"><i class="bi bi-youtube"></i> Trailer</span>`
+      : `<span class="badge bg-primary mb-2"><i class="bi bi-play-circle"></i> HD</span>`;
   return `
     <div class="card min-w-15">
       <a href="${playerURL}" class="d-block d-md-none">
@@ -86,13 +85,43 @@ document.addEventListener("click", (e) => {
   if (e.target.closest("a")) return;
 
   if (card) {
-    document.querySelectorAll(".card.card-active").forEach(c => {
+    document.querySelectorAll(".card.card-active").forEach((c) => {
       if (c !== card) c.classList.remove("card-active");
     });
     card.classList.toggle("card-active");
   } else {
-    document.querySelectorAll(".card.card-active").forEach(c => {
+    document.querySelectorAll(".card.card-active").forEach((c) => {
       c.classList.remove("card-active");
     });
   }
+});
+
+// -----------Feedback form-----------
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("feedback-form");
+  const successMessage = document.getElementById("success-message");
+
+  if (!form) return;
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    if (!form.checkValidity()) {
+      event.stopPropagation();
+      form.classList.add("was-validated");
+      return;
+    }
+
+    successMessage.classList.remove("d-none");
+    successMessage.classList.add("show");
+
+    form.reset();
+    form.classList.remove("was-validated");
+
+    setTimeout(() => {
+      successMessage.classList.remove("show");
+      successMessage.classList.add("d-none");
+    }, 3000);
+  });
 });

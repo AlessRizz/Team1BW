@@ -21557,13 +21557,6 @@ main {
   backdrop-filter: blur(2px);
   z-index: 9999;
 }
-@media (max-width: 767px) {
-  .cookie-banner {
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 300px;
-  }
-}
 @media (min-width: 768px) {
   .cookie-banner {
     left: auto;
@@ -21582,6 +21575,7 @@ main {
   margin: 0;
   font-size: 14px;
   line-height: 1.4;
+  color: #fff;
 }
 .cookie-banner a {
   color: #c3ac52;
@@ -21622,6 +21616,13 @@ main {
 body {
   background-color: #2B2233;
   color: #c4c4c4;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
