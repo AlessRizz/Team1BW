@@ -2,13 +2,23 @@
 
 
 .main-privacy {
-    padding: 60px;
+    padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+   
 }
+
 .main-privacy h2 {
+    text-align: center;
     color: $giallo;
     margin-bottom: 40px;
 }
-
+.main-privacy h1, .main-privacy h3 {
+    text-align: center;
+}
+.main-privacy h1 {
+    margin-bottom: 30px;
+}
 .header-privacy a, .main-privacy a, .privacy-btn {
     display: inline-block;
     color: $rosa-logo;
