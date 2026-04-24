@@ -21553,7 +21553,7 @@ main {
   flex-direction: column;
   gap: 20px;
   box-shadow: 0 12px 35px rgba(0, 5, 13, 0.25);
-  border: 1px solid rgba(0, 5, 13, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(2px);
   z-index: 9999;
 }

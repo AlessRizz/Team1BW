@@ -20,20 +20,12 @@
   gap: 20px;
 
   box-shadow: 0 12px 35px rgba($scuro, 0.25);
-  border: 1px solid rgba($scuro, 0.15);
+  border: 1px solid rgba($bianco, 0.2);
 
   backdrop-filter: blur(2px);
-
   z-index: 9999;
 
-  // MOBILE (по центру как сейчас)
-  @media (max-width: 767px) {
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 300px;
-  }
-
-  // TABLET
+     
   @media (min-width: 768px) {
     left: auto;
     right: 20px;
@@ -41,7 +33,7 @@
     transform: none;
   }
 
-  // DESKTOP
+  
   @media (min-width: 1200px) {
     right: 40px;
     bottom: 40px;
@@ -51,6 +43,7 @@
     margin: 0;
     font-size: 14px;
     line-height: 1.4;
+    color: $bianco; 
   }
 
   a {
