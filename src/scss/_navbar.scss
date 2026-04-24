@@ -21,8 +21,18 @@
 }
 
 /* Sfondo dropdown e separatori */
+
+.dropdown-item {
+    color:#ffffff;
+
+}
 .dropdown-menu-dark {
     background-color: $bludark;
+    
+}
+
+.dropdown-divider {
+    background-color: $viola-chiaro;
 }
 
 /* Effetto hover sull'avatar */
@@ -40,6 +50,8 @@
 .profile-avatar {
     cursor: pointer;
     transition: transform 0.2s ease;
+    width: 40px; 
+    height: 35px;
 
     img {
         border: 2px solid transparent;
@@ -50,4 +62,6 @@
         border-color: #ffffff; // Bordo bianco all'hover
         transform: scale(1.05); // Leggero zoom
     }
+
+    background-image: linear-gradient(135deg, #7b2ff7, #c471ed);
 }
