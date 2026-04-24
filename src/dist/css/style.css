@@ -21336,12 +21336,23 @@ h3,
 .card:last-child {
   transform-origin: right center;
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (hover: hover) {
   .card:hover {
     animation: cardExpand 0.3s ease forwards;
     z-index: 100;
   }
   .card:hover .card-body {
+    opacity: 1;
+    max-height: 500px;
+    padding: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .card.card-active {
+    animation: cardExpand 0.3s ease forwards;
+    z-index: 100;
+  }
+  .card.card-active .card-body {
     opacity: 1;
     max-height: 500px;
     padding: 1rem;

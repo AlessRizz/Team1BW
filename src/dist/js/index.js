@@ -79,3 +79,20 @@ function escapeHtml(str = "") {
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#39;");
 }
+
+document.addEventListener("click", (e) => {
+  const card = e.target.closest(".card");
+
+  if (e.target.closest("a")) return;
+
+  if (card) {
+    document.querySelectorAll(".card.card-active").forEach(c => {
+      if (c !== card) c.classList.remove("card-active");
+    });
+    card.classList.toggle("card-active");
+  } else {
+    document.querySelectorAll(".card.card-active").forEach(c => {
+      c.classList.remove("card-active");
+    });
+  }
+});

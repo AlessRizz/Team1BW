@@ -96,8 +96,21 @@
     transform-origin: right center;
   }
 
-  &:hover {
+    @media (min-width: 768px) and (hover: hover) {
+    &:hover {
+      animation: cardExpand 0.3s ease forwards;
+      z-index: 100;
+
+      .card-body {
+        opacity: 1;
+        max-height: 500px;
+        padding: 1rem;
+      }
+    }
+  }
+
     @media (min-width: 768px) {
+    &.card-active {
       animation: cardExpand 0.3s ease forwards;
       z-index: 100;
 
