@@ -28,9 +28,22 @@
                 <div class="collapse navbar-collapse" id="Navbar">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-bold">
                         <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./index.html#Film">Film</a></li>
+                        <li class="nav-item"><a class="nav-link border-start-custom" href="./index.html#Film">Film</a></li>
                         <li class="nav-item"><a class="nav-link" href="./index.html#Serie">Serie TV</a></li>
                         <li class="nav-item"><a class="nav-link" href="./index.html#Sport">Sport</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown">Categorie</a>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0">
+                                <li><a class="dropdown-item" href="#">Azione e avventura</a></li>
+                                <li><a class="dropdown-item" href="#">Commedia</a></li>
+                                <li><a class="dropdown-item" href="#">Documentari</a></li>
+                                <li>
+                                    <hr class="dropdown-divider bg-secondary">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Bambini</a></li>
+                            </ul>
+                        </li>
                     </ul>
 
                     <div class="d-flex align-items-center gap-4">
@@ -47,8 +60,8 @@
                             </a>
 
                             <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark border-0">
-                                <li><a class="dropdown-item" href="./login.html">Accedi</a></li>
-                                <li><a class="dropdown-item" href="./register.html">Iscriviti</a></li>
+                                <li><a class="dropdown-item" href="login.html">Accedi</a></li>
+                                <li><a class="dropdown-item" href="./register.html">Iscrizione Fluxr</a></li>
                             </ul>
                         </div>
                     </div>
@@ -129,25 +142,41 @@
             <div class="mb-4">
                 <img src="../assets/img/streaming_logo.webp" alt="Logo Fluxr" width="100">
             </div>
+        </main>
 
-            <ul class="list-inline footer-links mb-3">
-                <li class="list-inline-item"><a href="#">Privacy</a></li>
-                <li class="list-inline-item"><a href="#">Aiuto</a></li>
-                <li class="list-inline-item"><a href="#">Cookie</a></li>
-            </ul>
+        <!-- FOOTER -->
+        <footer class="footer-stream py-5 mt-5 bg-viola">
+            <div class="container text-center">
+                <!-- Logo Footer -->
+                <div class="footer-logo mb-4 ">
+                    <img src="../assets/img/streaming_logo.webp" alt="Logo Fluxr" width="100">
+                </div>
 
-            <p class="small">© 2026 FLUXR Streaming</p>
+                <!-- Link di Servizio -->
+                <ul class="list-inline footer-links mb-3">
+                    <li class="list-inline-item"><a href="./termini-privacy.html">Termini e Informativa sulla privacy</a></li>
+                    <li class="list-inline-item"><a href="./feedback.html">Inviaci un feedback</a></li>
+                    <li class="list-inline-item"><a href="./aiuto.html">Aiuto</a></li>
+                    <li class="list-inline-item"><a href="./cookies.html">Informativa sui cookie</a></li>
+                </ul>
 
-            <div class="mt-3">
-                <i class="bi bi-facebook mx-2"></i>
-                <i class="bi bi-instagram mx-2"></i>
+                <!-- Copyright -->
+                <p class="footer-copy small">
+                    © 2026, FLUXR Streaming Video, Inc. o società affiliate
+                </p>
+
+                <!-- Social Icons  -->
+                <div class="footer-social mt-4">
+                    <a href="#" class="mx-2"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="mx-2"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" class="mx-2"><i class="bi bi-instagram"></i></a>
+                </div>
             </div>
+        </footer>
 
-        </div>
-    </footer>
-
-    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./js/register.js"></script>
+        <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="./js/auth.js"></script>
+        <script src="./js/register.js"></script>
 
 </body>
 

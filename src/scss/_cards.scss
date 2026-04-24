@@ -19,6 +19,10 @@
   padding-top: 120px !important;
   margin-top: -120px;
 
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  scroll-behavior: smooth;
+
   &::-webkit-scrollbar {
     display: none;
   }
@@ -70,10 +74,19 @@
     padding-bottom: 0;
     transition: all 0.3s ease-in-out;
 
+  
+
     .mio-bottone {
       background-color: $rosso-scuro;
+      color: $grigio-lt;
 
+      &:hover {
+
+        color: #fff;
+      }
+    
     }
+
   }
 
   &:first-child {
@@ -83,8 +96,21 @@
     transform-origin: right center;
   }
 
-  &:hover {
+    @media (min-width: 768px) and (hover: hover) {
+    &:hover {
+      animation: cardExpand 0.3s ease forwards;
+      z-index: 100;
+
+      .card-body {
+        opacity: 1;
+        max-height: 500px;
+        padding: 1rem;
+      }
+    }
+  }
+
     @media (min-width: 768px) {
+    &.card-active {
       animation: cardExpand 0.3s ease forwards;
       z-index: 100;
 
