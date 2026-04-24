@@ -2,7 +2,8 @@
 @use "./variables" as *;
 
 .login-page {
-  min-height: 100vh;
+  min-height: 70vh;
+  padding: 3rem 0;
   background: linear-gradient(
     180deg,
     $viola-scuro 0%,

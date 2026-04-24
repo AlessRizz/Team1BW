@@ -20,6 +20,11 @@
         }
     }
 
+    .footer-logo img {
+        width: 200px;
+        height: auto;          
+    }
+
     .footer-copy {
         font-size: 0.8rem;
         color: #fff;
@@ -31,7 +36,7 @@
         transition: color 0.2s;
 
         &:hover {
-            color: $viola;
+            color: $viola-chiaro;
         }
     }
 }

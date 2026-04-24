@@ -20896,6 +20896,11 @@ h3,
   color: #ffffff;
 }
 
+.navbar-brand img {
+  width: 200px;
+  height: auto;
+}
+
 /* Sfondo dropdown e separatori */
 .dropdown-item {
   color: #ffffff;
@@ -21187,6 +21192,10 @@ h3,
   color: #fff;
   text-decoration: underline;
 }
+.footer-stream .footer-logo img {
+  width: 200px;
+  height: auto;
+}
 .footer-stream .footer-copy {
   font-size: 0.8rem;
   color: #fff;
@@ -21197,11 +21206,12 @@ h3,
   transition: color 0.2s;
 }
 .footer-stream .footer-social i:hover {
-  color: #39264D;
+  color: #5e3a7e;
 }
 
 .login-page {
-  min-height: 100vh;
+  min-height: 70vh;
+  padding: 3rem 0;
   background: linear-gradient(180deg, #2B2233 0%, #19222d 100%);
   color: #fff;
 }
@@ -21376,6 +21386,13 @@ main {
   padding-top: 1rem;
 }
 
+.register-page {
+  min-height: 70vh;
+  padding: 3rem 0;
+  background: linear-gradient(180deg, #2B2233 0%, #19222d 100%);
+  color: #fff;
+}
+
 .register-card {
   width: 100%;
   max-width: 420px;
@@ -21481,20 +21498,18 @@ main {
 }
 
 .main-privacy h2 {
-  text-align: center;
   color: #c3ac52;
   margin-bottom: 40px;
 }
 
-.main-privacy h1, .main-privacy h3 {
+.main-privacy h1 {
+  margin-bottom: 30px;
   text-align: center;
 }
 
-.main-privacy h1 {
-  margin-bottom: 30px;
-}
-
-.header-privacy a, .main-privacy a, .privacy-btn {
+.header-privacy a,
+.main-privacy a,
+.privacy-btn {
   display: inline-block;
   color: #ba145b;
   text-decoration: none;
@@ -21506,12 +21521,15 @@ main {
   background-color: rgba(232, 92, 155, 0.25);
   padding: 10px 15px;
 }
-.header-privacy a:hover, .main-privacy a:hover, .privacy-btn:hover {
+.header-privacy a:hover,
+.main-privacy a:hover,
+.privacy-btn:hover {
   color: #c3ac52;
   text-decoration: underline;
 }
 
-.header-privacy, .footer-privacy {
+.header-privacy,
+.footer-privacy {
   padding: 40px;
   background-color: #39264D;
 }
@@ -21527,7 +21545,7 @@ main {
   transform: translateX(-50%);
   width: 520px;
   max-width: 92%;
-  background: #5e3a7e;
+  background: rgba(94, 58, 126, 0.98);
   color: #fff;
   padding: 24px 22px;
   border-radius: 18px;
@@ -21538,6 +21556,13 @@ main {
   border: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(2px);
   z-index: 9999;
+}
+@media (max-width: 767px) {
+  .cookie-banner {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 300px;
+  }
 }
 @media (min-width: 768px) {
   .cookie-banner {
@@ -21557,7 +21582,6 @@ main {
   margin: 0;
   font-size: 14px;
   line-height: 1.4;
-  color: #fff;
 }
 .cookie-banner a {
   color: #c3ac52;
