@@ -10,6 +10,7 @@
   position: relative;
   overflow: hidden;
   height: 60vh;
+
 }
 
 .hero-section {
@@ -180,6 +181,7 @@
 }
 
 .img-up {
+  object-fit: cover;
   object-position: center 25%;
 }
 
