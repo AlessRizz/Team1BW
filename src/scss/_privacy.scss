@@ -1,35 +1,43 @@
 @use "./variables" as *;
 
-
 .main-privacy {
-    padding: 60px;
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
 }
+
 .main-privacy h2 {
+  color: $giallo;
+  margin-bottom: 40px;
+}
+
+.main-privacy h1 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.header-privacy a,
+.main-privacy a,
+.privacy-btn {
+  display: inline-block;
+  color: $rosa-logo;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+  margin-block: 20px;
+  border: 1px solid rgba($rosa-logo, 0.25);
+  border-radius: 16px;
+  background-color: rgba($rosa-logo-chiaro, 0.25);
+  padding: 10px 15px;
+  &:hover {
     color: $giallo;
-    margin-bottom: 40px;
+    text-decoration: underline;
+  }
 }
 
-.header-privacy a, .main-privacy a, .privacy-btn {
-    display: inline-block;
-    color: $rosa-logo;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.2s ease;
-    margin-block: 20px;
-    border: 1px solid rgba($rosa-logo, 0.25);
-    border-radius: 16px;
-    background-color: rgba($rosa-logo-chiaro, 0.25);
-    padding: 10px 15px;
-    &:hover {
-        color: $giallo;
-        text-decoration: underline;
-    }
-}
-
-.header-privacy, .footer-privacy {
-    padding: 40px;
- background-color: $viola;
-
+.header-privacy,
+.footer-privacy {
+  padding: 40px;
+  background-color: $viola;
 }
 
 .form-control.bg-grigio-lt {

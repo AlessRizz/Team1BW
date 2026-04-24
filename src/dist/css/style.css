@@ -21484,7 +21484,9 @@ main {
   }
 }
 .main-privacy {
-  padding: 60px;
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .main-privacy h2 {
@@ -21492,7 +21494,14 @@ main {
   margin-bottom: 40px;
 }
 
-.header-privacy a, .main-privacy a, .privacy-btn {
+.main-privacy h1 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.header-privacy a,
+.main-privacy a,
+.privacy-btn {
   display: inline-block;
   color: #ba145b;
   text-decoration: none;
@@ -21504,18 +21513,102 @@ main {
   background-color: rgba(232, 92, 155, 0.25);
   padding: 10px 15px;
 }
-.header-privacy a:hover, .main-privacy a:hover, .privacy-btn:hover {
+.header-privacy a:hover,
+.main-privacy a:hover,
+.privacy-btn:hover {
   color: #c3ac52;
   text-decoration: underline;
 }
 
-.header-privacy, .footer-privacy {
+.header-privacy,
+.footer-privacy {
   padding: 40px;
   background-color: #39264D;
 }
 
 .form-control.bg-grigio-lt {
   background-color: #a6b6c6;
+}
+
+.cookie-banner {
+  position: fixed;
+  bottom: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 520px;
+  max-width: 92%;
+  background: rgba(94, 58, 126, 0.98);
+  color: #fff;
+  padding: 24px 22px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 12px 35px rgba(0, 5, 13, 0.25);
+  border: 1px solid rgba(0, 5, 13, 0.15);
+  backdrop-filter: blur(2px);
+  z-index: 9999;
+}
+@media (max-width: 767px) {
+  .cookie-banner {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 300px;
+  }
+}
+@media (min-width: 768px) {
+  .cookie-banner {
+    left: auto;
+    right: 20px;
+    bottom: 40px;
+    transform: none;
+  }
+}
+@media (min-width: 1200px) {
+  .cookie-banner {
+    right: 40px;
+    bottom: 40px;
+  }
+}
+.cookie-banner p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.cookie-banner a {
+  color: #c3ac52;
+  font-weight: 600;
+}
+.cookie-banner a:hover {
+  color: #fff;
+}
+.cookie-banner .cookie-buttons {
+  display: flex;
+  gap: 20px;
+}
+.cookie-banner button {
+  flex: 1;
+  font-size: 13px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  color: #fff;
+}
+.cookie-banner #accept-cookies {
+  background: rgba(79, 127, 106, 0.8);
+  border: 1px solid rgba(79, 127, 106, 0.9);
+}
+.cookie-banner #accept-cookies:hover {
+  background: rgba(79, 127, 106, 0.4);
+}
+.cookie-banner #decline-cookies {
+  background: rgba(186, 20, 91, 0.5);
+  border: 1px solid rgba(186, 20, 91, 0.9);
+}
+.cookie-banner #decline-cookies:hover {
+  background: rgba(186, 20, 91, 0.35);
 }
 
 body {

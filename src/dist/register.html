@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Registrazione | FLUXR</title>
 
     <link rel="stylesheet" href="./css/style.css">
@@ -13,24 +12,24 @@
 
 <body>
 
-    <!-- NAVBAR -->
+    <!-- HEADER -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-viola sticky-top px-lg-5">
             <div class="container-fluid">
-                <!-- Logo  -->
                 <a class="navbar-brand me-4" href="./index.html">
                     <img src="../assets/img/streaming_logo.webp" alt="logo FLUXR">
                 </a>
-                <!-- Hamburger Menu per Mobile -->
+
                 <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
                     data-bs-target="#Navbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="collapse navbar-collapse" id="Navbar">
-                    <!-- Menu Principale (Sinistra) -->
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-bold">
                         <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link border-start-custom" href="./index.html#Film">Film</a></li>
+                        <li class="nav-item"><a class="nav-link border-start-custom" href="./index.html#Film">Film</a>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="./index.html#Serie">Serie TV</a></li>
                         <li class="nav-item"><a class="nav-link" href="./index.html#Sport">Sport</a></li>
                         <li class="nav-item dropdown">
@@ -47,11 +46,10 @@
                             </ul>
                         </li>
                     </ul>
-                    <!-- Area Utente e Ricerca (Destra) -->
+
                     <div class="d-flex align-items-center gap-4">
-                        <!-- Icona Cerca -->
                         <a href="#" class="text-white"><i class="bi bi-search fs-5"></i></a>
-                        <!-- Menu Profilo -->
+
                         <div class="dropdown">
                             <a href="#"
                                 class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
@@ -60,8 +58,9 @@
                                     style="width: 32px; height: 32px;">
                                     <i class="bi bi-person-fill text-white"></i>
                                 </div>
-                                <span class="d-none d-xl-inline small fw-bold">Il mio account</span>
+                                <span class="small fw-bold">Il mio account</span>
                             </a>
+
                             <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark border-0">
                                 <li><a class="dropdown-item" href="login.html">Accedi</a></li>
                                 <li><a class="dropdown-item" href="./register.html">Iscrizione Fluxr</a></li>
@@ -71,69 +70,78 @@
                 </div>
             </div>
         </nav>
+    </header>
 
+    <!-- MAIN -->
+    <main class="register-page d-flex justify-content-center align-items-start py-4">
 
-        <!-- REGISTER -->
-        <main class="d-flex justify-content-center text-center py-2">
-            <div class="register-card p-4">
+        <div class="register-card p-4 mt-4 mt-lg-5">
 
-                <h1>Unisciti a FLUXR</h1>
+            <h1 class="text-center mb-2">Unisciti a FLUXR</h1>
 
-                <p>Crea il tuo account per guardare contenuti esclusivi</p>
+            <p class="text-center mb-4">Crea il tuo account per guardare contenuti esclusivi</p>
 
-                <h2 class="text-center mb-4">Registrati</h2>
+            <form id="registerForm" novalidate>
 
-                <form id="registerForm" novalidate>
+                <div class="mb-3">
+                    <label class="form-label" for="name">Nome utente</label>
+                    <input type="text" class="form-control" id="name" name="name">
+                    <small class="text-danger" id="nameError"></small>
+                </div>
 
-                    <div class="mb-3">
-                        <label class="form-label">Nome utente</label>
-                        <input type="text" class="form-control" id="name">
-                        <small class="text-danger" id="nameError"></small>
-                    </div>
+                <div class="mb-3">
+                    <label class="form-label" for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email">
+                    <small class="text-danger" id="emailError"></small>
+                </div>
 
-                    <div class="mb-3">
-                        <label class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email">
-                        <small class="text-danger" id="emailError"></small>
-                    </div>
+                <div class="mb-3">
+                    <label class="form-label" for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password">
+                    <small class="text-danger" id="passwordError"></small>
+                </div>
 
-                    <div class="mb-3">
-                        <label class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password">
-                        <small class="text-danger" id="passwordError"></small>
-                    </div>
+                <div class="mb-3">
+                    <label class="form-label" for="confirmPassword">Conferma Password</label>
+                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword">
+                    <small class="text-danger" id="confirmPasswordError"></small>
+                </div>
 
-                    <div class="mb-3">
-                        <label class="form-label">Conferma Password</label>
-                        <input type="password" class="form-control" id="confirmPassword">
-                        <small class="text-danger" id="confirmPasswordError"></small>
-                    </div>
+                <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" id="terms" name="terms">
+                    <label class="form-check-label" for="terms">
+                        Accetto i termini e le condizioni
+                    </label>
+                    <small class="text-danger d-block" id="termsError"></small>
+                </div>
 
-                    <div class="form-check mb-3">
-                        <input type="checkbox" class="form-check-input" id="terms">
-                        <label class="form-check-label">Accetto i termini</label>
-                        <small class="text-danger d-block" id="termsError"></small>
-                    </div>
+                <!-- Honeypot -->
+                <div class="d-none">
+                    <input type="text" id="website" name="website">
+                </div>
 
-                    <!-- Honeypot -->
-                    <div class="d-none">
-                        <input type="text" id="website">
-                    </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn register-btn">Registrati</button>
+                </div>
 
-                    <div class="d-grid">
-                        <button type="submit" class="btn register-btn">Registrati</button>
-                    </div>
+                <p class="text-danger mt-3" id="formError"></p>
+                <p class="text-success mt-3" id="formSuccess"></p>
 
-                    <p class="text-danger mt-3" id="formError"></p>
-                    <p class="text-success mt-3" id="formSuccess"></p>
+                <p class="text-center mt-4">
+                    Hai già un account?
+                    <a href="./login.html">Accedi</a>
+                </p>
 
-                    <p class="text-center mt-4">
-                        Hai già un account?
-                        <a href="./login.html">Accedi</a>
-                    </p>
+            </form>
 
-                </form>
-
+        </div>
+    </main>
+    <!-- FOOTER -->
+    <footer class="footer-stream py-5 mt-5 bg-viola">
+        <div class="container text-center">
+            <!-- Logo Footer -->
+            <div class="footer-logo mb-4 ">
+                <img src="../assets/img/streaming_logo.webp" alt="Logo Fluxr" width="100">
             </div>
         </main>
 
@@ -145,31 +153,32 @@
                     <img src="../assets/img/streaming_logo.webp" alt="Logo Fluxr">
                 </div>
 
-                <!-- Link di Servizio -->
-                <ul class="list-inline footer-links mb-3">
-                    <li class="list-inline-item"><a href="./termini-privacy.html">Termini e Informativa sulla privacy</a></li>
-                    <li class="list-inline-item"><a href="./feedback.html">Inviaci un feedback</a></li>
-                    <li class="list-inline-item"><a href="./aiuto.html">Aiuto</a></li>
-                    <li class="list-inline-item"><a href="./cookies.html">Informativa sui cookie</a></li>
-                </ul>
+            <!-- Link di Servizio -->
+            <ul class="list-inline footer-links mb-3">
+                <li class="list-inline-item"><a href="./termini-privacy.html">Termini e Informativa sulla privacy</a>
+                </li>
+                <li class="list-inline-item"><a href="./feedback.html">Inviaci un feedback</a></li>
+                <li class="list-inline-item"><a href="./aiuto.html">Aiuto</a></li>
+                <li class="list-inline-item"><a href="./cookies.html">Informativa sui cookie</a></li>
+            </ul>
 
-                <!-- Copyright -->
-                <p class="footer-copy small">
-                    © 2026, FLUXR Streaming Video, Inc. o società affiliate
-                </p>
+            <!-- Copyright -->
+            <p class="footer-copy small">
+                © 2026, FLUXR Streaming Video, Inc. o società affiliate
+            </p>
 
-                <!-- Social Icons  -->
-                <div class="footer-social mt-4">
-                    <a href="#" class="mx-2"><i class="bi bi-facebook"></i></a>
-                    <a href="#" class="mx-2"><i class="bi bi-twitter-x"></i></a>
-                    <a href="#" class="mx-2"><i class="bi bi-instagram"></i></a>
-                </div>
+            <!-- Social Icons  -->
+            <div class="footer-social mt-4">
+                <a href="#" class="mx-2"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="mx-2"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" class="mx-2"><i class="bi bi-instagram"></i></a>
             </div>
-        </footer>
+        </div>
+    </footer>
 
-        <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="./js/auth.js"></script>
-        <script src="./js/register.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/auth.js"></script>
+    <script src="./js/register.js"></script>
 
 </body>
 
