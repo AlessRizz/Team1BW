@@ -9,7 +9,12 @@ main {
   padding-top: 1rem; // riduce distanza dal hero
 }
 
-
+.register-page {
+  min-height: 70vh;
+  padding: 3rem 0;
+  background: linear-gradient(180deg, $viola-scuro 0%, $bludark 100%);
+  color: $bianco;
+}
 
 .register-card {
   width: 100%;
