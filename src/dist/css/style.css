@@ -21130,6 +21130,7 @@ h3,
 }
 
 .img-up {
+  object-fit: cover;
   object-position: center 25%;
 }
 
@@ -21345,11 +21346,6 @@ h3,
     max-height: 500px;
     padding: 1rem;
   }
-}
-
-.hero-section {
-  padding-top: 2rem;
-  padding-bottom: 1rem;
 }
 
 main {
