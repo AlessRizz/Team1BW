@@ -16,21 +16,21 @@
     if (profileIcon) {
       const avatar = profileIcon.closest(".profile-avatar");
       if (avatar) {
-        avatar.innerHTML = `<span class="text-white fw-bold" style="font-size: 14px;">${user.name.charAt(0).toUpperCase()}</span>`;
+        avatar.innerHTML = `<span class="text-white fw-bold">${user.name.charAt(0).toUpperCase()}</span>`;
         avatar.classList.remove("bg-secondary");
-        avatar.style.background = "linear-gradient(135deg, #7b2ff7, #c471ed)";
+        avatar.style.background = (".profile-avatar");
       }
     }
 
-    // Aggiorna il menu dropdown con un look più premium
+    // Aggiorna il menu dropdown
     profileDropdown.innerHTML = `
       <li>
         <span class="dropdown-item text-light small">
           <i class="bi bi-person-circle me-1"></i> ${user.name}
         </span>
       </li>
-      <li><span class="dropdown-item-text text-muted small">${user.email}</span></li>
-      <li><hr class="dropdown-divider bg-secondary"></li>
+      <li><span class="dropdown-item small">${user.email}</span></li>
+      <li><hr class="dropdown-divider"></li>
       <li><a class="dropdown-item" href="#" id="logoutBtn"><i class="bi bi-box-arrow-right me-1"></i> Esci</a></li>
     `;
 
