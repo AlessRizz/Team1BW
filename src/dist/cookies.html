@@ -5,10 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cookie Policy</title>
-
   <link rel="stylesheet" href="./css/style.css" />
-  <!-- Percorso relativo da index.html verso node_modules -->
-
   <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css" />
 </head>
 
@@ -48,7 +45,7 @@
                 <li><a class="dropdown-item" href="#">Commedia</a></li>
                 <li><a class="dropdown-item" href="#">Documentari</a></li>
                 <li>
-                  <hr class="dropdown-divider bg-secondary" />
+                  <hr class="dropdown-divider" />
                 </li>
                 <li><a class="dropdown-item" href="#">Bambini</a></li>
               </ul>
@@ -56,22 +53,28 @@
           </ul>
           <!-- Area Utente e Ricerca (Destra) -->
           <div class="d-flex align-items-center gap-4">
+
             <!-- Icona Cerca -->
+            <!--
             <a href="#" class="text-white"><i class="bi bi-search fs-5"></i></a>
+            -->
+
             <!-- Menu Profilo -->
             <div class="dropdown">
               <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
                 data-bs-toggle="dropdown">
-                <div class="profile-avatar me-2 d-flex align-items-center justify-content-center bg-secondary rounded"
-                  style="width: 32px; height: 32px">
+                <div class="profile-avatar me-2 d-flex align-items-center justify-content-center bg-secondary rounded">
                   <i class="bi bi-person-fill text-white"></i>
                 </div>
                 <span class="d-none d-xl-inline small fw-bold">Il mio account</span>
               </a>
-              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark border-0">
+              <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-lg-end border-0">
                 <li><a class="dropdown-item" href="login.html">Accedi</a></li>
                 <li>
                   <a class="dropdown-item" href="./register.html">Iscrizione Fluxr</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
                 </li>
               </ul>
             </div>

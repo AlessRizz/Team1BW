@@ -8,9 +8,9 @@ $bootstrap-icons-font-src: url("../assets/fonts/bootstrap-icons.woff2") format("
 
 */
 
-
 // Variabili e icone (solo definizioni)
-$bootstrap-icons-font-src: url("../assets/fonts/bootstrap-icons.woff2") format("woff2"),
+$bootstrap-icons-font-src:
+  url("../assets/fonts/bootstrap-icons.woff2") format("woff2"),
   url("../assets/fonts/bootstrap-icons.woff") format("woff");
 
 @use "../../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
@@ -18,31 +18,33 @@ $bootstrap-icons-font-src: url("../assets/fonts/bootstrap-icons.woff2") format("
 
 // IMPORTA BOOTSTRAP (Deve stare sopra i moduli che lo usano)
 @use "../../node_modules/bootstrap/scss/bootstrap.scss" with (
-  $font-family-sans-serif: ('Kanit', sans-serif), // riga per i font
-  
-  $theme-colors: ( // colori del tema
-    "viola": $viola,
-    "scuro": $scuro,
-    "grigio-chiaro": $grigio-lt,
-    "viola-chiaro": $viola-chiaro,
-    "viola-scuro": $viola-scuro,
-    "bludark": $bludark,
-    "rosa-logo": $rosa-logo,
-    "rosa-logo-chiaro": $rosa-logo-chiaro,
-    "bianco": $bianco,
-    "grigio-molto-chiaro": $grigio-molto-chiaro,
-    "rosso-scuro": $rosso-scuro,
-    "giallo": $giallo,
-    "giallo-chiaro": $giallo-chiaro,
-    "verde": $verde,
-    "verde-chiaro": $verde-chiaro,
-  )
+  $font-family-sans-serif: (
+    "Kanit",
+    sans-serif,
+  ),
+  // riga per i font
+  $theme-colors: (
+      // colori del tema
+      "viola": $viola,
+      "scuro": $scuro,
+      "grigio-chiaro": $grigio-lt,
+      "viola-chiaro": $viola-chiaro,
+      "viola-scuro": $viola-scuro,
+      "bludark": $bludark,
+      "rosa-logo": $rosa-logo,
+      "rosa-logo-chiaro": $rosa-logo-chiaro,
+      "bianco": $bianco,
+      "grigio-molto-chiaro": $grigio-molto-chiaro,
+      "rosso-scuro": $rosso-scuro,
+      "giallo": $giallo,
+      "giallo-chiaro": $giallo-chiaro,
+      "verde": $verde,
+      "verde-chiaro": $verde-chiaro,
+    )
 );
 
-
-
 // I MODULI (Ora possono usare le classi di Bootstrap o sovrascriverle)
-@use "./fonts";      // Spostato sotto Bootstrap
+@use "./fonts"; // Spostato sotto Bootstrap
 @use "./navbar";
 @use "./accordion";
 @use "./hero";
@@ -53,7 +55,6 @@ $bootstrap-icons-font-src: url("../assets/fonts/bootstrap-icons.woff2") format("
 @use "./privacy";
 
 @use "./cookies";
-
 
 // Stili globali finali
 body {

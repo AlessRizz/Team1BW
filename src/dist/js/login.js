@@ -50,13 +50,21 @@ form.addEventListener("submit", function (e) {
   if (!valid) return;
 
   const userData = localStorage.getItem(email.toLowerCase());
+  console.log("Tentativo login per:", email.toLowerCase(), "Dati trovati:", userData);
 
   if (!userData) {
     formError.textContent = "Utente non trovato.";
     return;
   }
 
-  const user = JSON.parse(userData);
+  let user;
+  try {
+    user = JSON.parse(userData);
+  } catch (err) {
+    console.error("Errore nel parsing dei dati utente:", err);
+    formError.textContent = "Errore interno nei dati salvati.";
+    return;
+  }
 
   if (user.password !== password) {
     formError.textContent = "Email o password non corretti.";

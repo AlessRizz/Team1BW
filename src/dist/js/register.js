@@ -102,7 +102,9 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      localStorage.setItem(email.toLowerCase(), JSON.stringify({ name, email, password }));
+      const userData = { name, email, password };
+      localStorage.setItem(email.toLowerCase(), JSON.stringify(userData));
+      console.log("Utente registrato:", email.toLowerCase(), userData);
 
       formSuccess.textContent = 'Registrazione avvenuta con successo! Reindirizzamento in corso...';
 

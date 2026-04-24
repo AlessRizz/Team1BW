@@ -1,74 +1,73 @@
-
 @use "./variables" as *;
 
 .accordion-section {
-    background-color: $viola-scuro;
-    border: 1px solid rgba($grigio-lt, 0.2); 
-    border-radius: 20px; 
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+  background-color: $viola-scuro;
+  border: 1px solid rgba($grigio-lt, 0.2);
+  border-radius: 20px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 
-    .accordion-title {
-        color: #fff;
-        font-family: 'Kanit', sans-serif;
-        font-weight: 700;
-        font-size: clamp(1.8rem, 5vw, 2.5rem); // Si adatta tra mobile e desktop
-        margin-top: 1rem;
+  .accordion-title {
+    color: #fff;
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.8rem, 5vw, 2.5rem); // Si adatta tra mobile e desktop
+    margin-top: 1rem;
+  }
+
+  .accordion {
+    --bs-accordion-border-color: rgba(#{$grigio-lt}, 0.5);
+
+    --bs-accordion-color: $grigio-lt;
+    --bs-accordion-btn-bg: $viola-chiaro;
+
+    --bs-accordion-btn-color: $grigio-lt;
+    --bs-accordion-active-bg: $viola-scuro;
+    --bs-accordion-active-color: #ffffff;
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem #{rgba($viola, 0.5)};
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    .accordion-item {
+      margin-bottom: 1rem;
+
+      background-color: $viola;
+      border-radius: 10px;
+      border-left: none;
+      border-right: none;
+
+      &:last-child {
+        border-bottom: none; // Rimuove l'ultima riga interna
+      }
     }
 
-    .accordion {
+    .accordion-button {
+      padding: 1.5rem 1rem;
+      font-size: 1.1rem;
 
+      transition:
+        background-color 0.25s ease,
+        color 0.25s ease;
 
-        --bs-accordion-border-color: rgba(#{$grigio-lt}, 0.5);
-        
-        --bs-accordion-color: $grigio-lt;
-        --bs-accordion-btn-bg: $viola-chiaro;
-
-        --bs-accordion-btn-color: $grigio-lt;
-        --bs-accordion-active-bg: $viola-scuro;
-        --bs-accordion-active-color: #ffffff;
-        --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem #{rgba($viola, 0.5)};
-
+      &:hover {
+        background-color: lighten($viola, 8%); // Schiarisce al passaggio
+        color: #ffffff; // Testo più luminoso
         border-radius: 10px;
-        overflow: hidden;
+      }
 
-        .accordion-item {
-            margin-bottom: 1rem;;
-            
-            background-color: $viola;
-            border-radius: 10px;
-            border-left: none;
-            border-right: none;
-
-            &:last-child {
-                border-bottom: none; // Rimuove l'ultima riga interna
-            }
-        }
-
-        .accordion-button {
-            padding: 1.5rem 1rem;
-            font-size: 1.1rem;
-            
-            transition: background-color 0.25s ease, color 0.25s ease; 
-
-            &:hover {
-                background-color: lighten($viola, 8%); // Schiarisce al passaggio
-                color: #ffffff; // Testo più luminoso
-                border-radius: 10px;
-            }
-
-            &::after {
-                filter: invert(1);
-                transition: transform 0.3s ease;
-            }
-        }
-
-        .accordion-body {
-            color: $grigio-lt;
-            border-radius: 10px;
-            padding-bottom: 2rem;
-            line-height: 1.5;
-            background-color: $viola;
-        }
+      &::after {
+        filter: invert(1);
+        transition: transform 0.3s ease;
+      }
     }
+
+    .accordion-body {
+      color: $grigio-lt;
+      border-radius: 10px;
+      padding-bottom: 2rem;
+      line-height: 1.5;
+      background-color: $viola;
+    }
+  }
 }

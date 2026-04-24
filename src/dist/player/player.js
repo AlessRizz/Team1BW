@@ -1,17 +1,15 @@
 import { findById } from "./catalog.js";
 
-
-const params  = new URLSearchParams(window.location.search);
+const params = new URLSearchParams(window.location.search);
 const videoId = params.get("id");           // es. "film-01"
 
 const video = findById(videoId);
 
-
 const playerSection = document.getElementById("player-section");
-const playerError   = document.getElementById("player-error");
-const metaTitle     = document.getElementById("meta-title");
-const metaSubtitle  = document.getElementById("meta-subtitle");
-const btnBack       = document.getElementById("btn-back");
+const playerError = document.getElementById("player-error");
+const metaTitle = document.getElementById("meta-title");
+const metaSubtitle = document.getElementById("meta-subtitle");
+const btnBack = document.getElementById("btn-back");
 
 
 if (!video) {
@@ -25,7 +23,7 @@ if (!video) {
 
   document.title = `${video.title} — FLUXR`;
 
-  if (metaTitle)    metaTitle.textContent = video.title;
+  if (metaTitle) metaTitle.textContent = video.title;
   if (metaSubtitle) {
     const parts = [video.year, video.duration, video.category].filter(Boolean);
     metaSubtitle.textContent = parts.join("  ·  ");
@@ -33,9 +31,9 @@ if (!video) {
 
 
   if (video.type === "youtube") {
-    initYouTube(video.src);                 
+    initYouTube(video.src);
   } else {
-    initVideoJS(video.src, video.poster);  
+    initVideoJS(video.src, video.poster);
   }
 }
 
@@ -59,7 +57,7 @@ function initYouTube(youtubeId) {
 
   if (!window.YT) {
     const tag = document.createElement("script");
-    tag.src   = "https://www.youtube.com/iframe_api";
+    tag.src = "https://www.youtube.com/iframe_api";
     document.head.appendChild(tag);
   }
 
@@ -74,11 +72,11 @@ function initYouTube(youtubeId) {
     new YT.Player("yt-player", {
       videoId: id,
       playerVars: {
-        autoplay:       1,  
-        rel:            0,   
-        modestbranding: 1,  
-        playsinline:    1,   
-        cc_load_policy: 1,  
+        autoplay: 1,
+        rel: 0,
+        modestbranding: 1,
+        playsinline: 1,
+        cc_load_policy: 1,
       },
       events: {
         onReady: (event) => {
@@ -110,7 +108,7 @@ function initVideoJS(src, poster) {
     return;
   }
 
-  videoEl.src   = src;
+  videoEl.src = src;
   if (poster) videoEl.poster = poster;
 
   console.log("[FLUXR] Video.js v10 — src impostato →", src);

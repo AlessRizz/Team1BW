@@ -4,27 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="icon" type="image/png" href="../assets/favicon.ico" />
-
     <title>Streaming Video</title>
-
     <meta name="description"
         content="Piattaforma di streaming di film con contenuti in evidenza, trailer e categorie. Scopri nuovi film, guarda trailer e trova i tuoi preferiti." />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="team1BW" />
-
     <meta property="og:title" content="Streaming Film | Scopri, Guarda e Esplora" />
     <meta property="og:description"
         content="Esplora una vasta selezione di film, guarda trailer e scopri contenuti in evidenza. Progetto sviluppato dal team di sviluppatori team1BW." />
     <meta property="og:type" content="website" />
-
-
     <link rel="stylesheet" href="./css/style.css">
-    <!-- Percorso relativo da index.html verso node_modules -->
-
     <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
-
 </head>
 
 <body>
@@ -63,14 +54,18 @@
                         </li>
                     </ul>
 
-
                     <!-- Area Utente e Ricerca (Destra) -->
                     <div class="d-flex align-items-center gap-4">
+                        
                         <!-- Icona Cerca -->
+                         <!--
                         <a href="#" class="text-white"><i class="bi bi-search fs-5"></i></a>
+                        -->
+
                         <!-- Menu Profilo -->
                         <div class="dropdown">
-                            <a href="#" class="nav-link d-flex align-items-center text-decoration-none dropdown-toggle"
+                            <a href="#" 
+                                class="nav-link d-flex align-items-center text-decoration-none dropdown-toggle"
                                 data-bs-toggle="dropdown">
                                 <div
                                     class="profile-avatar me-2 d-flex align-items-center justify-content-center bg-secondary rounded">
@@ -84,7 +79,6 @@
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-
                             </ul>
                         </div>
                     </div>
@@ -111,7 +105,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="carousel-item h-100">
                         <div class="hero-img-wrap">
                             <img src="../assets/img/hero/interstellar.webp" class="d-block w-100 h-100 object-fit-cover"
@@ -125,7 +118,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="carousel-item h-100">
                         <div class="hero-img-wrap">
                             <img src="../assets/img/hero/maleficent.webp" class="d-block w-100 h-100 object-fit-cover"
@@ -138,7 +130,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="carousel-item h-100">
                         <div class="hero-img-wrap">
                             <img src="../assets/img/hero/titanic.webp"
@@ -155,7 +146,6 @@
                         <div class="hero-img-wrap">
                             <img src="../assets/img/hero/williwonka.webp" class="d-block w-100 h-100 object-fit-cover"
                                 alt="Wonka film poster">
-
                             <div class="hero-img-text">
                                 <h2>Wonka</h2>
                                 <p>La storia di Willy Wonka e il suo mondo magico.</p>
@@ -167,7 +157,6 @@
             </div>
         </section>
     </header>
-
     <main>
         <div id="Serie" class="container-fluid mb-3 mt-5">
             <h2 class="mb-4">Serie TV</h2>
@@ -187,7 +176,6 @@
                 <!-- ci pensa direttamente il js player a popolare i div presi dal catalog.js -->
             </div>
         </div>
-
         <!-- ----------ACCORDION---------- -->
         <section class="accordion-section py-4 py-lg-5 px-3 px-lg-5 container" id="Domande">
             <h2 class="accordion-title text-center mb-5">Una risposta per ogni domanda</h2>
@@ -207,7 +195,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -222,7 +209,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -250,7 +236,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -267,7 +252,6 @@
             </div>
         </section>
     </main>
-
     <footer class="footer-stream py-5 bg-viola">
         <div class="container text-center">
             <!-- Logo Footer -->
@@ -298,31 +282,24 @@
     </footer>
 
     <!-- -----------------Cookie Banner----------------->
-
     <div id="cookie-banner" class="cookie-banner">
         <p>
             Utilizziamo i cookie per migliorare l’esperienza.
             <a href="cookies.html">Cookie Policy</a>
         </p>
-
         <div class="cookie-buttons">
             <button id="decline-cookies">
                 Rifiuta
             </button>
-
             <button id="accept-cookies">
                 Accetta
             </button>
         </div>
     </div>
-
-
     <script type="module" src="./js/index.js"></script>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/auth.js"></script>
     <script src="./js/cookies.js"></script>
-</body>
-
 </body>
 
 </html>

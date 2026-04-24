@@ -74,19 +74,14 @@
     padding-bottom: 0;
     transition: all 0.3s ease-in-out;
 
-  
-
     .mio-bottone {
       background-color: $rosso-scuro;
       color: $grigio-lt;
 
       &:hover {
-
         color: #fff;
       }
-    
     }
-
   }
 
   &:first-child {
@@ -96,7 +91,7 @@
     transform-origin: right center;
   }
 
-    @media (min-width: 768px) and (hover: hover) {
+  @media (min-width: 768px) and (hover: hover) {
     &:hover {
       animation: cardExpand 0.3s ease forwards;
       z-index: 100;
@@ -109,7 +104,7 @@
     }
   }
 
-    @media (min-width: 768px) {
+  @media (min-width: 768px) {
     &.card-active {
       animation: cardExpand 0.3s ease forwards;
       z-index: 100;
