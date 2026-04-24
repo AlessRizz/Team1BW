@@ -1,0 +1,91 @@
+@use "./variables" as *;
+
+.cookie-banner {
+  position: fixed;
+  bottom: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 520px;
+  max-width: 92%;
+
+  background: rgba($giallo, 0.6);
+  color: $scuro;
+
+  padding: 24px 22px;
+  border-radius: 18px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  box-shadow: 0 12px 35px rgba($scuro, 0.25);
+  border: 1px solid rgba($scuro, 0.15);
+
+  backdrop-filter: blur(2px);
+
+  z-index: 9999;
+
+  @media (min-width: 768px) {
+    bottom: 450px;
+  }
+
+  @media (min-width: 1200px) {
+    bottom: 200px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .cookie-buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  a {
+    color: $viola-scuro;
+    font-weight: 600;
+
+    &:hover {
+      color: $viola;
+    }
+  }
+
+  .cookie-buttons {
+    display: flex;
+    gap: 20px;
+  }
+
+  button {
+    flex: 1;
+    font-size: 13px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+  }
+
+  #accept-cookies {
+    background: rgba($verde, 0.8); // 🔽 прозрачный зелёный
+    color: $scuro;
+    border: 1px solid rgba($verde, 0.9);
+
+    &:hover {
+      background: rgba($verde, 0.4);
+    }
+  }
+
+  #decline-cookies {
+    background: rgba($rosa-logo, 0.5); // 🔽 прозрачный розовый
+    color: $scuro;
+    border: 1px solid rgba($rosa-logo, 0.9);
+
+    &:hover {
+      background: rgba($rosa-logo, 0.35);
+    }
+  }
+}
