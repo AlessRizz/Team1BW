@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="../assets/favicon.ico" />
   <title>Termini e Privacy | FLUXR</title>
   <meta name="description"
     content="Consulta i termini di servizio e l'informativa sulla privacy di FLUXR per sapere come proteggiamo i tuoi dati." />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="team1BW" />
   <meta property="og:title" content="Termini e Privacy | FLUXR Streaming Video" />
-  <meta property="og:description"
-    content="Termini di servizio e privacy policy della piattaforma FLUXR." />
+  <meta property="og:description" content="Termini di servizio e privacy policy della piattaforma FLUXR." />
   <meta property="og:type" content="website" />
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css" />
@@ -69,7 +69,7 @@
             <!-- Menu Profilo -->
 
             <div class="dropdown">
-              <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+              <a href="#" class="nav-link d-flex align-items-center text-decoration-none dropdown-toggle"
                 data-bs-toggle="dropdown">
                 <div class="profile-avatar me-2 d-flex align-items-center justify-content-center bg-secondary rounded">
                   <i class="bi bi-person-fill text-white"></i>
@@ -189,14 +189,14 @@
       <!-- Link di Servizio -->
       <ul class="list-inline footer-links mb-3">
         <li class="list-inline-item">
-          <a href="termini-privacy.html">Termini e Informativa sulla privacy</a>
+          <a href="./termini-privacy.html">Termini e Informativa sulla privacy</a>
         </li>
         <li class="list-inline-item">
-          <a href="feedback.html">Inviaci un feedback</a>
+          <a href="./feedback.html">Inviaci un feedback</a>
         </li>
-        <li class="list-inline-item"><a href="aiuto.html">Aiuto</a></li>
+        <li class="list-inline-item"><a href="./aiuto.html">Aiuto</a></li>
         <li class="list-inline-item">
-          <a href="cookies.html">Informativa sui cookie</a>
+          <a href="./cookies.html">Informativa sui cookie</a>
         </li>
       </ul>
 
@@ -213,9 +213,27 @@
       </div>
     </div>
   </footer>
+
+  <!-- -----------------Cookie Banner----------------->
+  <div id="cookie-banner" class="cookie-banner">
+    <p>
+      Utilizziamo i cookie per migliorare l’esperienza.
+      <a href="./cookies.html">Cookie Policy</a>
+    </p>
+    <div class="cookie-buttons">
+      <button id="decline-cookies">
+        Rifiuta
+      </button>
+      <button id="accept-cookies">
+        Accetta
+      </button>
+    </div>
+  </div>
+
   <script type="module" src="./js/index.js"></script>
   <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./js/auth.js"></script>
+  <script src="./js/cookies.js"></script>
 </body>
 
 </html>

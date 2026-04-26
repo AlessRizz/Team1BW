@@ -22,7 +22,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-viola sticky-top px-lg-5">
-            <div class="container-fluid">
+            <div class="container-fluid" id="su">
                 <!-- Logo  -->
                 <a class="navbar-brand me-4" href="./index.html">
                     <img src="../assets/img/streaming_logo.webp" alt="logo FLUXR">
@@ -48,7 +48,7 @@
                                 <li><a class="dropdown-item" href="#">Commedia</a></li>
                                 <li><a class="dropdown-item" href="#">Documentari</a></li>
                                 <li>
-                                    <hr class="dropdown-divider bg-secondary">
+                                    <hr class="dropdown-divider">
                                 </li>
                                 <li><a class="dropdown-item" href="#">Bambini</a></li>
                             </ul>
@@ -64,8 +64,7 @@
 
                         <!-- Menu Profilo -->
                         <div class="dropdown">
-                            <a href="#"
-                                class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                            <a href="#" class="nav-link d-flex align-items-center text-decoration-none dropdown-toggle"
                                 data-bs-toggle="dropdown">
                                 <div
                                     class="profile-avatar me-2 d-flex align-items-center justify-content-center bg-secondary rounded">
@@ -148,8 +147,26 @@
             </div>
         </div>
     </footer>
+
+    <!-- -----------------Cookie Banner----------------->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>
+            Utilizziamo i cookie per migliorare l’esperienza.
+            <a href="./cookies.html">Cookie Policy</a>
+        </p>
+        <div class="cookie-buttons">
+            <button id="decline-cookies">
+                Rifiuta
+            </button>
+            <button id="accept-cookies">
+                Accetta
+            </button>
+        </div>
+    </div>
+
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/auth.js"></script>
+    <script src="./js/cookies.js"></script>
     <script src="./js/login.js"></script>
 </body>
 
