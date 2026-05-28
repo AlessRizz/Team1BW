@@ -21536,8 +21536,8 @@ main {
   background-color: #39264d;
 }
 
-.form-control.bg-grigio-lt {
-  background-color: #a6b6c6;
+.form-control {
+  resize: none;
 }
 
 .cookie-banner {
