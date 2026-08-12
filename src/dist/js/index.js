@@ -33,6 +33,20 @@ document.querySelectorAll(".categories").forEach((container) => {
   });
 });
 
+// Image fallback error listener (avoids inline onerror & infinite loops)
+document.addEventListener(
+  "error",
+  (e) => {
+    if (e.target.tagName === "IMG" && e.target.classList.contains("card-img-top")) {
+      if (!e.target.dataset.fallbackAttempted) {
+        e.target.dataset.fallbackAttempted = "true";
+        e.target.src = "../assets/img/placeholder.webp";
+      }
+    }
+  },
+  true
+);
+
 function buildCard(video) {
   const playerURL = `./player/player.html?id=${encodeURIComponent(video.id)}`;
   const badge =
@@ -46,21 +60,19 @@ function buildCard(video) {
           src="${escapeHtml(video.poster)}"
           class="card-img-top"
           alt="${escapeHtml(video.title)}"
-          onerror="this.src='../assets/img/placeholder.webp'"
         />
       </a>
       <img
         src="${escapeHtml(video.poster)}"
         class="card-img-top d-none d-md-block"
         alt="${escapeHtml(video.title)}"
-        onerror="this.src='../assets/img/placeholder.webp'"
       />
       <div class="card-body d-flex flex-column">
         ${badge}
         <h5 class="card-title">${escapeHtml(video.title)}</h5>
         <p class="card-text small flex-grow-1">${escapeHtml(video.description)}</p>
         <div class="d-flex align-items-center justify-content-between mt-2">
-          <small class="text-grigio-chiaro">${video.year} · ${escapeHtml(video.duration)}</small>
+          <small class="text-grigio-chiaro">${escapeHtml(video.year)} · ${escapeHtml(video.duration)}</small>
           <a href="${playerURL}" class="btn mio-bottone btn-sm">
             <i class="bi bi-play-fill text-grigio-chiaro"></i> Guarda
           </a>
