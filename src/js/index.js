@@ -40,7 +40,7 @@ document.addEventListener(
     if (e.target.tagName === "IMG" && e.target.classList.contains("card-img-top")) {
       if (!e.target.dataset.fallbackAttempted) {
         e.target.dataset.fallbackAttempted = "true";
-        e.target.src = "../assets/img/placeholder.webp";
+        e.target.src = "./assets/img/placeholder.webp";
       }
     }
   },

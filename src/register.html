@@ -4,28 +4,29 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="../assets/favicon.ico" />
-    <title>Accedi | FLUXR</title>
+    <link rel="icon" type="image/png" href="./assets/favicon.ico" />
+    <title>Registrazione | FLUXR</title>
     <meta name="description"
-        content="Accedi al tuo account FLUXR per guardare i tuoi film preferiti, serie TV e contenuti sportivi esclusivi." />
+        content="Crea un account su FLUXR per accedere a contenuti esclusivi, serie TV e film in streaming." />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="team1BW" />
-    <meta property="og:title" content="Accedi | FLUXR Streaming Video" />
+    <meta property="og:title" content="Registrazione | FLUXR Streaming Video" />
     <meta property="og:description"
-        content="Accedi al tuo account FLUXR per esplorare una vasta selezione di film, guarda trailer e scopri contenuti in evidenza." />
+        content="Unisciti a FLUXR e inizia a guardare il meglio del cinema e dello sport." />
     <meta property="og:type" content="website" />
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
-
+    <link rel="stylesheet" href="../dist/css/style.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 
 <body>
+
+    <!-- HEADER -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-viola sticky-top px-lg-5">
             <div class="container-fluid" id="su">
                 <!-- Logo  -->
                 <a class="navbar-brand me-4" href="./index.html">
-                    <img src="../assets/img/streaming_logo.webp" alt="Logo Fluxr" />
+                    <img src="./assets/img/streaming_logo.webp" alt="Logo Fluxr" />
                 </a>
                 <!-- Hamburger Menu per Mobile -->
                 <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
@@ -85,44 +86,64 @@
             </div>
         </nav>
     </header>
-    <main class="login-page d-flex align-items-center justify-content-center">
-        <div class="login-card p-4 p-md-5">
-            <div class="text-center mb-4">
-                <img src="../assets/img/streaming_logo.webp" alt="Logo Fluxr" width="120" />
-            </div>
-            <h1 class="h3 text-center mb-4">Accedi</h1>
-            <form id="loginForm" novalidate>
+
+    <!-- MAIN -->
+    <main class="register-page d-flex justify-content-center align-items-start py-4">
+        <div class="register-card p-4 mt-4 mt-lg-5">
+            <h1 class="text-center mb-2">Unisciti a FLUXR</h1>
+            <p class="text-center mb-4">Crea il tuo account per guardare contenuti esclusivi</p>
+            <form id="registerForm" novalidate>
+                <div class="mb-3">
+                    <label class="form-label" for="name">Nome utente</label>
+                    <input type="text" class="form-control" id="name" name="name">
+                    <small class="text-danger" id="nameError"></small>
+                </div>
                 <div class="mb-3">
                     <label class="form-label" for="email">Email</label>
-                    <input type="email" class="form-control" id="email" name="email" />
+                    <input type="email" class="form-control" id="email" name="email">
                     <small class="text-danger" id="emailError"></small>
                 </div>
                 <div class="mb-3">
                     <label class="form-label" for="password">Password</label>
-                    <input type="password" class="form-control" id="password" name="password" />
+                    <input type="password" class="form-control" id="password" name="password">
                     <small class="text-danger" id="passwordError"></small>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="confirmPassword">Conferma Password</label>
+                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword">
+                    <small class="text-danger" id="confirmPasswordError"></small>
+                </div>
+                <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" id="terms" name="terms">
+                    <label class="form-check-label" for="terms">
+                        Accetto i termini e le condizioni
+                    </label>
+                    <small class="text-danger d-block" id="termsError"></small>
                 </div>
 
                 <!-- Honeypot -->
                 <div class="d-none">
-                    <label for="website">Lascia vuoto questo campo</label>
-                    <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+                    <input type="text" id="website" name="website">
                 </div>
-
                 <div class="d-grid">
-                    <button type="submit" class="btn login-btn">Accedi</button>
+                    <button type="submit" class="btn register-btn">Registrati</button>
                 </div>
-
-                <p class="mt-3 text-danger" id="formError"></p>
-                <p class="mt-3 text-success" id="formSuccess"></p>
+                <p class="text-danger mt-3" id="formError"></p>
+                <p class="text-success mt-3" id="formSuccess"></p>
+                <p class="text-center mt-4">
+                    Hai già un account?
+                    <a href="./login.html">Accedi</a>
+                </p>
             </form>
         </div>
     </main>
+
+    <!-- FOOTER -->
     <footer class="footer-stream py-5 bg-viola">
         <div class="container text-center">
             <!-- Logo Footer -->
             <div class="footer-logo mb-4">
-                <img src="../assets/img/streaming_logo.webp" alt="Logo Fluxr" />
+                <img src="./assets/img/streaming_logo.webp" alt="Logo Fluxr" />
             </div>
 
             <!-- Link di Servizio -->
@@ -163,10 +184,11 @@
         </div>
     </div>
 
-    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="./js/auth.js" defer></script>
     <script src="./js/cookies.js" defer></script>
-    <script src="./js/login.js" defer></script>
+    <script src="./js/register.js" defer></script>
+
 </body>
 
 </html>

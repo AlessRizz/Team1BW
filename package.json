@@ -16,8 +16,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch-css": "sass --watch src/scss/style.scss src/dist/css/style.css",
-    "build-css": "sass src/scss/style.scss src/dist/css/style.css"
+    "watch-css": "sass --watch src/scss/style.scss dist/css/style.css",
+    "build-css": "sass src/scss/style.scss dist/css/style.css"
   },
   "dependencies": {
     "@videojs/html": "^10.0.0-beta.26",
