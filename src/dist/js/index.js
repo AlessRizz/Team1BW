@@ -95,33 +95,3 @@ document.addEventListener("click", (e) => {
     });
   }
 });
-
-// -----------Feedback form-----------
-
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("feedback-form");
-  const successMessage = document.getElementById("success-message");
-
-  if (!form) return;
-
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    if (!form.checkValidity()) {
-      event.stopPropagation();
-      form.classList.add("was-validated");
-      return;
-    }
-
-    successMessage.classList.remove("d-none");
-    successMessage.classList.add("show");
-
-    form.reset();
-    form.classList.remove("was-validated");
-
-    setTimeout(() => {
-      successMessage.classList.remove("show");
-      successMessage.classList.add("d-none");
-    }, 3000);
-  });
-});

@@ -92,8 +92,9 @@
             inviarci i tuoi commenti, suggerimenti o segnalazioni di problemi.
         </p>
         <form onsubmit="
-          event.preventDefault();
-          alert('Messaggio inviato!');
+            event.preventDefault();
+            alert('Messaggio inviato!');
+            this.reset();
         ">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Email address</label>
