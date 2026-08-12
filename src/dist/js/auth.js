@@ -57,7 +57,7 @@
 
   } else {
     profileDropdown.innerHTML = `
-      <li><a class="dropdown-item" href="login.html">Accedi</a></li>
+      <li><a class="dropdown-item" href="./login.html">Accedi</a></li>
       <li><a class="dropdown-item" href="./register.html">Iscrizione Fluxr</a></li>
       <li><hr class="dropdown-divider"></li>
     `;
