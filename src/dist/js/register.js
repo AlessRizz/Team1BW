@@ -1,3 +1,10 @@
+(function checkAlreadyLogged() {
+  const saved = localStorage.getItem("fluxr_user");
+  if (saved) {
+    window.location.href = "./index.html";
+  }
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
   const registerForm = document.getElementById('registerForm');
 
@@ -104,7 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const userData = { name, email, password };
       localStorage.setItem(email.toLowerCase(), JSON.stringify(userData));
-      console.log("Utente registrato:", email.toLowerCase(), userData);
 
       formSuccess.textContent = 'Registrazione avvenuta con successo! Reindirizzamento in corso...';
 
@@ -114,10 +120,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
-
-(function checkAlreadyLogged() {
-  const saved = localStorage.getItem("fluxr_user");
-  if (saved) {
-    window.location.href = "./index.html";
-  }
-})();
