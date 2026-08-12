@@ -1,4 +1,13 @@
 (function initAuth() {
+  function escapeHtml(str = "") {
+    return String(str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
   const saved = localStorage.getItem("fluxr_user");
   const user = saved ? JSON.parse(saved) : null;
 
@@ -11,6 +20,10 @@
   if (!profileDropdown) return;
 
   if (user) {
+    const safeName = escapeHtml(user.name);
+    const safeEmail = escapeHtml(user.email);
+    const firstInitial = escapeHtml((user.name || "U").charAt(0).toUpperCase());
+
     if (profileLabel) {
       profileLabel.textContent = user.name;
     }
@@ -18,7 +31,7 @@
     if (profileIcon) {
       const avatar = profileIcon.closest(".profile-avatar");
       if (avatar) {
-        avatar.innerHTML = `<span class="text-white fw-bold">${(user.name || "U").charAt(0).toUpperCase()}</span>`;
+        avatar.innerHTML = `<span class="text-white fw-bold">${firstInitial}</span>`;
         avatar.classList.remove("bg-secondary");
         avatar.style.background = (".profile-avatar");
       }
@@ -28,10 +41,10 @@
     profileDropdown.innerHTML = `
       <li>
         <span class="dropdown-item text-light small fw-bold">
-          <i class="bi bi-person-circle me-1"></i> ${user.name}
+          <i class="bi bi-person-circle me-1"></i> ${safeName}
         </span>
       </li>
-      <li><span class="dropdown-item small text-secondary">${user.email}</span></li>
+      <li><span class="dropdown-item small text-secondary">${safeEmail}</span></li>
       <li><hr class="dropdown-divider"></li>
       <li><a class="dropdown-item" href="#" id="logoutBtn"><i class="bi bi-box-arrow-right me-1"></i> Esci</a></li>
     `;
