@@ -5,6 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!banner || !acceptButton || !declineButton) return;
 
+  if (localStorage.getItem('cookiesAccepted') !== null) {
+    banner.style.display = 'none';
+    return;
+  }
+
   acceptButton.addEventListener('click', () => {
     localStorage.setItem('cookiesAccepted', 'true');
     banner.style.display = 'none';
@@ -14,8 +19,4 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('cookiesAccepted', 'false');
     banner.style.display = 'none';
   });
-
-  if (localStorage.getItem('cookiesAccepted') !== null) {
-    banner.style.display = 'none';
-  }
 });
