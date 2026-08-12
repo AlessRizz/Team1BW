@@ -33,7 +33,6 @@
       if (avatar) {
         avatar.innerHTML = `<span class="text-white fw-bold">${firstInitial}</span>`;
         avatar.classList.remove("bg-secondary");
-        avatar.style.background = (".profile-avatar");
       }
     }
 
