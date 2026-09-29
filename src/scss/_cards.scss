@@ -1,12 +1,9 @@
 @use "./variables" as *;
 
 .min-w-15 {
-  min-width: 15rem;
-}
-
-.card-img-top {
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+  min-width: 17rem;
+  width: 17rem;
+  flex: 0 0 17rem;
 }
 
 .container-fluid {
@@ -14,12 +11,10 @@
 }
 
 .categories {
-  padding-top: 1.5rem !important;
-  padding-bottom: 3.5rem !important;
-  margin-top: -0.75rem;
-  margin-bottom: -0.75rem;
-
+  padding-top: 1rem !important;
+  padding-bottom: 1.5rem !important;
   overflow-x: auto !important;
+  overflow-y: hidden !important;
   scroll-behavior: smooth;
 
   &::-webkit-scrollbar {
@@ -29,102 +24,118 @@
   scrollbar-width: none;
 }
 
-@keyframes cardExpand {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.15);
-  }
-}
-
-@keyframes cardShrink {
-  0% {
-    transform: scale(1.15);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
 .card {
   position: relative;
-  overflow: visible !important;
-  transform-origin: center center;
-  @media (min-width: 768px) {
-    animation: cardShrink 0.3s ease forwards;
+  height: 220px;
+  overflow: hidden !important;
+  border-radius: 0.5rem;
+  background-color: $scuro;
+  border: 1px solid rgba($grigio-lt, 0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+
+  .card-poster-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.35s ease, filter 0.35s ease;
   }
 
   .card-body {
     position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: $viola;
+    inset: 0;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    background: linear-gradient(
+      180deg,
+      rgba($viola-scuro, 0.55) 0%,
+      rgba($viola-scuro, 0.9) 45%,
+      rgba(10, 4, 18, 0.98) 100%
+    );
+    backdrop-filter: blur(3px);
     color: $bianco;
-    border-radius: 0 0 0.375rem 0.375rem;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    z-index: 101;
-
     opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    padding-top: 0;
-    padding-bottom: 0;
-    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+      color: #fff;
+    }
+
+    .card-text {
+      font-size: 0.82rem;
+      line-height: 1.4;
+      color: $grigio-molto-chiaro;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin-bottom: 0.5rem;
+    }
 
     .mio-bottone {
       background-color: $rosso-scuro;
-      color: $grigio-lt;
+      color: #fff;
+      font-weight: 600;
+      padding: 0.35rem 0.85rem;
+      border-radius: 6px;
+      transition: background-color 0.2s ease, transform 0.2s ease;
 
       &:hover {
+        background-color: lighten($rosso-scuro, 8%);
         color: #fff;
+        transform: scale(1.03);
       }
     }
   }
 
-  @media (max-width: 767.98px) {
+  &:hover {
+    transform: scale(1.04);
+    border-color: rgba($rosa-logo, 0.6);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+    z-index: 10;
+
+    .card-img-top {
+      transform: scale(1.08);
+      filter: brightness(0.5);
+    }
+
     .card-body {
-      position: relative;
-      top: auto;
-      left: auto;
       opacity: 1;
-      max-height: none;
-      overflow: visible;
-      padding: 0.85rem 1rem;
+      pointer-events: auto;
+      transform: translateY(0);
     }
   }
 
-  &:first-child {
-    transform-origin: left center;
-  }
-  &:last-child {
-    transform-origin: right center;
-  }
+  &.card-active {
+    transform: scale(1.04);
+    border-color: rgba($rosa-logo, 0.6);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+    z-index: 10;
 
-  @media (min-width: 768px) and (hover: hover) {
-    &:hover {
-      animation: cardExpand 0.3s ease forwards;
-      z-index: 100;
-
-      .card-body {
-        opacity: 1;
-        max-height: 500px;
-        padding: 1rem;
-      }
+    .card-img-top {
+      transform: scale(1.08);
+      filter: brightness(0.5);
     }
-  }
 
-  @media (min-width: 768px) {
-    &.card-active {
-      animation: cardExpand 0.3s ease forwards;
-      z-index: 100;
-
-      .card-body {
-        opacity: 1;
-        max-height: 500px;
-        padding: 1rem;
-      }
+    .card-body {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
     }
   }
 }
