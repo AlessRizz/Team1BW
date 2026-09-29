@@ -15,22 +15,30 @@
   margin-bottom: 30px;
   text-align: center;
 }
-.header-privacy a,
-.main-privacy a,
 .privacy-btn {
   display: inline-block;
   color: $rosa-logo;
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
   margin-block: 20px;
   border: 1px solid rgba($rosa-logo, 0.25);
   border-radius: 16px;
   background-color: rgba($rosa-logo-chiaro, 0.25);
   padding: 10px 15px;
+  cursor: pointer;
   &:hover {
     color: $giallo;
-    text-decoration: underline;
+    background-color: rgba($rosa-logo, 0.35);
+  }
+}
+
+.main-privacy a:not(.privacy-btn) {
+  color: $rosa-logo;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+  &:hover {
+    color: $giallo;
   }
 }
 
@@ -40,6 +48,6 @@
   background-color: $viola;
 }
 
-.form-control {
+textarea.form-control {
   resize: none;
 }

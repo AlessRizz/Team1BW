@@ -97,26 +97,39 @@ function initYouTube(youtubeId) {
 
 
 function initVideoJS(src, poster) {
-
   document.getElementById("yt-wrapper")?.classList.add("d-none");
   document.getElementById("vjs-wrapper")?.classList.remove("d-none");
 
   const videoEl = document.querySelector("#vjs-wrapper video");
+  const posterImg = document.getElementById("vjs-poster");
 
   if (!videoEl) {
     console.error("[FLUXR] Elemento <video> non trovato in #vjs-wrapper");
     return;
   }
 
+  // Normalizza percorso relativo poster da cartella player
+  const resolvedPoster = poster ? poster.replace(/^\.\//, "../") : "";
+
   videoEl.src = src;
-  if (poster) videoEl.poster = poster;
+  if (resolvedPoster) {
+    videoEl.poster = resolvedPoster;
+    if (posterImg) {
+      posterImg.src = resolvedPoster;
+    }
+  }
 
   console.log("[FLUXR] Video.js v10 — src impostato →", src);
 }
 
 function showPlayerError(msg) {
   const el = document.getElementById("player-error");
-  if (!el) return;
-  el.textContent = msg;
-  el.classList.remove("d-none");
+  const msgEl = document.getElementById("player-error-msg");
+  const playerSection = document.getElementById("player-section");
+
+  if (playerSection) playerSection.classList.add("d-none");
+  if (msgEl) {
+    msgEl.textContent = msg;
+  }
+  if (el) el.classList.remove("d-none");
 }

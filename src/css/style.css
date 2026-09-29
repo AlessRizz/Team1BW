@@ -17,7 +17,7 @@ $bootstrap-icons-font-src: url("../assets/fonts/bootstrap-icons.woff2") format("
 @font-face {
   font-display: block;
   font-family: "bootstrap-icons";
-  src: url("./fonts/bootstrap-icons.woff2?24e3eb84d0bcaf83d77f904c78ac1f47") format("woff2"), url("./fonts/bootstrap-icons.woff?24e3eb84d0bcaf83d77f904c78ac1f47") format("woff");
+  src: url("../assets/fonts/bootstrap-icons.woff2") format("woff2"), url("../assets/fonts/bootstrap-icons.woff") format("woff");
 }
 .bi::before,
 [class^=bi-]::before,
@@ -21084,11 +21084,8 @@ h3,
   top: 70%;
   left: 5%;
   color: rgba(255, 255, 255, 0.9);
-  transform: translateY(-50%);
-  color: rgba(255, 255, 255, 0.9);
   text-shadow: 0 2px 5px rgba(0, 5, 13, 0.8), 0 10px 30px rgba(43, 34, 51, 0.6), 0 0 20px rgba(94, 58, 126, 0.25);
-  transform: translate(-50%, -50%) translateY(20px);
-  text-shadow: 0 2px 5px rgba(0, 5, 13, 0.8), 0 10px 30px rgba(43, 34, 51, 0.6), 0 0 20px rgba(94, 58, 126, 0.25);
+  transform: translateY(20px);
   opacity: 0;
   transition: all 0.8s ease;
 }
@@ -21289,12 +21286,11 @@ h3,
 }
 
 .categories {
-  padding-bottom: 400px !important;
-  margin-bottom: -400px;
-  padding-top: 120px !important;
-  margin-top: -120px;
+  padding-top: 1.5rem !important;
+  padding-bottom: 3.5rem !important;
+  margin-top: -0.75rem;
+  margin-bottom: -0.75rem;
   overflow-x: auto !important;
-  overflow-y: hidden !important;
   scroll-behavior: smooth;
 }
 .categories::-webkit-scrollbar {
@@ -21310,12 +21306,12 @@ h3,
     transform: scale(1);
   }
   100% {
-    transform: scale(1.5);
+    transform: scale(1.15);
   }
 }
 @keyframes cardShrink {
   0% {
-    transform: scale(1.5);
+    transform: scale(1.15);
   }
   100% {
     transform: scale(1);
@@ -21355,6 +21351,17 @@ h3,
 .card .card-body .mio-bottone:hover {
   color: #fff;
 }
+@media (max-width: 767.98px) {
+  .card .card-body {
+    position: relative;
+    top: auto;
+    left: auto;
+    opacity: 1;
+    max-height: none;
+    overflow: visible;
+    padding: 0.85rem 1rem;
+  }
+}
 .card:first-child {
   transform-origin: left center;
 }
@@ -21382,10 +21389,6 @@ h3,
     max-height: 500px;
     padding: 1rem;
   }
-}
-
-main {
-  padding-top: 1rem;
 }
 
 .register-page {
@@ -21509,25 +21512,31 @@ main {
   text-align: center;
 }
 
-.header-privacy a,
-.main-privacy a,
 .privacy-btn {
   display: inline-block;
   color: #ba145b;
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
   margin-block: 20px;
   border: 1px solid rgba(186, 20, 91, 0.25);
   border-radius: 16px;
   background-color: rgba(232, 92, 155, 0.25);
   padding: 10px 15px;
+  cursor: pointer;
 }
-.header-privacy a:hover,
-.main-privacy a:hover,
 .privacy-btn:hover {
   color: #c3ac52;
+  background-color: rgba(186, 20, 91, 0.35);
+}
+
+.main-privacy a:not(.privacy-btn) {
+  color: #ba145b;
   text-decoration: underline;
+  transition: color 0.2s ease;
+}
+.main-privacy a:not(.privacy-btn):hover {
+  color: #c3ac52;
 }
 
 .header-privacy,
@@ -21536,13 +21545,13 @@ main {
   background-color: #39264d;
 }
 
-.form-control {
+textarea.form-control {
   resize: none;
 }
 
 .cookie-banner {
   position: fixed;
-  bottom: 300px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   width: 520px;

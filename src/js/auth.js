@@ -9,7 +9,16 @@
   }
 
   const saved = localStorage.getItem("fluxr_user");
-  const user = saved ? JSON.parse(saved) : null;
+  let user = null;
+  if (saved) {
+    try {
+      user = JSON.parse(saved);
+    } catch (e) {
+      console.error("[FLUXR Auth] Dati utente non validi in localStorage:", e);
+      localStorage.removeItem("fluxr_user");
+      user = null;
+    }
+  }
 
   // Selettori mirati partendo dall'avatar per evitare conflitti con altri dropdown (es. Categorie)
   const profileAvatarContainer = document.querySelector(".profile-avatar");
@@ -59,7 +68,6 @@
     profileDropdown.innerHTML = `
       <li><a class="dropdown-item" href="./login.html">Accedi</a></li>
       <li><a class="dropdown-item" href="./register.html">Iscrizione Fluxr</a></li>
-      <li><hr class="dropdown-divider"></li>
     `;
   }
 })();

@@ -14,13 +14,12 @@
 }
 
 .categories {
-  padding-bottom: 400px !important;
-  margin-bottom: -400px;
-  padding-top: 120px !important;
-  margin-top: -120px;
+  padding-top: 1.5rem !important;
+  padding-bottom: 3.5rem !important;
+  margin-top: -0.75rem;
+  margin-bottom: -0.75rem;
 
   overflow-x: auto !important;
-  overflow-y: hidden !important;
   scroll-behavior: smooth;
 
   &::-webkit-scrollbar {
@@ -35,13 +34,13 @@
     transform: scale(1);
   }
   100% {
-    transform: scale(1.5);
+    transform: scale(1.15);
   }
 }
 
 @keyframes cardShrink {
   0% {
-    transform: scale(1.5);
+    transform: scale(1.15);
   }
   100% {
     transform: scale(1);
@@ -81,6 +80,18 @@
       &:hover {
         color: #fff;
       }
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    .card-body {
+      position: relative;
+      top: auto;
+      left: auto;
+      opacity: 1;
+      max-height: none;
+      overflow: visible;
+      padding: 0.85rem 1rem;
     }
   }
 

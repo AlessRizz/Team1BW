@@ -15,7 +15,6 @@
         content="Aiutaci a migliorare la tua esperienza su FLUXR inviandoci il tuo feedback." />
     <meta property="og:type" content="website" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css" />
 </head>
 
 <body>
@@ -74,9 +73,6 @@
                             <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-lg-end border-0">
                                 <li><a class="dropdown-item" href="./login.html">Accedi</a></li>
                                 <li><a class="dropdown-item" href="./register.html">Iscrizione Fluxr</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
                             </ul>
                         </div>
                     </div>
@@ -91,22 +87,21 @@
             Il tuo feedback è importante per noi! Compila il modulo sottostante per
             inviarci i tuoi commenti, suggerimenti o segnalazioni di problemi.
         </p>
-        <form onsubmit="
-            event.preventDefault();
-            alert('Messaggio inviato!');
-            this.reset();
-        ">
+        <form id="feedbackForm" novalidate>
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                <input type="email" class="form-control bg-grigio-lt" id="exampleFormControlInput1"
+                <label for="feedbackEmail" class="form-label">Indirizzo Email</label>
+                <input type="email" class="form-control bg-grigio-lt" id="feedbackEmail"
                     placeholder="name@example.com" required />
             </div>
             <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                <textarea class="form-control bg-grigio-lt" placeholder="Scrivi il tuo messaggio..." maxlength="200"
-                    id="exampleFormControlTextarea1" rows="3" required></textarea>
+                <label for="feedbackMessage" class="form-label">Il tuo messaggio</label>
+                <textarea class="form-control bg-grigio-lt" placeholder="Scrivi il tuo messaggio..." maxlength="500"
+                    id="feedbackMessage" rows="4" required></textarea>
             </div>
             <button type="submit" class="privacy-btn">Invia Feedback</button>
+            <div id="feedbackSuccess" class="alert alert-success d-none mt-3" role="alert">
+                Grazie per il tuo feedback! Il messaggio è stato inviato con successo.
+            </div>
         </form>
         <a href="#su">↑ Torna su</a>
     </main>
@@ -158,6 +153,23 @@
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="./js/auth.js" defer></script>
     <script src="./js/cookies.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('feedbackForm');
+            if (!form) return;
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const successEl = document.getElementById('feedbackSuccess');
+                if (successEl) {
+                    successEl.classList.remove('d-none');
+                }
+                form.reset();
+                setTimeout(() => {
+                    if (successEl) successEl.classList.add('d-none');
+                }, 5000);
+            });
+        });
+    </script>
 </body>
 
 </html>

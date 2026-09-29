@@ -2,7 +2,12 @@
 (function checkAlreadyLogged() {
   const saved = localStorage.getItem("fluxr_user");
   if (saved) {
-    window.location.href = "./index.html";
+    try {
+      JSON.parse(saved);
+      window.location.href = "./index.html";
+    } catch {
+      localStorage.removeItem("fluxr_user");
+    }
   }
 })();
 
@@ -31,7 +36,14 @@ document.addEventListener("DOMContentLoaded", () => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
 
-  form.addEventListener("submit", function (e) {
+  async function hashPassword(str) {
+    const msgUint8 = new TextEncoder().encode(str);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+  }
+
+  form.addEventListener("submit", async function (e) {
     e.preventDefault();
     clearErrors();
     if (honeypot && honeypot.value !== "") return;
@@ -59,7 +71,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!valid) return;
 
-    const userData = localStorage.getItem(email.toLowerCase());
+    const accountKey = "fluxr_account_" + email.toLowerCase();
+    const userData = localStorage.getItem(accountKey) || localStorage.getItem(email.toLowerCase());
 
     if (!userData) {
       if (formError) formError.textContent = "Utente non trovato.";
@@ -75,7 +88,8 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    if (user.password !== password) {
+    const hashedAttempt = await hashPassword(password);
+    if (user.password !== hashedAttempt && user.password !== password) {
       if (formError) formError.textContent = "Email o password non corretti.";
       return;
     }

@@ -8,12 +8,13 @@ $bootstrap-icons-font-src: url("../assets/fonts/bootstrap-icons.woff2") format("
 
 */
 
-// Variabili e icone (solo definizioni)
-$bootstrap-icons-font-src:
-  url("../assets/fonts/bootstrap-icons.woff2") format("woff2"),
-  url("../assets/fonts/bootstrap-icons.woff") format("woff");
-
-@use "../../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
+// Variabili e icone
+@use "../../node_modules/bootstrap-icons/font/bootstrap-icons.scss" with (
+  $bootstrap-icons-font-src: (
+    url("../assets/fonts/bootstrap-icons.woff2") format("woff2"),
+    url("../assets/fonts/bootstrap-icons.woff") format("woff")
+  )
+);
 @use "./variables" as *;
 
 // IMPORTA BOOTSTRAP (Deve stare sopra i moduli che lo usano)

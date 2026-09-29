@@ -244,7 +244,7 @@ export const catalog = {
       description: "Tensione alle stelle in questa sfida che deciderà le sorti del campionato.",
       poster: "./assets/img/sport/sport-partitacalcio2.webp",
       type: "youtube",
-      src: "https://www.youtube.com/watch?v=KME0PoqA2Rs",
+      src: "https://www.youtube.com/watch?v=gnERPd2201g",
       category: "Calcio",
       year: 2024,
       duration: "12 min"
@@ -255,7 +255,7 @@ export const catalog = {
       description: "Una notte di basket ad alto ritmo con canestri spettacolari.",
       poster: "./assets/img/sport/sport-partitabasket.webp",
       type: "youtube",
-      src: "https://www.youtube.com/watch?v=KME0PoqA2Rs",
+      src: "https://www.youtube.com/watch?v=ScMzIvxBSi4",
       category: "Basket",
       year: 2024,
       duration: "18 min"
@@ -266,7 +266,7 @@ export const catalog = {
       description: "La partita che ha incoronato il campione di questa stagione straordinaria.",
       poster: "./assets/img/sport/sport-partitabasket1.webp",
       type: "youtube",
-      src: "https://www.youtube.com/watch?v=KME0PoqA2Rs",
+      src: "https://www.youtube.com/watch?v=L_LUpnjgPso",
       category: "Basket",
       year: 2024,
       duration: "20 min"
@@ -277,7 +277,7 @@ export const catalog = {
       description: "Il derby più atteso dell'anno tra le due squadre rivali della città.",
       poster: "./assets/img/sport/sport-partitabasket2.webp",
       type: "youtube",
-      src: "https://www.youtube.com/watch?v=KME0PoqA2Rs",
+      src: "https://www.youtube.com/watch?v=M7lc1UVf-VE",
       category: "Basket",
       year: 2024,
       duration: "16 min"
@@ -288,7 +288,7 @@ export const catalog = {
       description: "I grandi campioni del pedale si sfidano sui passi alpini più duri.",
       poster: "./assets/img/sport/sport-ciclismo.webp",
       type: "youtube",
-      src: "https://www.youtube.com/watch?v=KME0PoqA2Rs",
+      src: "https://www.youtube.com/watch?v=ysz5S6PUM-U",
       category: "Ciclismo",
       year: 2024,
       duration: "10 min"
@@ -299,7 +299,7 @@ export const catalog = {
       description: "Emozioni in diretta dal grande evento sportivo internazionale.",
       poster: "./assets/img/sport/sport-img1.webp",
       type: "youtube",
-      src: "https://www.youtube.com/watch?v=KME0PoqA2Rs",
+      src: "https://www.youtube.com/watch?v=aqz-KE-bpKQ",
       category: "Sport",
       year: 2024,
       duration: "14 min"
@@ -310,7 +310,7 @@ export const catalog = {
       description: "Un evento che ha tenuto col fiato sospeso milioni di spettatori.",
       poster: "./assets/img/sport/sport-img2.webp",
       type: "youtube",
-      src: "https://www.youtube.com/watch?v=KME0PoqA2Rs",
+      src: "https://www.youtube.com/watch?v=pAgnJDJN4VA",
       category: "Sport",
       year: 2024,
       duration: "11 min"
@@ -321,7 +321,7 @@ export const catalog = {
       description: "Prestazioni straordinarie in una competizione di altissimo livello.",
       poster: "./assets/img/sport/sport-img3.webp",
       type: "youtube",
-      src: "https://www.youtube.com/watch?v=KME0PoqA2Rs",
+      src: "https://www.youtube.com/watch?v=fJ9rUzIMcZQ",
       category: "Sport",
       year: 2024,
       duration: "13 min"
@@ -332,7 +332,7 @@ export const catalog = {
       description: "Il meglio dello sport mondiale raccolto in un unico imperdibile speciale.",
       poster: "./assets/img/sport/sport-img4.webp",
       type: "youtube",
-      src: "https://www.youtube.com/watch?v=KME0PoqA2Rs",
+      src: "https://www.youtube.com/watch?v=2Vv-BfVoq4g",
       category: "Sport",
       year: 2024,
       duration: "9 min"

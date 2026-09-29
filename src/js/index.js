@@ -13,9 +13,12 @@ SECTIONS.forEach(({ containerId, catalogKey }) => {
   container.innerHTML = videos.map((video) => buildCard(video)).join("");
 });
 
-// Auto-scroll when hovering a card at the edge of the container
+// Auto-scroll when hovering a card at the edge of the container (with throttle cooldown)
 document.querySelectorAll(".categories").forEach((container) => {
-  container.addEventListener("mouseover", (e) => {
+  let isScrolling = false;
+  container.addEventListener("mousemove", (e) => {
+    if (isScrolling) return;
+
     const card = e.target.closest(".card");
     if (!card) return;
 
@@ -23,12 +26,20 @@ document.querySelectorAll(".categories").forEach((container) => {
     const kRect = card.getBoundingClientRect();
 
     // Card is at/past the right edge → scroll right
-    if (kRect.right > cRect.right - 20) {
-      container.scrollBy({ left: 300, behavior: "smooth" });
+    if (kRect.right > cRect.right - 30) {
+      isScrolling = true;
+      container.scrollBy({ left: 320, behavior: "smooth" });
+      setTimeout(() => {
+        isScrolling = false;
+      }, 600);
     }
     // Card is at/past the left edge → scroll left
-    else if (kRect.left < cRect.left + 20) {
-      container.scrollBy({ left: -300, behavior: "smooth" });
+    else if (kRect.left < cRect.left + 30) {
+      isScrolling = true;
+      container.scrollBy({ left: -320, behavior: "smooth" });
+      setTimeout(() => {
+        isScrolling = false;
+      }, 600);
     }
   });
 });
@@ -55,18 +66,13 @@ function buildCard(video) {
       : `<span class="badge bg-primary mb-2"><i class="bi bi-play-circle"></i> HD</span>`;
   return `
     <div class="card min-w-15">
-      <a href="${playerURL}" class="d-block d-md-none">
+      <a href="${playerURL}" class="card-poster-link">
         <img
           src="${escapeHtml(video.poster)}"
           class="card-img-top"
           alt="${escapeHtml(video.title)}"
         />
       </a>
-      <img
-        src="${escapeHtml(video.poster)}"
-        class="card-img-top d-none d-md-block"
-        alt="${escapeHtml(video.title)}"
-      />
       <div class="card-body d-flex flex-column">
         ${badge}
         <h5 class="card-title">${escapeHtml(video.title)}</h5>

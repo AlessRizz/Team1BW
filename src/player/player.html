@@ -7,7 +7,6 @@
   <link rel="icon" type="image/png" href="../assets/favicon.ico" />
   <title>Player — FLUXR</title>
   <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css" />
   <link rel="stylesheet" href="./player.css" />
   <script type="module" src="https://cdn.jsdelivr.net/npm/@videojs/html/cdn/video-ui.js"></script>
 </head>
@@ -174,7 +173,7 @@
   </main>
 
   <div id="player-error" class="d-none">
-    Video non trovato o id non valido.<br>
+    <p id="player-error-msg" class="mb-3">Video non trovato o id non valido.</p>
     <a href="../index.html">← Torna alla home</a>
   </div>
 
