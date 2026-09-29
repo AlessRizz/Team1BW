@@ -21273,9 +21273,16 @@ h3,
 }
 
 .min-w-15 {
-  min-width: 17rem;
-  width: 17rem;
-  flex: 0 0 17rem;
+  min-width: 20rem;
+  width: 20rem;
+  flex: 0 0 20rem;
+}
+@media (max-width: 575.98px) {
+  .min-w-15 {
+    min-width: 16rem;
+    width: 16rem;
+    flex: 0 0 16rem;
+  }
 }
 
 .container-fluid {
@@ -21299,7 +21306,9 @@ h3,
 
 .card {
   position: relative;
-  height: 220px;
+  aspect-ratio: 16/9;
+  width: 100%;
+  height: auto;
   overflow: hidden !important;
   border-radius: 0.5rem;
   background-color: #00050d;
@@ -21315,7 +21324,9 @@ h3,
 .card .card-img-top {
   width: 100%;
   height: 100%;
+  aspect-ratio: 16/9;
   object-fit: cover;
+  object-position: center;
   display: block;
   transition: transform 0.35s ease, filter 0.35s ease;
 }
@@ -21326,36 +21337,40 @@ h3,
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1rem;
-  background: linear-gradient(180deg, rgba(43, 34, 51, 0.55) 0%, rgba(43, 34, 51, 0.9) 45%, rgba(10, 4, 18, 0.98) 100%);
-  backdrop-filter: blur(3px);
+  padding: 0.75rem 0.9rem;
+  background: linear-gradient(180deg, rgba(43, 34, 51, 0.7) 0%, rgba(43, 34, 51, 0.92) 50%, rgba(10, 4, 18, 0.98) 100%);
+  backdrop-filter: blur(4px);
   color: #fff;
   opacity: 0;
   pointer-events: none;
-  transform: translateY(10px);
+  transform: translateY(6px);
   transition: opacity 0.25s ease, transform 0.25s ease;
 }
 .card .card-body .card-title {
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: 700;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.2rem;
   color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .card .card-body .card-text {
-  font-size: 0.82rem;
-  line-height: 1.4;
+  font-size: 0.75rem;
+  line-height: 1.35;
   color: #c4c4c4;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.35rem;
 }
 .card .card-body .mio-bottone {
   background-color: #6e1c28;
   color: #fff;
   font-weight: 600;
-  padding: 0.35rem 0.85rem;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.75rem;
   border-radius: 6px;
   transition: background-color 0.2s ease, transform 0.2s ease;
 }

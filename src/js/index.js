@@ -62,23 +62,27 @@ function buildCard(video) {
   const playerURL = `./player/player.html?id=${encodeURIComponent(video.id)}`;
   const badge =
     video.type === "youtube"
-      ? `<span class="badge bg-danger mb-2"><i class="bi bi-youtube"></i> Trailer</span>`
-      : `<span class="badge bg-primary mb-2"><i class="bi bi-play-circle"></i> HD</span>`;
+      ? `<span class="badge bg-danger"><i class="bi bi-youtube"></i> Trailer</span>`
+      : `<span class="badge bg-primary"><i class="bi bi-play-circle"></i> HD</span>`;
   return `
     <div class="card min-w-15">
-      <a href="${playerURL}" class="card-poster-link">
+      <a href="${playerURL}" class="card-poster-link" aria-label="${escapeHtml(video.title)}">
         <img
           src="${escapeHtml(video.poster)}"
           class="card-img-top"
           alt="${escapeHtml(video.title)}"
         />
       </a>
-      <div class="card-body d-flex flex-column">
-        ${badge}
-        <h5 class="card-title">${escapeHtml(video.title)}</h5>
-        <p class="card-text small flex-grow-1">${escapeHtml(video.description)}</p>
-        <div class="d-flex align-items-center justify-content-between mt-2">
+      <div class="card-body d-flex flex-column justify-content-between">
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          ${badge}
           <small class="text-grigio-chiaro">${escapeHtml(video.year)} · ${escapeHtml(video.duration)}</small>
+        </div>
+        <div class="flex-grow-1 overflow-hidden my-1">
+          <h5 class="card-title mb-1">${escapeHtml(video.title)}</h5>
+          <p class="card-text small mb-0">${escapeHtml(video.description)}</p>
+        </div>
+        <div class="d-flex justify-content-end mt-1">
           <a href="${playerURL}" class="btn mio-bottone btn-sm">
             <i class="bi bi-play-fill text-grigio-chiaro"></i> Guarda
           </a>
